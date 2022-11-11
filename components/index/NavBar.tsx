@@ -26,7 +26,7 @@ const NavBar = () => {
 							{/* justify-start lg:w-0 lg:flex-1 */}
 							<Link href="/">
 								<img
-									className="w-[252px] cursor-pointer"
+									className="w-[152px] 2xl:w-[252px] cursor-pointer"
 									src="/images/logo.svg"
 									alt="Champagne Logo"
 								/>
