@@ -15,15 +15,12 @@ interface LayoutProps {
 }
 
 const Layout = ({
+	// @ts-ignore
 	children,
-	title = "Champagne Digital - Modern Insurance solutions for everyone",
-	desc = `Champagne Digital is a Software-as-a-service (SaaS) company that
-      provides tailored solutions to brokers and insurers seeking to fully
-      digitize their customer acquisition process.`,
-	pt = false,
-	isBlog = false,
-	seo,
-}: LayoutProps) => {
+	title = "Champagne",
+	desc = `Champagne`,
+	footer = true,
+}) => {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<Head>
@@ -57,8 +54,7 @@ const Layout = ({
 			</div>
 
 			<div className="flex-grow overflow-hidden">{children}</div>
-
-			<Footer />
+			{footer && <Footer />}
 		</div>
 	);
 };
