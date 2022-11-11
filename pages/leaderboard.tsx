@@ -34,10 +34,10 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-[80%] flex mx-auto">
+			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl flex mx-auto">
 				<div className="pb-[8rem]">
-					<div className="gap-x-10 flex flex-row space-x-5">
-						<div className="rounded-[43px] border-[7px] border-black p-16 flex flex-row space-x-32">
+					<div className="flex flex-row space-x-5">
+						<div className="rounded-[43px] border-[7px] border-black p-16 flex flex-row space-x-10">
 							<div className="flex flex-col space-y-10">
 								<p className="text-champagne-light-gray text-[15px] leading-[15px] font-black">
 									Number of signups
@@ -157,13 +157,125 @@ function Hero() {
 					</div>
 				</div>
 			</div>
+
+			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+				<div className="w-full pb-[8rem] flex flex-col">
+					<div className="relative">
+						<h1 className="text-[97px] font-anton leading-[92px] text-black w-full">
+							College Hallway
+							<br />
+							Ranking 🍾
+						</h1>
+					</div>
+
+					<div className="grid grid-cols-2 my-14 gap-x-8 gap-y-10">
+						<div className="relative">
+							<div className="border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-4 -bottom-4" />
+							<div className="border-[7px] text-white border-black rounded-[43px] bg-gradient-to-br from-champagne-pink relative via-champagne-light-blue to-champagne-green p-10 z-[20] flex flex-col">
+								<div className="grid w-full items-end justify-items-end">
+									<h1 className="text-[79px] font-anton leading-[79px]">
+										1st
+									</h1>
+								</div>
+								<div className="flex flex-col max-w-md">
+									<h1 className="uppercase text-[18px] font-black leading-[18px]">
+										1000 students
+									</h1>
+									<h1 className="text-[71px] font-anton leading-[71px] w-full">
+										Stanford University
+									</h1>
+								</div>
+
+								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute bottom-5 right-5 bg-opacity-40">
+									<p className="text-[20px] font-anton leading-[20px]">
+										Share
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="relative">
+							<div className="border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-4 -bottom-4" />
+							<div className="border-[7px] text-white border-black rounded-[43px] bg-champagne-pink relative p-10 z-[20] flex flex-col">
+								<div className="grid w-full items-end justify-items-end">
+									<h1 className="text-[79px] font-anton leading-[79px]">
+										2nd
+									</h1>
+								</div>
+								<div className="flex flex-col max-w-md">
+									<h1 className="uppercase text-[18px] font-black leading-[18px]">
+										500 students
+									</h1>
+									<h1 className="text-[71px] font-anton leading-[71px] w-full">
+										San Jose State University
+									</h1>
+								</div>
+
+								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute bottom-5 right-5 bg-opacity-40">
+									<p className="text-[20px] font-anton leading-[20px]">
+										Share
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="relative col-span-2">
+							<div className="border-[7px] text-black border-black rounded-[43px] bg-white relative px-10 py-16 z-[20] flex flex-row items-center">
+								<div className="flex flex-col max-w-[70%] space-y-2.5">
+									<h1 className="uppercase text-[18px] font-black leading-[18px] text-champagne-light-gray">
+										200 students
+									</h1>
+									<h1 className="text-[71px] font-anton leading-[71px] w-full truncate">
+										San Jose State University
+									</h1>
+								</div>
+								<div className="grid w-full items-end justify-items-end">
+									<h1 className="text-[79px] font-anton leading-[79px] text-champagne-pink">
+										3rd
+									</h1>
+								</div>
+
+								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute top-5 right-5 bg-opacity-40">
+									<p className="text-[20px] font-anton leading-[20px]">
+										Share
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="relative col-span-2">
+							<div className="border-[7px] text-black border-black rounded-[43px] bg-white relative px-10 py-16 z-[20] flex flex-row items-center">
+								<div className="flex flex-col max-w-[70%] space-y-2.5">
+									<h1 className="uppercase text-[18px] font-black leading-[18px] text-champagne-light-gray">
+										100 students
+									</h1>
+									<h1 className="text-[71px] font-anton leading-[71px] w-full truncate">
+										Santa Clara University
+									</h1>
+								</div>
+								<div className="grid w-full items-end justify-items-end">
+									<h1 className="text-[79px] font-anton leading-[79px] text-champagne-pink">
+										4th
+									</h1>
+								</div>
+
+								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute top-5 right-5 bg-opacity-40">
+									<p className="text-[20px] font-anton leading-[20px]">
+										Share
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
 
 export default function LeaderBoard() {
 	return (
-		<Layout>
+		<Layout footer={false}>
 			<Hero />
 		</Layout>
 	);
