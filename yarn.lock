@@ -169,6 +169,11 @@
     make-synchronous "0.1.1"
     plaiceholder "2.5.0"
 
+"@rooks/use-outside-click-ref@^4.11.2":
+  version "4.11.2"
+  resolved "https://registry.yarnpkg.com/@rooks/use-outside-click-ref/-/use-outside-click-ref-4.11.2.tgz#7d91c70cf6f8294ec020956ad171e3d8fe31df85"
+  integrity sha512-w2bCW69zcpLh0KmN/odAuBsQ3sps+73KEu7zMOi0o4YMfDo+tXcqwlTJiLYysd0BEoQC9pNIklzZmI9zZep69g==
+
 "@rushstack/eslint-patch@^1.1.3":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
