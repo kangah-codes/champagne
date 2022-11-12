@@ -8,24 +8,24 @@ import Layout from "../components/index/Layout";
 function Hero() {
 	return (
 		<div className="w-full bg-white flex overflow-hidden px-4 flex-col">
-			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
-				<div className="mx-auto py-[5rem] 2xl:py-[8rem]">
-					<div className="grid grid-cols-1 2xl:grid-cols-2 gap-x-10 gap-y-10">
-						<h1 className="text-[47px] leading-[47px] text-center 2xl:text-left 2xl:text-[97px] font-anton 2xl:leading-[92px] text-black w-full ">
+			<div className="w-full max-w-5xl xl:max-w-7xl xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+				<div className="mx-auto py-[5rem] xl:py-[8rem]">
+					<div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-10">
+						<h1 className="text-[47px] leading-[47px] text-center xl:text-left xl:text-[97px] font-anton xl:leading-[92px] text-black w-full ">
 							See your <br />
 							college Activities
 						</h1>
 
-						<div className="flex flex-col items-center 2xl:items-end">
+						<div className="flex flex-col items-center xl:items-end">
 							<div className="flex flex-col">
-								<p className="text-center text-[9px] leading-[9px] text-champagne-light-gray 2xl:text-[15px] 2xl:leading-[15px] font-black">
+								<p className="text-center text-[9px] leading-[9px] text-champagne-light-gray xl:text-[15px] xl:leading-[15px] font-black">
 									Number of students needed to <br />
 									activate
 								</p>
-								<h1 className="text-[100px] leading-[100px] 2xl:text-[141px] font-anton 2xl:leading-[141px] text-black">
+								<h1 className="text-[100px] leading-[100px] xl:text-[141px] font-anton xl:leading-[141px] text-black">
 									20%
 								</h1>{" "}
-								<h1 className="text-[21px] leading-[21px] 2xl:text-[23px] font-anton 2xl:leading-[23px] text-black self-center 2xl:self-end">
+								<h1 className="text-[21px] leading-[21px] xl:text-[23px] font-anton xl:leading-[23px] text-black self-center xl:self-end">
 									of college's population
 								</h1>
 							</div>
@@ -34,31 +34,31 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl flex mx-auto">
+			<div className="w-full max-w-5xl xl:max-w-7xl xl:max-w-screen-2xl flex mx-auto">
 				<div className="pb-[8rem] mx-auto w-full">
-					<div className="flex flex-col 2xl:flex-row 2xl:space-x-5 space-y-5 2xl:space-y-0">
-						<div className="w-full rounded-[28px] 2xl:rounded-[43px] border-[4px] 2xl:border-[7px] border-black py-8 px-8 items-center justify-center flex flex-row space-x-14">
+					<div className="flex flex-col xl:flex-row xl:space-x-5 space-y-5 xl:space-y-0">
+						<div className="w-full rounded-[28px] xl:rounded-[43px] border-[4px] xl:border-[7px] border-black py-8 px-8 items-center justify-center flex flex-row space-x-14">
 							<div className="flex flex-col space-y-5">
-								<p className="text-champagne-light-gray text-[9px] leading-[9px] 2xl:text-[15px] 2xl:leading-[15px] font-black">
+								<p className="text-champagne-light-gray text-[9px] leading-[9px] xl:text-[15px] xl:leading-[15px] font-black">
 									Number of signups
 								</p>
-								<h1 className="text-[66px] leading-[66px] 2xl:text-[141px] font-anton 2xl:leading-[141px] text-black">
+								<h1 className="text-[66px] leading-[66px] xl:text-[141px] font-anton xl:leading-[141px] text-black">
 									5000
 								</h1>{" "}
 							</div>
 							<div className="flex flex-col space-y-5">
-								<p className="text-champagne-light-gray text-[9px] leading-[9px] 2xl:text-[15px] 2xl:leading-[15px] font-black">
+								<p className="text-champagne-light-gray text-[9px] leading-[9px] xl:text-[15px] xl:leading-[15px] font-black">
 									Number of signups
 								</p>
-								<h1 className="text-[66px] leading-[66px] 2xl:text-[141px] font-anton 2xl:leading-[141px] text-black">
+								<h1 className="text-[66px] leading-[66px] xl:text-[141px] font-anton xl:leading-[141px] text-black">
 									5000
 								</h1>{" "}
 							</div>
 						</div>
 
-						<div className="w-full rounded-[28px] 2xl:rounded-[43px] border-[4px] 2xl:border-[7px] border-black p-5 2xl:p-16 items-center justify-center flex flex-row space-x-5">
+						<div className="w-full rounded-[28px] xl:rounded-[43px] border-[4px] xl:border-[7px] border-black p-5 xl:p-16 items-center justify-center flex flex-row space-x-5">
 							<div className="flex flex-col justify-between">
-								<h1 className="text-[33px] leading-[33px] 2xl:text-[41px] font-anton 2xl:leading-[41px] text-black">
+								<h1 className="text-[33px] leading-[33px] xl:text-[41px] font-anton xl:leading-[41px] text-black">
 									Share with friends on your socials or your
 									contact to activate Champagne app in your
 									college.
@@ -68,7 +68,7 @@ function Hero() {
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 18.725 17.604"
-											className="w-[11px] h-[11px] 2xl:w-[18px] 2xl:h-[18px]"
+											className="w-[11px] h-[11px] xl:w-[18px] xl:h-[18px]"
 										>
 											<path
 												id="Icon_awesome-snapchat-ghost"
@@ -79,7 +79,7 @@ function Hero() {
 											/>
 										</svg>
 
-										<p className="text-[13px] leading-[13px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
+										<p className="text-[13px] leading-[13px] xl:text-[20px] font-anton xl:leading-[20px]">
 											Share
 										</p>
 									</div>
@@ -88,7 +88,7 @@ function Hero() {
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 18.725 17.604"
-											className="w-[11px] h-[11px] 2xl:w-[18px] 2xl:h-[18px]"
+											className="w-[11px] h-[11px] xl:w-[18px] xl:h-[18px]"
 										>
 											<path
 												id="Icon_awesome-snapchat-ghost"
@@ -99,7 +99,7 @@ function Hero() {
 											/>
 										</svg>
 
-										<p className="text-[13px] leading-[13px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
+										<p className="text-[13px] leading-[13px] xl:text-[20px] font-anton xl:leading-[20px]">
 											Share
 										</p>
 									</div>
@@ -107,7 +107,7 @@ function Hero() {
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 18.725 17.604"
-											className="w-[11px] h-[11px] 2xl:w-[18px] 2xl:h-[18px]"
+											className="w-[11px] h-[11px] xl:w-[18px] xl:h-[18px]"
 										>
 											<path
 												id="Icon_awesome-snapchat-ghost"
@@ -118,7 +118,7 @@ function Hero() {
 											/>
 										</svg>
 
-										<p className="text-[13px] leading-[13px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
+										<p className="text-[13px] leading-[13px] xl:text-[20px] font-anton xl:leading-[20px]">
 											Share
 										</p>
 									</div>
@@ -126,7 +126,7 @@ function Hero() {
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 18.725 17.604"
-											className="w-[11px] h-[11px] 2xl:w-[18px] 2xl:h-[18px]"
+											className="w-[11px] h-[11px] xl:w-[18px] xl:h-[18px]"
 										>
 											<path
 												id="Icon_awesome-snapchat-ghost"
@@ -137,7 +137,7 @@ function Hero() {
 											/>
 										</svg>
 
-										<p className="text-[13px] leading-[13px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
+										<p className="text-[13px] leading-[13px] xl:text-[20px] font-anton xl:leading-[20px]">
 											Share
 										</p>
 									</div>
@@ -247,35 +247,35 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+			<div className="w-full max-w-5xl xl:max-w-7xl xl:max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="w-full pb-[8rem] flex flex-col">
 					<div className="relative">
-						<h1 className="text-[47px] leading-[47px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-black w-full text-center 2xl:text-left">
+						<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full text-center xl:text-left">
 							College Hallway
 							<br />
 							Ranking 🍾
 						</h1>
 					</div>
 
-					<div className="grid grid-cols-1 2xl:grid-cols-2 my-14 gap-x-8 gap-y-10">
+					<div className="grid grid-cols-1 xl:grid-cols-2 my-14 gap-x-8 gap-y-10">
 						<div className="relative flex items-end justify-end">
-							<div className="border-[4px] 2xl:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-0.5 -bottom-2.5" />
-							<div className="border-[4px] 2xl:border-[7px] text-white self-end w-[98%] border-black rounded-[43px] bg-gradient-to-br from-champagne-pink relative via-champagne-light-blue to-champagne-green p-5 2xl:p-10 z-[20] flex flex-col">
+							<div className="border-[4px] xl:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-0.5 -bottom-2.5" />
+							<div className="border-[4px] xl:border-[7px] text-white self-end w-[98%] border-black rounded-[43px] bg-gradient-to-br from-champagne-pink relative via-champagne-light-blue to-champagne-green p-5 xl:p-10 z-[20] flex flex-col">
 								<div className="grid w-full items-end justify-items-end">
-									<h1 className="text-[46px] leading-[46px] 2xl:text-[79px] font-anton 2xl:leading-[79px]">
+									<h1 className="text-[46px] leading-[46px] xl:text-[79px] font-anton xl:leading-[79px]">
 										1st
 									</h1>
 								</div>
-								<div className="flex flex-col max-w-md mt-8 2xl:mt-0">
-									<h1 className="uppercase text-[9px] leading-[9px] 2xl:text-[18px] font-black 2xl:leading-[18px]">
+								<div className="flex flex-col max-w-md mt-8 xl:mt-0">
+									<h1 className="uppercase text-[9px] leading-[9px] xl:text-[18px] font-black xl:leading-[18px]">
 										1000 students
 									</h1>
-									<h1 className="text-[61px] leading-[61px] 2xl:text-[71px] font-anton 2xl:leading-[71px] w-full">
+									<h1 className="text-[61px] leading-[61px] xl:text-[71px] font-anton xl:leading-[71px] w-full">
 										Stanford University
 									</h1>
 								</div>
 
-								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute 2xl:bottom-5 2xl:right-5 bg-opacity-40">
+								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute xl:bottom-5 xl:right-5 bg-opacity-40">
 									<p className="text-[20px] font-anton leading-[20px]">
 										Share
 									</p>
@@ -284,23 +284,23 @@ function Hero() {
 						</div>
 
 						<div className="relative flex items-end justify-end">
-							<div className="border-[4px] 2xl:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-0.5 -bottom-2.5" />
-							<div className="border-[4px] 2xl:border-[7px] text-white self-end w-[98%] border-black rounded-[43px] bg-champagne-pink relative p-5 2xl:p-10 z-[20] flex flex-col">
+							<div className="border-[4px] xl:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-0.5 -bottom-2.5" />
+							<div className="border-[4px] xl:border-[7px] text-white self-end w-[98%] border-black rounded-[43px] bg-champagne-pink relative p-5 xl:p-10 z-[20] flex flex-col">
 								<div className="grid w-full items-end justify-items-end">
-									<h1 className="text-[46px] leading-[46px] 2xl:text-[79px] font-anton 2xl:leading-[79px]">
+									<h1 className="text-[46px] leading-[46px] xl:text-[79px] font-anton xl:leading-[79px]">
 										2nd
 									</h1>
 								</div>
-								<div className="flex flex-col max-w-md mt-8 2xl:mt-0">
-									<h1 className="uppercase text-[9px] leading-[9px] 2xl:text-[18px] font-black 2xl:leading-[18px]">
+								<div className="flex flex-col max-w-md mt-8 xl:mt-0">
+									<h1 className="uppercase text-[9px] leading-[9px] xl:text-[18px] font-black xl:leading-[18px]">
 										500 students
 									</h1>
-									<h1 className="text-[61px] leading-[61px] 2xl:text-[71px] font-anton 2xl:leading-[71px] w-full">
+									<h1 className="text-[61px] leading-[61px] xl:text-[71px] font-anton xl:leading-[71px] w-full">
 										Harvard University
 									</h1>
 								</div>
 
-								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute 2xl:bottom-5 2xl:right-5 bg-opacity-40">
+								<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute xl:bottom-5 xl:right-5 bg-opacity-40">
 									<p className="text-[20px] font-anton leading-[20px]">
 										Share
 									</p>
@@ -308,44 +308,44 @@ function Hero() {
 							</div>
 						</div>
 
-						<div className="border-[4px] 2xl:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 2xl:p-10 z-[20] flex flex-col 2xl:col-span-full">
+						<div className="border-[4px] xl:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 xl:p-10 z-[20] flex flex-col xl:col-span-full">
 							<div className="grid w-full items-end justify-items-end">
-								<h1 className="text-[46px] leading-[46px] 2xl:text-[79px] font-anton 2xl:leading-[79px]">
+								<h1 className="text-[46px] leading-[46px] xl:text-[79px] font-anton xl:leading-[79px]">
 									3rd
 								</h1>
 							</div>
-							<div className="flex flex-col max-w-5xl mt-8 2xl:mt-0">
-								<h1 className="uppercase text-[9px] leading-[9px] 2xl:text-[18px] font-black 2xl:leading-[18px]">
+							<div className="flex flex-col max-w-5xl mt-8 xl:mt-0">
+								<h1 className="uppercase text-[9px] leading-[9px] xl:text-[18px] font-black xl:leading-[18px]">
 									500 students
 								</h1>
-								<h1 className="text-[61px] leading-[61px] 2xl:text-[71px] font-anton 2xl:leading-[71px] w-full">
+								<h1 className="text-[61px] leading-[61px] xl:text-[71px] font-anton xl:leading-[71px] w-full">
 									UCLA - University of California, Los Ang
 								</h1>
 							</div>
 
-							<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute 2xl:bottom-5 2xl:right-5 bg-opacity-40">
+							<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute xl:bottom-5 xl:right-5 bg-opacity-40">
 								<p className="text-[20px] font-anton leading-[20px]">
 									Share
 								</p>
 							</div>
 						</div>
 
-						<div className="border-[4px] 2xl:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 2xl:p-10 z-[20] flex flex-col 2xl:col-span-full">
+						<div className="border-[4px] xl:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 xl:p-10 z-[20] flex flex-col xl:col-span-full">
 							<div className="grid w-full items-end justify-items-end">
-								<h1 className="text-[46px] leading-[46px] 2xl:text-[79px] font-anton 2xl:leading-[79px]">
+								<h1 className="text-[46px] leading-[46px] xl:text-[79px] font-anton xl:leading-[79px]">
 									4th
 								</h1>
 							</div>
-							<div className="flex flex-col max-w-5xl mt-8 2xl:mt-0">
-								<h1 className="uppercase text-[9px] leading-[9px] 2xl:text-[18px] font-black 2xl:leading-[18px]">
+							<div className="flex flex-col max-w-5xl mt-8 xl:mt-0">
+								<h1 className="uppercase text-[9px] leading-[9px] xl:text-[18px] font-black xl:leading-[18px]">
 									200 students
 								</h1>
-								<h1 className="text-[61px] leading-[61px] 2xl:text-[71px] font-anton 2xl:leading-[71px] w-full">
+								<h1 className="text-[61px] leading-[61px] xl:text-[71px] font-anton xl:leading-[71px] w-full">
 									Santa Clara University
 								</h1>
 							</div>
 
-							<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute 2xl:bottom-5 2xl:right-5 bg-opacity-40">
+							<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute xl:bottom-5 xl:right-5 bg-opacity-40">
 								<p className="text-[20px] font-anton leading-[20px]">
 									Share
 								</p>
