@@ -8,7 +8,7 @@ import Layout from "../components/index/Layout";
 function Hero() {
 	return (
 		<div className="w-full bg-white flex overflow-hidden px-4 flex-col">
-			<div className="w-full max-w-5xl xl:max-w-7xl xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem] xl:py-[8rem]">
 					<div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-10">
 						<h1 className="text-[47px] leading-[47px] text-center xl:text-left xl:text-[97px] font-anton xl:leading-[92px] text-black w-full ">
@@ -34,7 +34,7 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-5xl xl:max-w-7xl xl:max-w-screen-2xl flex mx-auto">
+			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl flex mx-auto">
 				<div className="pb-[8rem] mx-auto w-full">
 					<div className="flex flex-col xl:flex-row xl:space-x-5 space-y-5 xl:space-y-0">
 						<div className="w-full rounded-[28px] xl:rounded-[43px] border-[4px] xl:border-[7px] border-black py-8 px-8 items-center justify-center flex flex-row space-x-14">
@@ -56,7 +56,7 @@ function Hero() {
 							</div>
 						</div>
 
-						<div className="w-full rounded-[28px] xl:rounded-[43px] border-[4px] xl:border-[7px] border-black p-5 xl:p-16 items-center justify-center flex flex-row space-x-5">
+						<div className="w-full rounded-[28px] xl:rounded-[43px] border-[4px] xl:border-[7px] border-black p-5 md:p-10 xl:p-16 items-center justify-center flex flex-row space-x-5">
 							<div className="flex flex-col justify-between">
 								<h1 className="text-[33px] leading-[33px] xl:text-[41px] font-anton xl:leading-[41px] text-black">
 									Share with friends on your socials or your
@@ -247,7 +247,7 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className="w-full max-w-5xl xl:max-w-7xl xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+			<div className="w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="w-full pb-[8rem] flex flex-col">
 					<div className="relative">
 						<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full text-center xl:text-left">
