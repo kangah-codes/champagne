@@ -17,7 +17,7 @@ const DataForm = () => {
 					alt="Champagne Logo"
 				/>
 
-				<h1 className="text-[52px] font-anton leading-[52px] text-white">
+				<h1 className="text-[47px] 2xl:text-[52px] font-anton leading-[47px] 2xl:leading-[52px] text-white">
 					Where your <br />
 					friend <br />
 					recommends
@@ -33,29 +33,29 @@ const DataForm = () => {
 			<div className="flex flex-col items-center relative space-y-3 max-w-[404px] text-black">
 				<input
 					type="text"
-					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[20px] leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] 2xl:text-[20px] leading-[202xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 					placeholder="Type your name"
 				/>
 				<input
 					type="email"
-					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[20px] leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] 2xl:text-[20px] leading-[202xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 					placeholder="Email"
 				/>
 				<div className="flex flex-row space-x-3 w-full">
 					<select
-						className={`rounded-[14px] bg-white text-black text-[20px] leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-[112px]`}
+						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] 2xl:text-[20px] leading-[202xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-[112px]`}
 					>
 						<option>+1</option>
 						<option>+2</option>
 					</select>
 					<input
 						type="number"
-						className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[20px] leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-[280px]"
+						className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] 2xl:text-[20px] leading-[202xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-[280px]"
 						placeholder="Phone Number"
 					/>
 				</div>
 				<select
-					className={`rounded-[14px] bg-white text-black text-[20px] leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
+					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] 2xl:text-[20px] leading-[202xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your college"
 				>
 					<option className="text-champagne-light-gray">
@@ -65,7 +65,7 @@ const DataForm = () => {
 					<option>+2</option>
 				</select>
 				<select
-					className={`rounded-[14px] bg-white text-black text-[20px] leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
+					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] 2xl:text-[20px] leading-[202xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your year"
 				>
 					<option>Pick your year</option>
@@ -74,7 +74,7 @@ const DataForm = () => {
 				</select>
 
 				<div className="pt-3 w-full">
-					<button className="bg-black text-white  rounded-full w-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black text-[20px] font-anton leading-[20px]">
+					<button className="bg-black text-white  rounded-full w-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black text-[14px] leading-[14px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 						Done
 					</button>
 				</div>
@@ -85,15 +85,15 @@ const DataForm = () => {
 
 const SuccessForm = () => {
 	return (
-		<div className="flex flex-row p-14">
-			<div className="flex flex-col">
+		<div className="flex flex-col 2xl:flex-row p-5 2xl:p-14 w-full">
+			<div className="flex flex-col w-full">
 				<img
-					className="w-[252px] cursor-pointer"
+					className="w-[142px] 2xl:w-[252px] cursor-pointer mx-auto 2xl:mx-0"
 					src="/images/logo.svg"
 					alt="Champagne Logo"
 				/>
 
-				<h1 className="text-[52px] font-anton leading-[52px] text-white">
+				<h1 className="text-[47px] 2xl:text-[52px] font-anton leading-[47px] 2xl:leading-[52px] text-white text-center 2xl:text-left">
 					Congratulations
 					<br /> for joining the
 					<br /> Champagne waitlist.
@@ -101,26 +101,26 @@ const SuccessForm = () => {
 					<br /> abreast of progress!
 				</h1>
 
-				<p className="text-white font-bold text-[23px] leading-[23px] mt-5">
+				<p className="text-white font-bold text-[12px] 2xl:text-[23px] leading-[12px] 2xl:leading-[23px] mt-5 text-center 2xl:text-left">
 					Invite your friends to win a bottle of Champagne. The more
 					of your friends join, the better your chances
 				</p>
 			</div>
 
-			<div className="flex flex-col items-center relative space-y-5">
-				<div className="w-[386px] h-[409px] p-5 rounded-[14px] bg-champagne-yellow absolute -top-2 z-1" />
-				<div className="w-[404px] h-[409px] p-5 rounded-[14px] bg-white flex flex-col justify-between z-10">
+			<div className="flex flex-col items-center relative space-y-5 mt-8 2xl:my-0">
+				<div className="w-[90%] 2xl:w-[386px] h-[278px] 2x:h-[409px] p-5 rounded-[14px] bg-champagne-yellow absolute -top-0.5 2xl:-top-2 z-1" />
+				<div className="w-full 2xl:w-[404px] h-[278px] 2xl:h-[409px] p-5 rounded-[14px] bg-white flex flex-col justify-between z-10">
 					<div className="flex flex-row justify-between w-full">
 						<div className="flex flex-row space-x-2">
 							<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
 								<LinkIcon className="text-champagne-light-gray w-5 h-5" />
-								<p className="text-black text-[16px] font-anton leading-[16px]">
+								<p className="text-black text-[10px] leading-[10px] 2xl:text-[16px] font-anton 2xl:leading-[16px]">
 									Copy Card Link
 								</p>
 							</div>
 							<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
 								<img
-									className="w-[28px] h-[28px] cursor-pointer"
+									className="w-[15px] h-[15px] 2xl:w-[28px] 2xl:h-[28px] cursor-pointer"
 									src="/images/emojis/dice.png"
 									alt="Champagne Logo"
 								/>
@@ -128,14 +128,14 @@ const SuccessForm = () => {
 						</div>
 
 						<img
-							className="w-[103px] cursor-pointer"
+							className="w-[80px] 2xl:w-[103px] cursor-pointer"
 							src="/images/logo.svg"
 							alt="Champagne Logo"
 						/>
 					</div>
 
 					<div>
-						<h1 className="text-[44px] font-anton leading-[44px] text-black">
+						<h1 className="text-[29px] leading-[29px] 2xl:text-[44px] font-anton 2xl:leading-[44px] text-black">
 							Checkout the most eligible{" "}
 							<span className="text-champagne-light-blue">
 								bachelors
@@ -174,7 +174,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[20px] font-anton leading-[20px]">
+						<p className="text-[14px] leading-[14px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 							Share
 						</p>
 					</div>
@@ -195,7 +195,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[20px] font-anton leading-[20px]">
+						<p className="text-[14px] leading-[14px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 							Share
 						</p>
 					</div>
@@ -216,7 +216,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[20px] font-anton leading-[20px]">
+						<p className="text-[14px] leading-[14px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 							Share
 						</p>
 					</div>
@@ -241,7 +241,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[20px] font-anton leading-[20px] truncate">
+						<p className="text-[14px] leading-[14px] 2xl:text-[20px] font-anton 2xl:leading-[20px] truncate">
 							Share with friends
 						</p>
 					</div>
@@ -283,7 +283,7 @@ export default function Modal() {
 						<div
 							className={`
 									my-8 inline-block w-full max-w-[85rem] transform overflow-hidden 
-									rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green p-6 
+									rounded-[29px] 2xl:rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green 
 									text-left align-middle shadow-xl transition-all relative
 								`}
 						>
