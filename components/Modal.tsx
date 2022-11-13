@@ -174,12 +174,19 @@ const SuccessForm = () => {
 				<div className="w-full md:w-[70%] xl:w-[404px] h-[278px] xl:h-[409px] p-5 rounded-[14px] bg-white flex flex-col justify-between z-10">
 					<div className="flex flex-row justify-between w-full">
 						<div className="flex flex-row space-x-2">
-							<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
+							<button
+								onClick={() => {
+									navigator.clipboard.writeText(
+										`https://champagne-topaz.vercel.app/share/${formData["College Name"]}`
+									);
+								}}
+								className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black"
+							>
 								<LinkIcon className="text-champagne-light-gray w-5 h-5" />
 								<p className="text-black text-[10px] leading-[10px] xl:text-[16px] font-anton xl:leading-[16px]">
 									Copy Card Link
 								</p>
-							</div>
+							</button>
 							<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
 								<img
 									className="w-[15px] h-[15px] xl:w-[28px] xl:h-[28px] cursor-pointer"
