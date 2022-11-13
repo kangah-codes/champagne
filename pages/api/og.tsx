@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
@@ -60,6 +61,18 @@ export default async function handler(req: NextRequest) {
 				</div> */}
 				<div tw="bg-white flex h-full items-center rounded-xl">
 					<div tw="flex flex-col w-full py-12 px-4 md:items-center justify-between p-2 mx-auto items-center">
+						<div
+							tw="flex flex-row-reverse w-full"
+							style={{
+								padding: "0 3rem",
+							}}
+						>
+							<img
+								width="125"
+								height="58"
+								src={`http://localhost:3000/images/logo.png`}
+							/>
+						</div>
 						<h2 tw="flex flex-col text-5xl font-bold tracking-tight text-gray-900 text-left">
 							<span>Checkout the most</span>
 							<span tw="flex flex-row">
