@@ -11,6 +11,8 @@ export default function Share() {
 	const router = useRouter();
 	const { college } = router.query;
 
+	console.log(college);
+
 	return (
 		<Layout footer={false} college={college as string}>
 			<Hero />

@@ -195,7 +195,7 @@ function Hero({
 												stroke="#fff"
 												stroke-linecap="round"
 												stroke-linejoin="round"
-												stroke-width="3"
+												strokeWidth="3"
 											/>
 										</svg>
 

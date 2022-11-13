@@ -306,7 +306,7 @@ const SuccessForm = () => {
 								stroke="#fff"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								stroke-width="3"
+								strokeWidth="3"
 							/>
 						</svg>
 
@@ -397,7 +397,7 @@ export default function Modal() {
 										fill="none"
 										stroke="#000"
 										stroke-linecap="round"
-										stroke-width="5"
+										strokeWidth="5"
 									/>
 									<line
 										id="Line_51"
@@ -408,7 +408,7 @@ export default function Modal() {
 										fill="none"
 										stroke="#000"
 										stroke-linecap="round"
-										stroke-width="5"
+										strokeWidth="5"
 									/>
 								</svg>
 							</span>

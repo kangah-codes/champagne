@@ -75,7 +75,7 @@ const NavBar = () => {
 										fill="none"
 										stroke="#000"
 										stroke-linecap="round"
-										stroke-width="3"
+										strokeWidth="3"
 									/>
 									<path
 										id="Path_3351"
@@ -85,7 +85,7 @@ const NavBar = () => {
 										fill="none"
 										stroke="#000"
 										stroke-linecap="round"
-										stroke-width="3"
+										strokeWidth="3"
 									/>
 									<path
 										id="Path_3352"
@@ -95,7 +95,7 @@ const NavBar = () => {
 										fill="none"
 										stroke="#000"
 										stroke-linecap="round"
-										stroke-width="3"
+										strokeWidth="3"
 									/>
 								</g>
 							</svg>
@@ -148,7 +148,7 @@ const NavBar = () => {
 								fill="none"
 								stroke="#000"
 								stroke-linecap="round"
-								stroke-width="5"
+								strokeWidth="5"
 							/>
 							<line
 								id="Line_51"
@@ -159,7 +159,7 @@ const NavBar = () => {
 								fill="none"
 								stroke="#000"
 								stroke-linecap="round"
-								stroke-width="5"
+								strokeWidth="5"
 							/>
 						</svg>
 					</span>
