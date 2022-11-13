@@ -70,7 +70,7 @@ export default async function handler(req: NextRequest) {
 							<img
 								width="125"
 								height="58"
-								src={`http://localhost:3000/images/logo.png`}
+								src={`https://champagne-topaz.vercel.app/images/logo.png`}
 							/>
 						</div>
 						<h2 tw="flex flex-col text-5xl font-bold tracking-tight text-gray-900 text-left">
