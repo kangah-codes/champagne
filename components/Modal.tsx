@@ -1,81 +1,141 @@
 /* eslint-disable @next/next/no-img-element */
 import { Transition, Dialog } from "@headlessui/react";
 import { LinkIcon } from "@heroicons/react/24/outline";
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import { modalState } from "../recoil";
+import { formDataState, modalState, reqSuccessfulState } from "../recoil";
+import { colleges } from "../utils/data";
 
 const DataForm = () => {
+	const [formData, setFormData] = useRecoilState(formDataState);
+	const [reqSuccessful, setReqSuccessful] =
+		useRecoilState(reqSuccessfulState);
+	const [loading, setLoading] = useState(false);
+
+	const onSubmit = () => {
+		setLoading(true);
+		fetch("/api/create-record", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(formData),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				setReqSuccessful(true);
+			})
+			.catch((err) => {
+				console.log(err);
+			})
+			.finally(() => {
+				setLoading(false);
+			});
+	};
+
 	return (
 		<div
-			className={`w-full p-10 grid grid-cols-2 mx-auto max-w-7xl gap-10 items-center`}
+			className={`w-full p-5 xl:p-10 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10 items-center`}
 		>
 			<div className="flex flex-col justify-between">
 				<img
-					className="w-[252px] cursor-pointer"
+					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
 					src="/images/logo.svg"
 					alt="Champagne Logo"
 				/>
 
-				<h1 className="text-[47px] xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
+				<h1 className="text-[47px] text-center xl:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
 					Where your <br />
 					friend <br />
 					recommends
 					<br /> your next date
 				</h1>
 
-				<p className="text-white font-bold text-[23px] leading-[23px] mt-5">
+				<p className="text-white font-bold text-center xl:text-left text-[12px] xl:text-[23px] leading-[12px] xl:leading-[23px] mt-5">
 					The platform where dating and friendship happen for college
 					students
 				</p>
 			</div>
 
-			<div className="flex flex-col items-center relative space-y-3 max-w-[404px] text-black">
+			<div className="flex flex-col items-center relative space-y-3 max-w-[404px] text-black mx-auto md:py-16 lg:py-10">
 				<input
 					type="text"
 					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 					placeholder="Type your name"
+					value={formData.Name}
+					onChange={(e) =>
+						setFormData({ ...formData, Name: e.target.value })
+					}
 				/>
 				<input
 					type="email"
 					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 					placeholder="Email"
+					value={formData.Email}
+					onChange={(e) =>
+						setFormData({ ...formData, Email: e.target.value })
+					}
 				/>
 				<div className="flex flex-row space-x-3 w-full">
 					<select
-						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-[112px]`}
+						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[20px] col-span-1`}
 					>
 						<option>+1</option>
-						<option>+2</option>
 					</select>
 					<input
-						type="number"
-						className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-[280px]"
+						type="text"
+						className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 						placeholder="Phone Number"
+						value={formData["Phone Number"]}
+						onChange={(e) =>
+							setFormData({
+								...formData,
+								"Phone Number": e.target.value,
+							})
+						}
 					/>
 				</div>
 				<select
 					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your college"
+					value={formData["College Name"]}
+					onChange={(e) =>
+						setFormData({
+							...formData,
+							"College Name": e.target.value,
+						})
+					}
 				>
 					<option className="text-champagne-light-gray">
 						Pick your college
 					</option>
-					<option>+1</option>
-					<option>+2</option>
+					{colleges.map((college, index) => (
+						<option key={index} value={college}>
+							{college}
+						</option>
+					))}
 				</select>
 				<select
 					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your year"
+					value={formData.Year}
+					onChange={(e) =>
+						setFormData({ ...formData, Year: e.target.value })
+					}
 				>
 					<option>Pick your year</option>
-					<option>+1</option>
-					<option>+2</option>
+					<option value="Freshman Year">Freshman Year</option>
+					<option value="Sophomore Year">Sophomore Year</option>
+					<option value="Junior Year">Junior Year</option>
+					<option value="Senior Year">Senior Year</option>
 				</select>
 
 				<div className="pt-3 w-full">
-					<button className="bg-black text-white  rounded-full w-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black text-[14px] leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
-						Done
+					<button
+						onClick={onSubmit}
+						className="bg-black text-white  rounded-full w-full flex flex-row space-x-2 items-center justify-center py-5 px-6 text-base font-black text-[14px] leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]"
+					>
+						{loading ? "Loading..." : "Done"}
 					</button>
 				</div>
 			</div>
@@ -84,9 +144,11 @@ const DataForm = () => {
 };
 
 const SuccessForm = () => {
+	const [formData, setFormData] = useRecoilState(formDataState);
+
 	return (
 		<div className="flex flex-col xl:flex-row p-5 xl:p-14 w-full">
-			<div className="flex flex-col w-full">
+			<div className="flex flex-col w-full my-auto">
 				<img
 					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
 					src="/images/logo.svg"
@@ -144,7 +206,7 @@ const SuccessForm = () => {
 							<span className="text-champagne-pink">
 								bachelorettes
 							</span>{" "}
-							in Stanford University
+							in {formData["College Name"]}
 						</h1>
 					</div>
 				</div>
@@ -253,6 +315,22 @@ const SuccessForm = () => {
 
 export default function Modal() {
 	const [isOpen, setIsOpen] = useRecoilState(modalState);
+	const [reqSuccessful, setReqSuccessful] =
+		useRecoilState(reqSuccessfulState);
+	const [, setFormData] = useRecoilState(formDataState);
+
+	useEffect(() => {
+		return () => {
+			setReqSuccessful(false);
+			setFormData({
+				Name: undefined,
+				Email: undefined,
+				"Phone Number": undefined,
+				"College Name": undefined,
+				Year: undefined,
+			});
+		};
+	}, []);
 
 	return (
 		<Transition appear show={isOpen} as={Fragment}>
@@ -327,7 +405,8 @@ export default function Modal() {
 									/>
 								</svg>
 							</span>
-							<SuccessForm />
+
+							{reqSuccessful ? <SuccessForm /> : <DataForm />}
 						</div>
 					</Transition.Child>
 				</div>

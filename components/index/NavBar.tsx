@@ -49,7 +49,7 @@ const NavBar = () => {
 									Join Wailist
 								</button>
 								<Link href="/leaderboard">
-									<div className="bg-champagne-pink rounded-full items-center justify-center py-4 px-12 text-white text-base font-black hidden xl:flex">
+									<div className="bg-champagne-pink rounded-full items-center justify-center py-4 px-12 text-white text-base font-black hidden xl:flex text-[10px] xl:text-[20px]">
 										<p className="my-auto">
 											Activate your campus
 										</p>

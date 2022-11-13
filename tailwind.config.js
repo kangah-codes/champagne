@@ -108,5 +108,8 @@ module.exports = {
 			display: ["group-hover"],
 		},
 	},
-	plugins: [require("@plaiceholder/tailwindcss")],
+	plugins: [
+		require("@plaiceholder/tailwindcss"),
+		require("@tailwindcss/line-clamp"),
+	],
 };
