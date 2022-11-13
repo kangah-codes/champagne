@@ -177,7 +177,9 @@ const SuccessForm = () => {
 							<button
 								onClick={() => {
 									navigator.clipboard.writeText(
-										`https://champagne-topaz.vercel.app/share/${formData["College Name"]}`
+										`https://champagne-topaz.vercel.app/share/${formData[
+											"College Name"
+										].replace(/ /g, "+")}`
 									);
 								}}
 								className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black"
