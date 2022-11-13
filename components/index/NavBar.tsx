@@ -183,7 +183,7 @@ const NavBar = () => {
 									happen for college students
 								</p>
 							</div>
-							<div className="flex flex-col space-y-5 w-full">
+							<div className="flex flex-col space-y-5 w-full px-4">
 								<button
 									className="bg-champagne-pink rounded-full flex items-center justify-center py-4 w-full text-white text-base font-black text-[15px]"
 									onClick={() => setIsOpen(true)}
