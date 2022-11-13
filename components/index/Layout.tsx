@@ -49,7 +49,10 @@ const Layout = ({
 				<link rel="icon" href="/images/logo.svg" />
 				<meta
 					property="og:image"
-					content={`https://champagne-topaz.vercel.app/api/og?title=${college}`}
+					content={`https://champagne-topaz.vercel.app/api/og?title=${college!.replace(
+						/ /g,
+						"+"
+					)}`}
 				/>
 			</Head>
 
