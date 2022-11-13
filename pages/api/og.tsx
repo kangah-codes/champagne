@@ -20,47 +20,53 @@ export default function handler(req: NextRequest) {
 			(
 				<div
 					style={{
-						backgroundColor: "black",
-						backgroundSize: "150px 150px",
 						height: "100%",
 						width: "100%",
 						display: "flex",
-						textAlign: "center",
+						flexDirection: "column",
 						alignItems: "center",
 						justifyContent: "center",
-						flexDirection: "column",
-						flexWrap: "nowrap",
+						backgroundColor: "white",
 					}}
 				>
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-							justifyItems: "center",
-						}}
-					>
-						<img
-							alt="Champagne"
-							height={200}
-							src="data:image/svg+xml,%3Csvg width='116' height='100' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.5 0L115 100H0L57.5 0z' /%3E%3C/svg%3E"
-							style={{ margin: "0 30px" }}
-							width={232}
-						/>
-					</div>
-					<div
-						style={{
-							fontSize: 60,
-							fontStyle: "normal",
-							letterSpacing: "-0.025em",
-							color: "white",
-							marginTop: 30,
-							padding: "0 120px",
-							lineHeight: 1.4,
-							whiteSpace: "pre-wrap",
-						}}
-					>
-						{title}
+					<div className="w-full md:w-[70%] xl:w-[404px] h-[278px] xl:h-[409px] p-5 rounded-[14px] bg-white flex flex-col justify-between z-10">
+						<div className="flex flex-row justify-between w-full">
+							{/* <div className="flex flex-row space-x-2">
+								<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
+									<LinkIcon className="text-champagne-light-gray w-5 h-5" />
+									<p className="text-black text-[10px] leading-[10px] xl:text-[16px] font-anton xl:leading-[16px]">
+										Copy Card Link
+									</p>
+								</div>
+								<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
+									<img
+										className="w-[15px] h-[15px] xl:w-[28px] xl:h-[28px] cursor-pointer"
+										src="/images/emojis/dice.png"
+										alt="Champagne Logo"
+									/>
+								</div>
+							</div> */}
+
+							<img
+								className="w-[80px] xl:w-[103px] cursor-pointer"
+								src="/images/logo.svg"
+								alt="Champagne Logo"
+							/>
+						</div>
+
+						<div>
+							<h1 className="text-[29px] leading-[29px] xl:text-[44px] font-anton xl:leading-[44px] text-black">
+								Checkout the most eligible{" "}
+								<span className="text-champagne-light-blue">
+									bachelors
+								</span>{" "}
+								&{" "}
+								<span className="text-champagne-pink">
+									bachelorettes
+								</span>{" "}
+								in {title}
+							</h1>
+						</div>
 					</div>
 				</div>
 			),
