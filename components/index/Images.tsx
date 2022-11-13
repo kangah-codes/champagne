@@ -6,7 +6,7 @@ export default function Images() {
 	return (
 		<div className="w-full flex overflow-hidden px-4 relative">
 			<div className="w-full  xl:max-w-screen-2xl mx-auto flex items-center justify-center">
-				<div className="mx-auto py-[12rem] w-full">
+				<div className="mx-auto py-[5rem] xl:py-[12rem] w-full">
 					<div className="m-auto gap-10 xl:gap-5 relative w-full grid grid-cols-3 xl:grid-cols-4 items-start">
 						<img
 							alt="img"
