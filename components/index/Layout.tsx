@@ -48,7 +48,7 @@ const Layout = ({
 				<link rel="icon" href="/images/logo.svg" />
 				<meta
 					property="og:image"
-					content="https://my-og-img.vercel.app/api/og?title=my post title"
+					content="https://champagne-topaz.vercel.app/api/og?title=my post title"
 				/>
 			</Head>
 
