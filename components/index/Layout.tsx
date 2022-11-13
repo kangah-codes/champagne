@@ -21,6 +21,10 @@ const Layout = ({
 	desc = `Champagne`,
 	footer = true,
 }) => {
+	//get params
+	const params = new URLSearchParams(window.location.search);
+	const college = params.get("college");
+
 	return (
 		<div className="flex flex-col min-h-screen">
 			<Head>
@@ -48,7 +52,7 @@ const Layout = ({
 				<link rel="icon" href="/images/logo.svg" />
 				<meta
 					property="og:image"
-					content="https://champagne-topaz.vercel.app/api/og?title=my post title"
+					content={`https://champagne-topaz.vercel.app/api/og?title=${college}`}
 				/>
 			</Head>
 
