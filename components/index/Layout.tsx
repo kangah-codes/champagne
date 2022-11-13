@@ -35,7 +35,7 @@ const Layout = ({
 				/>
 				<meta
 					name="keywords"
-					content="Insurance, Online Insurance, Motor Insurance, Life Insurance, Digital Insurance, E-Insurance, Car Insurance"
+					content="Dating, Champagne, College Dating"
 				/>
 				<meta name="author" content="Champagne Digital" />
 				<meta property="og:site_name" content="Champagne Digital" />
@@ -46,6 +46,10 @@ const Layout = ({
 				<meta name="twitter:site" content="@propernounco" />
 				<meta name="twitter:creator" content="@propernounco" />
 				<link rel="icon" href="/images/logo.svg" />
+				<meta
+					property="og:image"
+					content="https://my-og-img.vercel.app/api/og?title=my post title"
+				/>
 			</Head>
 
 			<div className="sticky top-0 z-50">
