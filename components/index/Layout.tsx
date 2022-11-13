@@ -12,19 +12,20 @@ interface LayoutProps {
 	pt?: boolean;
 	college?: string;
 	footer?: boolean;
-	props?: any;
 }
 
-export const getServerSideProps = async (context: any) => {
-	return { props: { college: context.params.college } };
-};
-
-const Layout = (props: any) => {
-	console.log(props);
+const Layout = ({
+	// @ts-ignore
+	children,
+	title = "Champagne",
+	desc = `Champagne`,
+	footer = true,
+	college,
+}: LayoutProps) => {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<Head>
-				{/* <title>{title}</title>
+				<title>{title}</title>
 				<meta name="description" content={desc} />
 				<meta property="og:type" content="website" />
 				<meta name="og:title" property="og:title" content={title} />
@@ -49,7 +50,7 @@ const Layout = (props: any) => {
 				<meta
 					property="og:image"
 					content={`https://champagne-topaz.vercel.app/api/og?title=${college}`}
-				/> */}
+				/>
 			</Head>
 
 			<div className="sticky top-0 z-50">
@@ -57,8 +58,8 @@ const Layout = (props: any) => {
 				<Modal />
 			</div>
 
-			<div className="flex-grow overflow-hidden">{props.children}</div>
-			{props.footer && <Footer />}
+			<div className="flex-grow overflow-hidden">{children}</div>
+			{footer && <Footer />}
 		</div>
 	);
 };
