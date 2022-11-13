@@ -40,7 +40,10 @@ const Layout = ({
 				/>
 				<meta name="author" content="Champagne" />
 				<meta property="og:site_name" content="Champagne" />
-				<meta property="og:url" content={`https://Champagne.com`} />
+				<meta
+					property="og:url"
+					content={`https://champagne-topaz.vercel.app`}
+				/>
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:title" content={title} />
 				<meta name="twitter:description" content={desc} />
@@ -49,10 +52,9 @@ const Layout = ({
 				<link rel="icon" href="/images/logo.svg" />
 				<meta
 					property="og:image"
-					content={`https://champagne-topaz.vercel.app/api/og?title=${college?.replace(
-						/ /g,
-						"+"
-					)}`}
+					content={`https://champagne-topaz.vercel.app/api/og?title=${
+						college?.replace(/ /g, "+") || "Champagne"
+					}`}
 				/>
 			</Head>
 
