@@ -118,7 +118,7 @@ function Hero({
 									contact to activate Champagne app in your
 									college.
 								</h1>{" "}
-								<div className="flex flex-row w-full justify-between pt-4">
+								<div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-full justify-between pt-4 max-w-3xl mx-auto">
 									<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 lg:px-5 2xl:py-3 2xl:px-6 text-base font-black">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ function Hero({
 											/>
 										</svg>
 
-										<p className="text-[13px] leading-[13px] lg:text-[15px] lg:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
+										<p className="text-[13px] leading-[13px] lg:text-[15px] lg:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px] truncate">
 											Share with friends
 										</p>
 									</div>
