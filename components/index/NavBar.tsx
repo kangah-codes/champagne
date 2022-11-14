@@ -35,7 +35,7 @@ const NavBar = () => {
 							<Link href="/">
 								<img
 									className="w-[152px] xl:w-[252px] cursor-pointer"
-									src="/images/logo.svg"
+									src="/images/logo.png"
 									alt="Champagne Logo"
 								/>
 							</Link>
@@ -45,7 +45,7 @@ const NavBar = () => {
 								className="bg-champagne-pink rounded-full flex items-center justify-center py-2 px-4 xl:py-4 xl:px-12 text-white text-base font-black text-[10px] xl:text-[20px]"
 								onClick={() => setIsOpen(true)}
 							>
-								Join Wailist
+								Join Waitlist
 							</button>
 							<Link href="/leaderboard">
 								<div className="bg-champagne-pink rounded-full items-center justify-center py-4 px-12 text-white text-base font-black hidden xl:flex text-[10px] xl:text-[20px]">
@@ -120,7 +120,7 @@ const NavBar = () => {
 					ref={ref1}
 					onMouseEnter={() => setMenu1(true)}
 					onMouseLeave={() => setMenu1(false)}
-					className="absolute left-0 -top-0 bg-champagne-yellow  md:bg-white py-10 transform px-2 sm:px-0 w-full"
+					className="absolute left-0 -top-0 bg-white py-10 transform px-2 sm:px-0 w-full"
 					style={{ zIndex: 99999999999999 }}
 				>
 					<span
@@ -169,7 +169,7 @@ const NavBar = () => {
 							<div className="flex flex-col items-center">
 								<img
 									className="w-[152px] xl:w-[252px] cursor-pointer"
-									src="/images/logo.svg"
+									src="/images/logo.png"
 									alt="Champagne Logo"
 								/>
 
@@ -186,7 +186,7 @@ const NavBar = () => {
 									className="bg-champagne-pink rounded-full flex items-center justify-center py-4 w-full text-white text-base font-black text-[15px]"
 									onClick={() => setIsOpen(true)}
 								>
-									Join Wailist
+									Join Waitlist
 								</button>
 								<Link href="/leaderboard">
 									<div className="bg-champagne-pink rounded-full items-center justify-center py-4 w-full text-white text-base font-black flex text-[15px]">

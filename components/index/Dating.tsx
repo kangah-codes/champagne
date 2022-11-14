@@ -1,8 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { modalState } from "../../recoil";
 
 function Content1() {
+	const [isOpen, setIsOpen] = useRecoilState(modalState);
+
 	return (
 		<div className="w-full flex flex-col mt-5 md:mt-0">
 			<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full">
@@ -18,8 +23,11 @@ function Content1() {
 						className="w-[48px] h-[48px] xl:w-[93px] xl:h-[77px]"
 					/>
 				</div>
-				<div className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] xl:text-[32px] font-black">
-					<p className="my-auto">Get Early Access</p>
+				<div
+					onClick={() => setIsOpen(true)}
+					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] xl:text-[32px] font-black"
+				>
+					<p className="my-auto">Join Waitlist</p>
 				</div>
 				<div className="flex flex-row -space-x-16 md:-space-x-10 self-end">
 					<Image
@@ -197,11 +205,13 @@ export default function Dating() {
 											Make and connect with new friends at
 											your college
 										</h1>
-										<div className="bg-champagne-light-blue rounded-full rotate-[-356deg] xl:my-auto flex items-center justify-center py-4 px-12 my-5 xl:mt-14 text-black text-[18px] xl:text-[32px] font-black">
-											<p className="my-auto">
-												Active your campus
-											</p>
-										</div>
+										<Link href="/leaderboard">
+											<div className="bg-champagne-light-blue rounded-full rotate-[-356deg] xl:my-auto flex items-center justify-center py-4 px-12 my-5 xl:mt-14 text-black text-[18px] xl:text-[32px] font-black">
+												<p className="my-auto">
+													Activate your campus
+												</p>
+											</div>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -310,7 +320,7 @@ export default function Dating() {
 											/>
 										</div>
 										<div className="flex flex-col space-y-2 self-end">
-											<p className="text-[9px] leading-[9px] xl:text-[14px] font-black xl:leading-[14px] text-champagne-light-gray">
+											<p className="text-[9px] leading-[9px] xl:text-[14px] font-black xl:leading-[14px] text-[#16b5bc]">
 												Picked
 											</p>
 											<div className="p-5 h-[48px] xl:h-[85px] bg-white rounded-[10px] xl:rounded-[18px] flex flex-col-reverse bottom-5 left-5 space-y-2 self-end">
