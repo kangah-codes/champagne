@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function Content1() {
 	return (
-		<div className="w-full flex flex-col">
+		<div className="w-full flex flex-col mt-5 md:mt-0">
 			<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full">
 				Champagne - a dating and <br />
 				friendship app for college
@@ -21,7 +21,7 @@ function Content1() {
 				<div className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] xl:text-[32px] font-black">
 					<p className="my-auto">Get Early Access</p>
 				</div>
-				<div className="flex flex-row -space-x-10 self-end">
+				<div className="flex flex-row -space-x-16 md:-space-x-10 self-end">
 					<Image
 						width={324}
 						height={412}
@@ -90,15 +90,15 @@ export default function Dating() {
 			<div className="w-full max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="mx-auto w-full flex flex-col space-y-32">
 					<div className="relative w-full">
-						<div className="bg-white z-10 absolute rotate-[355deg] border-[3px] border-black -left-[10px] xl:-left-[30px] xl:top-5">
-							<div className="relative px-2 xl:py-5 xl:px-10">
+						<div className="bg-white z-10 absolute rotate-[355deg] border-[3px] border-black left-2 2xl:-left-[30px] 2xl:top-5">
+							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
 									dating
 								</p>
 							</div>
 						</div>
-						<div className="bg-white z-[5] absolute rotate-[355deg] border-[3px] border-black -left-[15px] top-2 xl:-left-[36px] xl:top-7">
-							<div className="relative px-2 xl:py-5 xl:px-10">
+						<div className="bg-white z-[5] absolute rotate-[355deg] border-[3px] border-black left-0 top-2 2xl:-left-[36px] 2xl:top-7">
+							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
 									dating
 								</p>
@@ -137,15 +137,15 @@ export default function Dating() {
 					</div>
 
 					<div className="relative w-full">
-						<div className="bg-white z-10 absolute rotate-[355deg] border-[3px] border-black -right-[25px] -top-8">
-							<div className="relative px-2 xl:py-5 xl:px-10">
+						<div className="bg-white z-10 absolute rotate-[355deg] border-[3px] border-black right-0 2xl:-right-[25px] -top-8">
+							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-light-blue font-black">
 									friendz
 								</p>
 							</div>
 						</div>
-						<div className="bg-white z-[5] absolute rotate-[355deg] border-[3px] border-black -right-[19px] -top-6">
-							<div className="relative px-2 xl:py-5 xl:px-10">
+						<div className="bg-white z-[5] absolute rotate-[355deg] border-[3px] border-black right-[0.6rem] 2xl:-right-[19px] -top-6">
+							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-light-blue font-black">
 									friendz
 								</p>
@@ -155,11 +155,12 @@ export default function Dating() {
 							<div className="w-full flex flex-col-reverse xl:flex-row space-y-5 xl:space-y-0 xl:space-x-24 items-start justify-between relative">
 								<div className="flex flex-col w-full xl:w-1/3 space-y-8">
 									<div className="relative self-end">
-										<Image
+										<img
 											width={363}
 											height={284}
 											alt="Champagne app mockup"
 											src="/images/content/guy-4.png"
+											className="w-[223px] h-[175px] xl:w-[363px] xl:h-[284px]"
 										/>
 
 										<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2">
@@ -172,11 +173,12 @@ export default function Dating() {
 										</div>
 									</div>
 									<div className="relative">
-										<Image
+										<img
 											width={363}
 											height={284}
 											alt="Champagne app mockup"
 											src="/images/content/woman-4.png"
+											className="w-[223px] h-[175px] xl:w-[363px] xl:h-[284px]"
 										/>
 
 										<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 left-5 space-y-2">
@@ -207,7 +209,7 @@ export default function Dating() {
 					</div>
 
 					<div className="relative w-full flex flex-col -space-y-5">
-						<div className="bg-white z-20 absolute rotate-[-355deg] border-[3px] border-black -left-[10px] -top-10 xl:-left-[30px] xl:top-5">
+						{/* <div className="bg-white z-20 absolute rotate-[-355deg] border-[3px] border-black -left-[10px] -top-10 xl:-left-[30px] xl:top-5">
 							<div className="relative px-2 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
 									games
@@ -220,9 +222,23 @@ export default function Dating() {
 									games
 								</p>
 							</div>
+						</div> */}
+						<div className="bg-white z-20 absolute rotate-[-355deg] border-[3px] border-black left-2 -top-10 2xl:-left-[30px] 2xl:top-5">
+							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
+								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
+									games
+								</p>
+							</div>
+						</div>
+						<div className="bg-white z-[19] absolute rotate-[-355deg] border-[3px] border-black left-0 -top-3 2xl:-left-[36px] 2xl:top-7">
+							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
+								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
+									games
+								</p>
+							</div>
 						</div>
 						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] rotate-[1deg] xl:rounded-[73px] flex flex-col xl:flex-row p-5 md:p-10 xl:p-16 z-[15] bg-white">
-							<div className="w-full xl:w-2/3 flex flex-col items-start xl:gap-y-10">
+							<div className="w-full xl:w-2/3 flex flex-col items-start xl:gap-y-10 mt-5 xl:mt-0">
 								<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full xl:pt-20 rotate-[-1deg]">
 									Checkout the most eligible{" "}
 									<span className="text-champagne-light-blue">
@@ -238,8 +254,8 @@ export default function Dating() {
 									<p className="my-auto">Join Waitlist</p>
 								</div>
 							</div>
-							<div className="w-full xl:w-1/3 flex flex-col items-start justify-between relative">
-								<div className="p-5 w-[130px] xl:w-[230px] rounded-[18px] bg-champagne-pink flex flex-col h-[102px] xl:h-[195px] justify-between rotate-[-1deg]">
+							<div className="w-full xl:w-1/3 flex flex-col -space-y-6 xl:-space-y-0 items-start justify-between relative">
+								<div className="p-5 w-[130px] md:w-[230px] rounded-[18px] bg-champagne-pink flex flex-col h-[102px] xl:h-[195px] justify-between rotate-[-1deg]">
 									<div className="flex flex-col space-y-2">
 										<p className="text-[18px] xl:text-[35px] font-anton leading-[18px] xl:leading-[35px] text-white">
 											Claire Mary
@@ -280,7 +296,7 @@ export default function Dating() {
 						<div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-x-10 w-full">
 							<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[73px] flex flex-row p-5 md:p-10 xl:p-16 rotate-[-1deg] bg-white z-10">
 								<div className="w-full flex flex-col justify-between items-start">
-									<div className="p-5 w-[208px] xl:w-[371px] rounded-[18px] bg-champagne-light-blue flex flex-col items-start justify-between rotate-[-1deg] space-y-10">
+									<div className="p-5 w-[208px] md:w-[371px] rounded-[18px] bg-champagne-light-blue flex flex-col items-start justify-between rotate-[-1deg] space-y-10">
 										<div className="flex flex-row justify-between space-x-2 items-center">
 											<p className="text-[15px] leading-[15px] xl:text-[28px] font-anton xl:leading-[28px] text-white">
 												Most love person <br />

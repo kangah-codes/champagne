@@ -4,10 +4,15 @@ import Image from "next/image";
 
 export default function Images() {
 	return (
-		<div className="w-full flex overflow-hidden px-4 relative">
-			<div className="w-full  xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+		<div className="w-full flex overflow-hidden  relative">
+			<div className="w-full xl:max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem] xl:py-[12rem] w-full">
-					<div className="m-auto gap-10 xl:gap-5 relative w-full grid grid-cols-3 xl:grid-cols-4 items-start">
+					<img
+						alt="img"
+						src="/images/content/group-mobile.png"
+						className="w-screen block md:hidden"
+					/>
+					<div className="m-auto px-4 gap-10 xl:gap-5 relative w-full grid-cols-3 xl:grid-cols-4 items-start hidden md:grid">
 						<img
 							alt="img"
 							src="/images/content/group-1.png"

@@ -120,7 +120,7 @@ const NavBar = () => {
 					ref={ref1}
 					onMouseEnter={() => setMenu1(true)}
 					onMouseLeave={() => setMenu1(false)}
-					className="absolute left-0 -top-0 bg-white py-10 transform px-2 sm:px-0 w-full"
+					className="absolute left-0 -top-0 bg-champagne-yellow  md:bg-white py-10 transform px-2 sm:px-0 w-full"
 					style={{ zIndex: 99999999999999 }}
 				>
 					<span
