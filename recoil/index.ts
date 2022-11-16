@@ -5,6 +5,16 @@ export const modalState = atom({
 	default: false,
 });
 
+export const shareModalState = atom({
+	key: "shareModalState",
+	default: false,
+});
+
+export const shareModalSchoolState = atom<string | undefined>({
+	key: "shareModalSchoolState",
+	default: undefined,
+});
+
 export const reqSuccessfulState = atom({
 	key: "reqSuccessfulState",
 	default: false,

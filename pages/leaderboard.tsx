@@ -3,9 +3,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
 import Dating from "../components/index/Dating";
 import Images from "../components/index/Images";
 import Layout from "../components/index/Layout";
+import ShareModal from "../components/ShareModal";
+import { shareModalSchoolState, shareModalState } from "../recoil";
 import { table } from "../utils/airtable";
 import getNumberSuffix from "../utils/helpers";
 
@@ -64,7 +67,8 @@ function Hero({
 		.sort((a, b) => b[1] - a[1])
 		.map((school) => school[0]);
 
-	console.log(originalPositions);
+	const [isOpen, setIsOpen] = useRecoilState(shareModalState);
+	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 
 	const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { value } = e.target;
@@ -103,7 +107,7 @@ function Hero({
 							<p className="text-champagne-light-gray text-[9px] leading-[9px] lg1:text-[15px] lg1:leading-[15px] font-black">
 								Number of signups
 							</p>
-							<h1 className="text-[66px] leading-[66px] lg1:text-[141px] font-anton lg1:leading-[141px] text-black">
+							<h1 className="text-[66px] leading-[66px] lg1:text-[141px] font-anton lg1:leading-[141px] text-black text-center">
 								{signups}
 							</h1>{" "}
 						</div>
@@ -111,12 +115,14 @@ function Hero({
 							<p className="text-champagne-light-gray text-[9px] leading-[9px] lg1:text-[15px] lg1:leading-[15px] font-black">
 								School represented
 							</p>
-							<h1 className="text-[66px] leading-[66px] lg1:text-[141px] font-anton lg1:leading-[141px] text-black">
+							<h1 className="text-[66px] leading-[66px] lg1:text-[141px] font-anton lg1:leading-[141px] text-black text-center">
 								{uniqueSchools}
 							</h1>{" "}
 						</div>
 					</div>
 				</div>
+
+				<ShareModal />
 
 				<div className="w-full flex mx-auto h-full">
 					<div className="mx-auto w-full">
@@ -126,17 +132,32 @@ function Hero({
 									How to activate your campus
 								</p>
 								<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
-									Invite or share Champagne app with your
-									schoolmates.{" "}
+									<span className="text-champagne-pink">
+										Invite
+									</span>{" "}
+									or{" "}
+									<span className="text-champagne-light-blue">
+										share
+									</span>{" "}
+									Champagne app with your schoolmates.{" "}
 								</h1>
 								<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
-									Champagne will be activated on your campus
-									when 200 or more students join the waitlist
+									<span className="text-champagne-pink">
+										Champagne
+									</span>{" "}
+									will be activated on your campus when{" "}
+									<span className="text-champagne-light-blue">
+										200 or more students
+									</span>{" "}
+									join the waitlist
 								</h1>{" "}
 								<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
 									Share with friends on your socials or your
-									contact to activate Champagne app in your
-									college.
+									contact to activate{" "}
+									<span className="text-champagne-pink">
+										Champagne app
+									</span>{" "}
+									in your college.
 								</h1>{" "}
 								<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
 									<div className="bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black">
@@ -238,14 +259,14 @@ function Hero({
 				<div className="w-full pb-[8rem] flex flex-col">
 					{/* <div className="w-full max-w-5xl lg1:max-w-7xl mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem]"></div> */}
-					<div className="relative w-full mx-auto flex flex-row items-center justify-between self-end pl-0 lg1:pl-16">
+					<div className="relative w-full mx-auto flex flex-col lg1:flex-row items-center justify-between self-end pl-0 lg1:pl-16">
 						<h1 className="text-[47px] leading-[47px] lg1:text-[62px] lg1:leading-[62px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] text-center lg1:text-left 2xl:text-[97px] font-anton 2xl:leading-[92px] text-black w-full ">
 							College Hallway
 							<br />
 							Ranking 🍾
 						</h1>
 
-						<div className="relative p-2 w-[280px]">
+						<div className="relative p-2 w-full mt-5 lg1:mt-0 lg1:w-[280px]">
 							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -333,17 +354,23 @@ function Hero({
 													)}
 												</h1>
 											</div>
-											<div className="flex flex-col max-w-md mt-8 lg1:mt-0">
+											<div className="flex flex-col w-full lg1:max-w-[80%] mt-8 lg1:mt-0">
 												<h1 className="uppercase text-[9px] leading-[9px] lg1:text-[18px] font-black lg1:leading-[18px]">
 													{item[1]} student
 													{item[1] > 1 ? "s" : ""}
 												</h1>
-												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[80px] w-full line-clamp-2">
+												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[80px] w-full line-clamp-2 break-words">
 													{item[0]}
 												</h1>
 											</div>
 
-											<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40">
+											<div
+												onClick={() => {
+													setShareSchool(item[0]);
+													setIsOpen(true);
+												}}
+												className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
+											>
 												<p className="text-[20px] font-anton leading-[20px]">
 													Share
 												</p>
@@ -361,17 +388,23 @@ function Hero({
 												)}
 											</h1>
 										</div>
-										<div className="flex flex-col max-w-2xl mt-8 lg1:mt-0">
+										<div className="flex flex-col w-full lg1:max-w-[80%] mt-8 lg1:mt-0">
 											<h1 className="uppercase text-[9px] leading-[9px] lg1:text-[18px] font-black lg1:leading-[18px]">
 												{item[1]} student
 												{item[1] > 1 ? "s" : ""}
 											</h1>
-											<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full">
+											<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words">
 												{item[0]}
 											</h1>
 										</div>
 
-										<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40">
+										<div
+											onClick={() => {
+												setShareSchool(item[0]);
+												setIsOpen(true);
+											}}
+											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
+										>
 											<p className="text-[20px] font-anton leading-[20px]">
 												Share
 											</p>

@@ -101,3 +101,7 @@ select {
   background-repeat: no-repeat;
   background-position: calc(100% - 30px) center;
 } */
+
+select {
+  border-right: 32px solid transparent
+}

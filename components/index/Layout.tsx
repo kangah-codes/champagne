@@ -35,6 +35,14 @@ const Layout = ({
 					content={desc}
 				/>
 				<meta
+					property="og:image"
+					content="https://champagne-topaz.vercel.app/api/og/Your+Campus"
+				/>
+				<meta
+					property="snapchat:sticker"
+					content="https://champagne-topaz.vercel.app/api/og/Your+Campus"
+				/>
+				<meta
 					name="keywords"
 					content="Dating, Champagne, College Dating"
 				/>
@@ -49,7 +57,7 @@ const Layout = ({
 				<meta name="twitter:description" content={desc} />
 				<meta name="twitter:site" content="@propernounco" />
 				<meta name="twitter:creator" content="@propernounco" />
-				<link rel="icon" href="/images/logo.svg" />
+				<link rel="icon" href="/images/logo.svg" type="image/x-icon" />
 				<meta
 					property="og:image"
 					content={`https://champagne-topaz.vercel.app/api/og?title=${

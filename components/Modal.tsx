@@ -1,16 +1,178 @@
 /* eslint-disable @next/next/no-img-element */
-import { Transition, Dialog } from "@headlessui/react";
+import { Transition, Dialog, Listbox, Combobox } from "@headlessui/react";
 import { LinkIcon } from "@heroicons/react/24/outline";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState, useRef } from "react";
 import { useRecoilState } from "recoil";
 import { formDataState, modalState, reqSuccessfulState } from "../recoil";
 import { colleges } from "../utils/data";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import classNames from "classnames";
+import { useVirtualizer } from "@tanstack/react-virtual";
+
+const people = [
+	{ name: "Wade Cooper" },
+	{ name: "Arlene Mccoy" },
+	{ name: "Devon Webb" },
+	{ name: "Tom Cook" },
+	{ name: "Tanya Fox" },
+	{ name: "Hellen Schmidt" },
+];
+
+type Props = {
+	name?: string;
+	items?: string[];
+	label?: string;
+	onChange?: (event: { target: any; type?: any }) => Promise<void | boolean>;
+	children?: never;
+	className: string;
+};
+
+function Select({ name, label, items, className, onChange }: Props) {
+	const [selected, setSelected] = useState<string>();
+	const [query, setQuery] = useState("");
+	const btnRef = useRef<HTMLButtonElement>(null);
+
+	const filteredItems =
+		query === ""
+			? items
+			: items?.filter((item: string) =>
+					(item ?? "")
+						.toLowerCase()
+						.replace(/\s+/g, "")
+						.includes(query.toLowerCase().replace(/\s+/g, ""))
+			  ) ?? [];
+
+	var classes = classNames(
+		// "relative w-full cursor-default overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300",
+		// "mt-1 block w-full h-9 bg-background-grey border rounded text-base text-dark-grey shadow-sm placeholder-light-grey focus:bg-white focus:outline-none focus:border-accent-purple focus:ring-2 focus:ring-accent-light disabled:bg-light-grey disabled:text-light-grey disabled:border-light-grey disabled:shadow-none invalid:border-red-100 invalid:text-light-grey focus:invalid:border-red-100 focus:invalid:ring-red-100 leading-none border-light-grey",
+		className
+	);
+
+	return (
+		<Combobox
+			value={selected}
+			onChange={(v) => {
+				setSelected(v);
+				onChange?.({ target: { name, value: v } });
+			}}
+		>
+			<div className={classes}>
+				<Combobox.Input
+					onFocus={(e: any) => {
+						e.target.select();
+						if (!e.relatedTarget) {
+							btnRef?.current?.click();
+						}
+					}}
+					className="w-full border-none text-sm leading-5 text-gray-900 focus:outline-none"
+					displayValue={(item: string) => item ?? ""}
+					onChange={(event) => setQuery(event.target.value)}
+				/>
+				<Combobox.Button
+					ref={btnRef}
+					className="absolute inset-y-0 right-0 flex items-center pr-2"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="14.541"
+						height="8.314"
+						viewBox="0 0 14.541 8.314"
+					>
+						<path
+							id="Icon_ionic-ios-arrow-down"
+							data-name="Icon ionic-ios-arrow-down"
+							d="M13.461,17.054l5.5-5.5a1.035,1.035,0,0,1,1.468,0,1.048,1.048,0,0,1,0,1.472L14.2,19.258a1.037,1.037,0,0,1-1.433.03l-6.273-6.26a1.039,1.039,0,0,1,1.468-1.472Z"
+							transform="translate(-6.188 -11.246)"
+						/>
+					</svg>
+				</Combobox.Button>
+			</div>
+
+			<Combobox.Options className="relative">
+				{filteredItems?.length === 0 && query !== "" ? (
+					<div className="relative cursor-default select-none py-2 px-4 text-gray-700">
+						Nothing found.
+					</div>
+				) : (
+					<VirtualizedList items={filteredItems ?? []} />
+				)}
+			</Combobox.Options>
+		</Combobox>
+	);
+}
+
+function VirtualizedList({ items }: { items: string[] }) {
+	const parentRef = useRef<HTMLDivElement>(null);
+
+	const rowVirtualizer = useVirtualizer({
+		count: items?.length,
+		getScrollElement: () => parentRef.current,
+		estimateSize: () => 35,
+		overscan: 5,
+	});
+
+	return (
+		<div
+			ref={parentRef}
+			className="absolute inset-0 z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+		>
+			<div
+				style={{
+					height: `${rowVirtualizer.getTotalSize()}px`,
+					width: "100%",
+					position: "relative",
+				}}
+			>
+				{rowVirtualizer.getVirtualItems().map((virtualRow: any) => (
+					<Combobox.Option
+						key={virtualRow.index}
+						style={{
+							position: "absolute",
+							top: 0,
+							left: 0,
+							width: "100%",
+							height: `${virtualRow.size}px`,
+							transform: `translateY(${virtualRow.start}px)`,
+						}}
+						className={({ active }) =>
+							`relative cursor-default select-none py-2 pl-2 pr-4 ${
+								active
+									? "bg-dark-grey text-white"
+									: "text-gray-900"
+							}`
+						}
+						value={items?.[virtualRow.index]}
+					>
+						{({ selected, active }) => (
+							<span
+								className={`block truncate ${
+									selected ? "font-medium" : "font-normal"
+								}`}
+							>
+								{items?.[virtualRow.index]}
+							</span>
+						)}
+					</Combobox.Option>
+				))}
+			</div>
+		</div>
+	);
+}
 
 const DataForm = () => {
 	const [formData, setFormData] = useRecoilState(formDataState);
 	const [reqSuccessful, setReqSuccessful] =
 		useRecoilState(reqSuccessfulState);
 	const [loading, setLoading] = useState(false);
+	const [selected, setSelected] = useState(people[0]);
+	const parentRef = useRef<HTMLDivElement>(null);
+
+	const rowVirtualizer = useVirtualizer({
+		count: colleges.length,
+		getScrollElement: () => parentRef.current,
+		estimateSize: () => 35,
+		overscan: 5,
+	});
 
 	const onSubmit = () => {
 		setLoading(true);
@@ -109,12 +271,20 @@ const DataForm = () => {
 					<option className="text-champagne-light-gray">
 						Pick your college
 					</option>
+
 					{colleges.map((college, index) => (
 						<option key={index} value={college}>
 							{college}
 						</option>
 					))}
 				</select>
+
+				{/* <Select
+					name="LOL"
+					label="LOL"
+					items={colleges}
+					className="relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full"
+				/> */}
 				<select
 					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your year"
@@ -145,10 +315,22 @@ const DataForm = () => {
 
 const SuccessForm = () => {
 	const [formData, setFormData] = useRecoilState(formDataState);
+	const [diceIndex, setDiceIndex] = useState(0);
+
+	const diceOptions = [
+		`Sign up for the newest and fun dating experience in ${formData["College Name"]}`,
+		`Check how your campus is ranking on champagne app`,
+		`Come and boost SJUS on Champagne leaderboard. Attached to link`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
+		`Wanna be the prom queen or prom king at ${formData["College Name"]}? Join the Champagne app - the new dating and fun friendship experience on campus! Attached to link`,
+		`Come and follow all the gists on ${formData["College Name"]} Campus. Sign up for Champagne App. Attached to link`,
+		`Champagne - dating, friendship, games, social and banking app at ${formData["College Name"]}. Join the fun! Attached to link`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${formData["College Name"]}. Attached to link`,
+	];
 
 	return (
-		<div className="flex flex-col xl:flex-row p-5 xl:p-14 w-full">
-			<div className="flex flex-col w-full my-auto">
+		<div className="flex flex-col lg1:flex-row p-5 lg1:p-14 w-full space-x-10">
+			<div className="flex flex-col w-full lg1:w-1/2 my-auto">
 				<img
 					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
 					src="/images/logo.svg"
@@ -189,7 +371,16 @@ const SuccessForm = () => {
 									Copy Card Link
 								</p>
 							</button>
-							<div className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black">
+							<div
+								onClick={() => {
+									if (diceIndex > diceOptions.length - 2) {
+										setDiceIndex(0);
+									} else {
+										setDiceIndex(diceIndex + 1);
+									}
+								}}
+								className="cursor-pointer bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black"
+							>
 								<img
 									className="w-[15px] h-[15px] xl:w-[28px] xl:h-[28px] cursor-pointer"
 									src="/images/emojis/dice.png"
@@ -206,16 +397,8 @@ const SuccessForm = () => {
 					</div>
 
 					<div>
-						<h1 className="text-[29px] leading-[29px] xl:text-[44px] font-anton xl:leading-[44px] text-black">
-							Checkout the most eligible{" "}
-							<span className="text-champagne-light-blue">
-								bachelors
-							</span>{" "}
-							&{" "}
-							<span className="text-champagne-pink">
-								bachelorettes
-							</span>{" "}
-							in {formData["College Name"]}
+						<h1 className="text-[29px] leading-[29px] xl:text-[44px] font-anton xl:leading-[44px] text-black line-clamp-5">
+							{diceOptions[diceIndex]}
 						</h1>
 					</div>
 				</div>
@@ -228,8 +411,8 @@ const SuccessForm = () => {
 					</p>
 				</div>
 
-				<div className="flex flex-row space-x-3">
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black">
+				<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3">
+					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="18.725"
@@ -245,12 +428,12 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[14px] leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share
 						</p>
 					</div>
 
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black">
+					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="17.145"
@@ -266,12 +449,12 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[14px] leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share
 						</p>
 					</div>
 
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black">
+					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="17.145"
@@ -287,17 +470,18 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[14px] leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share
 						</p>
 					</div>
 
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black">
+					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="21.203"
 							height="21.203"
 							viewBox="0 0 21.203 21.203"
+							className="w-[15px] h-[15px] lg:w-[21px] lg:h-[21px]"
 						>
 							<path
 								id="Icon_feather-message-square"
@@ -312,7 +496,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[14px] leading-[14px] xl:text-[20px] font-anton xl:leading-[20px] truncate">
+						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px] truncate">
 							Share with friends
 						</p>
 					</div>
@@ -369,7 +553,7 @@ export default function Modal() {
 					>
 						<div
 							className={`
-									py-5 my-8 inline-block w-full max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl transform overflow-hidden 
+									py-5 my-8 inline-block w-full max-w-[866px] lg1:max-w-[80%] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-xl transform overflow-hidden 
 									rounded-[29px] xl:rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green 
 									text-left align-middle shadow-xl transition-all relative
 								`}
