@@ -66,12 +66,6 @@ const Layout = ({
 				<meta name="twitter:site" content="@propernounco" />
 				<meta name="twitter:creator" content="@propernounco" />
 				<link rel="icon" href="/images/logo.png" type="image/x-icon" />
-				<meta
-					property="og:image"
-					content={`https://champagne-topaz.vercel.app/api/og?title=${
-						college?.replace(/ /g, "+") || "Champagne"
-					}`}
-				/>
 			</Head>
 
 			<div className="sticky top-0 z-50">
