@@ -30,11 +30,11 @@ const NavBar = () => {
 					style={{ maxWidth: "100rem" }}
 					className={`mx-auto px-4 relative ${menu1 && "hidden"}`}
 				>
-					<nav className="items-center flex justify-between w-full max-w-5xl xl:max-w-7xl 2xl:max-w-screen-xl mx-auto lg:justify-start lg:space-x-10">
+					<nav className="items-center flex justify-between w-full max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto lg:justify-start lg:space-x-10">
 						<div className="flex">
 							<Link href="/">
 								<img
-									className="w-[152px] xl:w-[252px] cursor-pointer"
+									className="w-[152px] lg1:w-[186px] 2xl:w-[252px] cursor-pointer"
 									src="/images/logo.png"
 									alt="Champagne Logo"
 								/>
@@ -42,13 +42,13 @@ const NavBar = () => {
 						</div>
 						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-2 cursor-pointer">
 							<button
-								className="bg-champagne-pink rounded-full flex items-center justify-center py-2 px-4 xl:py-4 xl:px-12 text-white text-base font-black text-[10px] xl:text-[20px]"
+								className="bg-champagne-pink rounded-full flex items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]"
 								onClick={() => setIsOpen(true)}
 							>
 								Join Waitlist
 							</button>
 							<Link href="/leaderboard">
-								<div className="bg-champagne-pink rounded-full items-center justify-center py-4 px-12 text-white text-base font-black hidden xl:flex text-[10px] xl:text-[20px]">
+								<div className="bg-champagne-pink rounded-full items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black hidden lg1:flex text-[10px] lg1:text-[13px] 2xl:text-[20px]">
 									<p className="my-auto">
 										Activate your campus
 									</p>
@@ -59,7 +59,7 @@ const NavBar = () => {
 								width="25.075"
 								height="21.178"
 								viewBox="0 0 25.075 21.178"
-								className="block xl:hidden"
+								className="block lg1:hidden"
 								onClick={() => setMenu1(!menu1)}
 							>
 								<g

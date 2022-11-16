@@ -39,12 +39,12 @@ const DataForm = () => {
 		>
 			<div className="flex flex-col justify-between">
 				<img
-					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
+					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto lg1:mx-0"
 					src="/images/logo.svg"
 					alt="Champagne Logo"
 				/>
 
-				<h1 className="text-[47px] text-center xl:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
+				<h1 className="text-[47px] text-center lg1:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
 					Where your <br />
 					friend <br />
 					recommends
@@ -369,19 +369,17 @@ export default function Modal() {
 					>
 						<div
 							className={`
-									my-8 inline-block w-full max-w-[85rem] transform overflow-hidden 
+									py-5 my-8 inline-block w-full max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl transform overflow-hidden 
 									rounded-[29px] xl:rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green 
 									text-left align-middle shadow-xl transition-all relative
 								`}
 						>
 							<span
-								className="rounded-full bg-white flex items-center w-[42px] h-[42px] absolute right-6 top-6 cursor-pointer"
+								className="rounded-full bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 								onClick={() => setIsOpen(false)}
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									width="42"
-									height="42"
 									viewBox="0 0 42 42"
 								>
 									<path

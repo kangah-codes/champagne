@@ -5,6 +5,15 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
+		screens: {
+			sm: "640px",
+			md: "768px",
+			lg: "1024px",
+			lg1: "1280px",
+			xl: "1366px",
+			xl1: "1440px",
+			"2xl": "1536px",
+		},
 		extend: {
 			fontSize: {
 				xxs: ".625rem",

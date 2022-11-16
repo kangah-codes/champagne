@@ -10,13 +10,13 @@ function Content1() {
 
 	return (
 		<div className="w-full flex flex-col mt-5 md:mt-0">
-			<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full">
+			<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
 				Champagne - a dating and <br />
 				friendship app for college
 				<br /> students
 			</h1>
-			<div className="w-full flex flex-col space-y-5 xl:flex-row gap-x-5 items-start justify-between relative">
-				<div className="absolute right-0 xl:-top-[130px] xl:right-[130px]">
+			<div className="w-full flex flex-col space-y-5 lg1:flex-row gap-x-5 items-start justify-between relative">
+				<div className="absolute right-0 -top-[150px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
 					<img
 						alt="Champagne app mockup"
 						src="/images/content/arrow.png"
@@ -25,7 +25,7 @@ function Content1() {
 				</div>
 				<div
 					onClick={() => setIsOpen(true)}
-					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] xl:text-[32px] font-black"
+					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl:text-[22px] xl1-[24px] 2xl:text-[32px] font-black"
 				>
 					<p className="my-auto">Join Waitlist</p>
 				</div>
@@ -49,33 +49,36 @@ function Content1() {
 }
 
 function Content2() {
+	const [isOpen, setIsOpen] = useRecoilState(modalState);
+
 	return (
 		<div className="w-full flex flex-col">
-			<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full">
+			<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
 				Find new date recommended
 				<br /> to you by your friends and
 				<br /> develop it into something <br />
 				meaningful
 			</h1>
-			<div className="w-full flex flex-col space-y-5 xl:flex-row gap-x-5 items-start justify-between relative">
-				<div className="absolute right-0 xl:-top-[180px] xl:right-[130px]">
+			<div className="w-full flex flex-col space-y-5 lg1:flex-row gap-x-5 items-start justify-between relative">
+				<div className="absolute right-0 -top-[150px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
 					<img
 						alt="Champagne app mockup"
 						src="/images/content/arrow.png"
 						className="w-[48px] h-[48px] xl:w-[93px] xl:h-[77px]"
 					/>
 				</div>
-				<div className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] xl:text-[32px] font-black">
+				<div
+					onClick={() => setIsOpen(true)}
+					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl:text-[22px] xl1-[24px] 2xl:text-[32px] font-black"
+				>
 					<p className="my-auto">Join Waitlist</p>
 				</div>
 				<div className="relative">
 					<img
-						width={699}
-						height={366}
 						alt="Champagne app mockup"
 						src="/images/content/woman-5.png"
 						// className="rotate-[1deg]"
-						className="xl:w-[699px] xl:h-[366px]w-[289px] h-[229px]"
+						className="xl1:w-[537px] xl1:h-[340px] lg:w-[477px] lg:h-[302px] w-[289px] h-[229px]"
 					/>
 
 					<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2 rotate-[1deg]">
@@ -95,7 +98,7 @@ export default function Dating() {
 
 	return (
 		<div className="w-full bg-white flex px-4 relative pb-32">
-			<div className="w-full max-w-screen-2xl mx-auto flex items-center justify-center">
+			<div className="w-full max-w-5xl lg1:max-w-[985px] xl:max-w-[1066px] xl1:max-w-[1107px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="mx-auto w-full flex flex-col space-y-32">
 					<div className="relative w-full">
 						<div className="bg-white z-10 absolute rotate-[355deg] border-[3px] border-black left-2 2xl:-left-[30px] 2xl:top-5">
@@ -112,8 +115,8 @@ export default function Dating() {
 								</p>
 							</div>
 						</div>
-						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[73px] flex flex-col p-5 md:p-10 xl:p-16">
-							<div className="w-full flex flex-row-reverse gap-x-5 rotate-[1deg]">
+						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-col p-5 md:p-10 xl:p-16">
+							<div className="w-full flex flex-row-reverse gap-x-5">
 								<p
 									className={`text-[31px] leading-[31px] xl:text-[60px] font-anton xl:leading-[60px] ${
 										selectedContent === 2
@@ -159,54 +162,63 @@ export default function Dating() {
 								</p>
 							</div>
 						</div>
-						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[73px] flex flex-row p-5 md:p-10 xl:p-16">
-							<div className="w-full flex flex-col-reverse xl:flex-row space-y-5 xl:space-y-0 xl:space-x-24 items-start justify-between relative">
-								<div className="flex flex-col w-full xl:w-1/3 space-y-8">
+						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row p-5 md:p-10 xl:p-16">
+							<div className="w-full flex flex-col-reverse lg:flex-row space-y-5 xl:space-y-0 lg:space-x-24 items-start justify-between relative">
+								<div className="flex flex-col w-full lg:w-1/2 space-y-8">
 									<div className="relative self-end">
-										<img
-											width={363}
-											height={284}
-											alt="Champagne app mockup"
-											src="/images/content/guy-4.png"
-											className="w-[223px] h-[175px] xl:w-[363px] xl:h-[284px]"
-										/>
-
-										<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2">
-											<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
-												Freshman
-											</p>
-											<p className="text-[14px] leading-[14px] text-black font-black">
-												Stanford University
-											</p>
+										<div
+											style={{
+												backgroundImage: `url("/images/content/guy-4.png")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+											}}
+											className="w-[223px] h-[175px] lg1:w-[242px] lg1:h-[189px] xl:w-[252px] xl:h-[202px] xl1:w-[272px] xl1:h-[213px] 2xl:w-[363px] 2xl:h-[284px] relative"
+										>
+											<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2">
+												<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
+													Freshman
+												</p>
+												<p className="text-[14px] leading-[14px] text-black font-black">
+													Stanford University
+												</p>
+											</div>
 										</div>
 									</div>
 									<div className="relative">
-										<img
-											width={363}
-											height={284}
-											alt="Champagne app mockup"
-											src="/images/content/woman-4.png"
-											className="w-[223px] h-[175px] xl:w-[363px] xl:h-[284px]"
-										/>
-
-										<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 left-5 space-y-2">
-											<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
-												Junior
-											</p>
-											<p className="text-[14px] leading-[14px] text-black font-black">
-												Stanford University
-											</p>
+										<div
+											style={{
+												backgroundImage: `url("/images/content/woman-4.png")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+											}}
+											// src="/images/content/woman-4.png"
+											className="w-[223px] h-[175px] lg1:w-[242px] lg1:h-[189px] xl:w-[252px] xl:h-[202px] xl1:w-[272px] xl1:h-[213px] 2xl:w-[363px] 2xl:h-[284px] relative"
+										>
+											<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 left-5 space-y-2">
+												<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
+													Junior
+												</p>
+												<p className="text-[14px] leading-[14px] text-black font-black">
+													Stanford University
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div className="w-full xl:w-2/3 flex flex-col h-full items-center">
+								<div className="w-full lg:w-1/2 flex flex-col h-full items-center xl:pt-10">
 									<div className="flex flex-col items-start my-auto">
-										<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full">
+										<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
 											Make and connect with new friends at
 											your college
 										</h1>
 										<Link href="/leaderboard">
-											<div className="bg-champagne-light-blue rounded-full rotate-[-356deg] xl:my-auto flex items-center justify-center py-4 px-12 my-5 xl:mt-14 text-black text-[18px] xl:text-[32px] font-black">
+											{/* <div className="bg-champagne-light-blue rounded-full rotate-[-356deg] xl:my-auto flex items-center justify-center py-4 px-12 my-5 xl:mt-14 text-black text-[18px] xl:text-[32px] font-black">
+												<p className="my-auto">
+													Activate your campus
+												</p>
+											</div> */}
+
+											<div className="bg-champagne-light-blue rounded-full rotate-[-355deg] flex items-center justify-center py-4 px-12 my-10 text-black text-[18px] lg1:text-[21px] xl:text-[22px] xl1-[24px] 2xl:text-[32px] font-black">
 												<p className="my-auto">
 													Activate your campus
 												</p>
@@ -247,9 +259,9 @@ export default function Dating() {
 								</p>
 							</div>
 						</div>
-						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] rotate-[1deg] xl:rounded-[73px] flex flex-col xl:flex-row p-5 md:p-10 xl:p-16 z-[15] bg-white">
-							<div className="w-full xl:w-2/3 flex flex-col items-start xl:gap-y-10 mt-5 xl:mt-0">
-								<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-black w-full xl:pt-20 rotate-[-1deg]">
+						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-col lg:flex-row p-5 md:p-10 xl:p-16 z-[15] bg-white">
+							<div className="w-full lg:w-2/3 flex flex-col items-start xl:gap-y-10 mt-5 xl:mt-0">
+								<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full xl:pt-20">
 									Checkout the most eligible{" "}
 									<span className="text-champagne-light-blue">
 										bachelors
@@ -260,116 +272,42 @@ export default function Dating() {
 									</span>{" "}
 									on your campus
 								</h1>
-								<div className="bg-black rounded-full rotate-[-356deg] xl:my-auto flex items-center justify-center py-4 px-12 my-5 xl:mt-14 text-white text-[18px] xl:text-[32px] font-black">
+								<div className="bg-black rounded-full xl:my-auto flex items-center justify-center py-4 px-12 my-5 lg:mt-14 text-white text-[18px] xl:text-[32px] font-black">
 									<p className="my-auto">Join Waitlist</p>
 								</div>
 							</div>
-							<div className="w-full xl:w-1/3 flex flex-col -space-y-6 xl:-space-y-0 items-start justify-between relative">
-								<div className="p-5 w-[130px] md:w-[230px] rounded-[18px] bg-champagne-pink flex flex-col h-[102px] xl:h-[195px] justify-between rotate-[-1deg]">
-									<div className="flex flex-col space-y-2">
-										<p className="text-[18px] xl:text-[35px] font-anton leading-[18px] xl:leading-[35px] text-white">
-											Claire Mary
-										</p>
-										<p className="text-[8px] leading-[8px] xl:text-[18px] xl:leading-[18px] text-white font-black">
-											UCLA
-										</p>
-									</div>
-									<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-white self-end">
-										1st
-									</p>
-								</div>
-								<div className="p-5 w-[130px] xl:w-[230px] rounded-[18px] bg-champagne-light-blue flex flex-col h-[102px] xl:h-[195px] justify-between self-end rotate-[-1deg]">
-									<div className="flex flex-col space-y-2">
-										<p className="text-[18px] xl:text-[35px] font-anton leading-[18px] xl:leading-[35px] text-white">
-											Paul Nowe
-										</p>
-										<p className="text-[8px] leading-[8px] xl:text-[18px] xl:leading-[18px] text-white font-black">
-											Berkeley
-										</p>
-									</div>
-									<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-white self-end">
-										1st
-									</p>
-								</div>
-								<div className="p-5 w-[130px] xl:w-[230px] rounded-[18px] bg-champagne-lighter-gray flex flex-col h-[130px] justify-between rotate-[-1deg]">
-									<div className="flex flex-col space-y-2">
-										<span className="h-3.5 w-full rounded-full bg-white" />
-										<span className="h-3.5 w-1/2 rounded-full bg-white" />
-									</div>
-									<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-white self-end">
-										1st
-									</p>
-								</div>
+							<div className="w-full lg:w-1/3 flex flex-col -space-y-2 lg1:-space-y-2 xl:space-y-5 items-start justify-between relative">
+								<img
+									alt="Champagne app mockup"
+									src="/images/content/cards.png"
+									className="w-full"
+								/>
 							</div>
 						</div>
 
-						<div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-x-10 w-full">
-							<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[73px] flex flex-row p-5 md:p-10 xl:p-16 rotate-[-1deg] bg-white z-10">
-								<div className="w-full flex flex-col justify-between items-start">
-									<div className="p-5 w-[208px] md:w-[371px] rounded-[18px] bg-champagne-light-blue flex flex-col items-start justify-between rotate-[-1deg] space-y-10">
-										<div className="flex flex-row justify-between space-x-2 items-center">
-											<p className="text-[15px] leading-[15px] xl:text-[28px] font-anton xl:leading-[28px] text-white">
-												Most love person <br />
-												On in class
-											</p>
-
-											<img
-												alt="Heart eyes"
-												src="/images/emojis/heart-eyes.png"
-												className="xl:w-[59px] xl:h-[59px] w-[32px] h-[32px]"
-											/>
-										</div>
-										<div className="flex flex-col space-y-2 self-end">
-											<p className="text-[9px] leading-[9px] xl:text-[14px] font-black xl:leading-[14px] text-[#16b5bc]">
-												Picked
-											</p>
-											<div className="p-5 h-[48px] xl:h-[85px] bg-white rounded-[10px] xl:rounded-[18px] flex flex-col-reverse bottom-5 left-5 space-y-2 self-end">
-												<p className="text-[7px] leading-[7px] xl:text-[14px] xl:leading-[14px] text-black font-black">
-													Stanford University
-												</p>
-												<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
-													Mike Lawse
-												</p>
-											</div>
-										</div>
-									</div>
-									<h1 className="text-[30px] xl:text-[51px] font-anton leading-[30px] xl:leading-[51px] text-black w-full pt-10 rotate-[-1deg]">
-										Boost your friends
-										<br className=" xl:block" /> up by
-										sending positive
-										<br className="hidden xl:block" />{" "}
-										messages
+						<div className="grid grid-cols-1 lg1:grid-cols-2 w-full">
+							<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row py-8 px-8 lg1:py-8 lg1:px-10 xl:py-10 xl:px-12 bg-white z-[25]">
+								<div className="w-full flex flex-col justify-between items-start space-y-8">
+									<img
+										alt="Champagne app mockup"
+										src="/images/content/card.png"
+										// className="rotate-[1deg]"
+										className="w-full lg:w-[247px] lg:h-[175px] xl:w-[264px] xl:h-[186px] xl1:w-[278px] xl1:h-[196px] 2xl:w-[371px] 2xl:h-[262px]"
+									/>
+									<h1 className="text-[30px] xl:text-[36px] xl:leading-[36px] xl1:text-[38px] font-anton leading-[30px] xl1:leading-[38px] text-black w-full">
+										Boost your friends up by sending
+										positive messages
 									</h1>
 								</div>
 							</div>
 
-							<div className="grid grid-rows-2 -space-y-5 relative">
-								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[73px] h-[211px] xl:h-[339px] flex flex-row p-5 xl:p-20 rotate-[-1deg] bg-white z-[8] -mt-10">
+							<div className="grid grid-rows-2 -space-y-3 relative items-stretch">
+								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row bg-white z-20 relative py-8 px-8 -top-5 lg1:-top-0 lg1:py-10 lg1:px-16 lg1:-left-[0.3rem] xl:-left-[1.5rem]">
 									<div className="w-full flex flex-col items-start">
-										<h1 className="text-[30px] xl:text-[51px] font-anton leading-[30px] xl:leading-[51px] text-black w-full rotate-[359deg] mt-10 xl:mt-0">
+										<h1 className="text-[30px] xl:text-[36px] xl:leading-[36px] xl1:text-[38px] font-anton leading-[30px] xl1:leading-[38px] text-black w-full">
 											Play games with
 											<br /> your friends and school
 											<br /> mates
-										</h1>
-
-										<div className="absolute right-10 bottom-10 ">
-											<img
-												width={100}
-												height={100}
-												alt="Champagne app mockup"
-												src="/images/emojis/gamepad.png"
-												className="xl:w-[59px] xl:h-[59px] w-[32px] h-[32px]"
-											/>
-										</div>
-									</div>
-								</div>
-
-								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[73px] flex flex-row p-5 xl:p-20 rotate-[-1deg] bg-white z-1 bottom-14 -left-10">
-									<div className="w-full flex flex-row items-start justify-between">
-										<h1 className="text-[30px] xl:text-[51px] font-anton leading-[30px] xl:leading-[51px] text-black w-full rotate-[359deg] mt-10 xl:mt-0">
-											You may get
-											<br /> Champagne delivered
-											<br /> to you for each date
 										</h1>
 
 										<div className="absolute right-10 bottom-10">
@@ -377,8 +315,28 @@ export default function Dating() {
 												width={100}
 												height={100}
 												alt="Champagne app mockup"
+												src="/images/emojis/gamepad.png"
+												className="lg1:w-[59px] lg1:h-[59px] w-[32px] h-[32px]"
+											/>
+										</div>
+									</div>
+								</div>
+
+								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row bg-white z-1 relative py-8 px-8 -top-5 lg1:-top-0 lg1:py-10 lg1:px-16 lg1:-left-[0.3rem] xl:-left-[1.5rem] lg1:-top-0">
+									<div className="w-full flex flex-row items-start justify-between relative">
+										<h1 className="text-[30px] xl:text-[36px] xl:leading-[36px] xl1:text-[38px] font-anton leading-[30px] xl1:leading-[38px] text-black w-full">
+											You may get
+											<br /> Champagne delivered
+											<br /> to you for each date
+										</h1>
+
+										<div className="absolute right-0 bottom-0">
+											<img
+												width={100}
+												height={100}
+												alt="Champagne app mockup"
 												src="/images/emojis/bottle.png"
-												className="xl:w-[59px] xl:h-[59px] w-[32px] h-[32px]"
+												className="lg1:w-[59px] lg1:h-[59px] w-[32px] h-[32px]"
 											/>
 										</div>
 									</div>

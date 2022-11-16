@@ -13,7 +13,7 @@ const Footer = () => {
 			className={`relative bg-gradient-to-r from-champagne-pink via-champagne-light-blue to-champagne-green text-black`}
 		>
 			<div className="mx-auto px-10">
-				<div className="flex flex-col w-full py-20 items-start space-y-5 max-w-5xl xl:max-w-7xl xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto">
+				<div className="flex flex-col w-full py-20 items-start space-y-5 max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
 					<div className="flex flex-row items-center space-x-5">
 						<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
 							Campus Gist
@@ -27,7 +27,7 @@ const Footer = () => {
 						/>
 					</div>
 					<div className="relative">
-						<h1 className="text-[47px] leading-[47px] xl:text-[97px] font-anton xl:leading-[92px] text-white">
+						<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
 							Get to know all the trending activities on your
 							campus
 						</h1>
