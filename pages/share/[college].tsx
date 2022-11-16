@@ -1,5 +1,3 @@
-/* eslint-disable react/display-name */
-/* eslint-disable import/no-anonymous-default-export */
 import Head from "next/head";
 import Image from "next/image";
 import Dating from "../../components/index/Dating";
@@ -11,10 +9,32 @@ import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
 import { modalState } from "../../recoil";
 import { useEffect } from "react";
-import dynamic from "next/dynamic";
 
-const Share = dynamic(() => import("../../components/Share"), {
-	ssr: false,
-});
+export default function Share({ college }: any) {
+	const router = useRouter();
+	const [isOpen, setIsOpen] = useRecoilState(modalState);
 
-export default () => <Share />;
+	useEffect(() => {
+		setIsOpen(true);
+	}, []);
+
+	return (
+		<Layout footer={false} college={college as string}>
+			<Hero />
+			<Images />
+			<Dating />
+			<Footer />
+		</Layout>
+	);
+}
+
+export async function getServerSideProps(ctx: any) {
+	const college = ctx.params.college.replace("+", " ");
+
+	// Pass data to the page via props
+	return {
+		props: {
+			college,
+		},
+	};
+}
