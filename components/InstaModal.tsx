@@ -10,10 +10,11 @@ import {
 	formDataState,
 	shareModalSchoolState,
 	shareModalState,
+	instaModalState,
 } from "../recoil";
 
 export default function InstaModal() {
-	const [isOpen, setIsOpen] = useRecoilState(shareModalState);
+	const [isOpen, setIsOpen] = useRecoilState(instaModalState);
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 	const [diceIndex, setDiceIndex] = useState(0);
 
@@ -156,7 +157,7 @@ export default function InstaModal() {
 
 											<img
 												className="w-[80px] xl:w-[103px] cursor-pointer"
-												src="/images/logo.svg"
+												src="/images/logo.png"
 												alt="Champagne Logo"
 											/>
 										</div>

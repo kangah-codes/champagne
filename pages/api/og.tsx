@@ -42,7 +42,7 @@ export default async function handler(req: NextRequest) {
 					<div tw="flex flex-row justify-between w-full">
 						<img
 							tw="w-[80px] xl:w-[103px] cursor-pointer"
-							src="/images/logo.svg"
+							src="/images/logo.png"
 							alt="Champagne Logo"
 						/>
 					</div>

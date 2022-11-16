@@ -156,7 +156,7 @@ export default function ShareModal() {
 
 											<img
 												className="w-[80px] xl:w-[103px] cursor-pointer"
-												src="/images/logo.svg"
+												src="/images/logo.png"
 												alt="Champagne Logo"
 											/>
 										</div>

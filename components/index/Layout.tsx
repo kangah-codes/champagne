@@ -65,7 +65,7 @@ const Layout = ({
 				<meta name="twitter:description" content={desc} />
 				<meta name="twitter:site" content="@propernounco" />
 				<meta name="twitter:creator" content="@propernounco" />
-				<link rel="icon" href="/images/logo.svg" type="image/x-icon" />
+				<link rel="icon" href="/images/logo.png" type="image/x-icon" />
 				<meta
 					property="og:image"
 					content={`https://champagne-topaz.vercel.app/api/og?title=${

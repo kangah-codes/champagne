@@ -203,7 +203,7 @@ const DataForm = () => {
 			<div className="flex flex-col justify-between">
 				<img
 					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto lg1:mx-0"
-					src="/images/logo.svg"
+					src="/images/logo.png"
 					alt="Champagne Logo"
 				/>
 
@@ -334,7 +334,7 @@ const SuccessForm = () => {
 			<div className="flex flex-col w-full lg1:w-1/2 my-auto">
 				<img
 					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
-					src="/images/logo.svg"
+					src="/images/logo.png"
 					alt="Champagne Logo"
 				/>
 
@@ -392,7 +392,7 @@ const SuccessForm = () => {
 
 						<img
 							className="w-[80px] xl:w-[103px] cursor-pointer"
-							src="/images/logo.svg"
+							src="/images/logo.png"
 							alt="Champagne Logo"
 						/>
 					</div>
