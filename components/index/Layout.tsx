@@ -28,7 +28,13 @@ const Layout = ({
 				<title>{title}</title>
 				<meta name="description" content={desc} />
 				<meta property="og:type" content="website" />
-				<meta name="og:title" property="og:title" content={title} />
+				<meta
+					name="og:title"
+					property="og:title"
+					content={
+						"Join other bachelors & bachelorettes on Champagne"
+					}
+				/>
 				<meta
 					name="og:description"
 					property="og:description"
@@ -40,7 +46,9 @@ const Layout = ({
 				/>
 				<meta
 					property="snapchat:sticker"
-					content="https://champagne-topaz.vercel.app/api/og/Your+Campus"
+					content={`https://champagne-topaz.vercel.app/api/og/${
+						college ? college : "Champagne"
+					}`}
 				/>
 				<meta
 					name="keywords"
