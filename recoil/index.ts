@@ -15,6 +15,11 @@ export const shareModalSchoolState = atom<string | undefined>({
 	default: undefined,
 });
 
+export const instaModalState = atom({
+	key: "instaModalState",
+	default: false,
+});
+
 export const reqSuccessfulState = atom({
 	key: "reqSuccessfulState",
 	default: false,

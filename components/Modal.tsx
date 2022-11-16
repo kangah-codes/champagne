@@ -8,6 +8,7 @@ import { colleges } from "../utils/data";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import classNames from "classnames";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import Link from "next/link";
 
 const people = [
 	{ name: "Wade Cooper" },
@@ -412,7 +413,18 @@ const SuccessForm = () => {
 				</div>
 
 				<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3">
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
+					<div
+						onClick={() => {
+							navigator.clipboard.writeText(
+								`https://champagne-topaz.vercel.app/share/${formData[
+									"College Name"
+								]
+									?.replace(/ /g, "+")
+									?.replace(/ /g, "+")}`
+							);
+						}}
+						className=" cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="18.725"
@@ -432,8 +444,18 @@ const SuccessForm = () => {
 							Share
 						</p>
 					</div>
-
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
+					<div
+						onClick={() => {
+							navigator.clipboard.writeText(
+								`https://champagne-topaz.vercel.app/share/${formData[
+									"College Name"
+								]
+									?.replace(/ /g, "+")
+									?.replace(/ /g, "+")}`
+							);
+						}}
+						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="17.145"
@@ -453,29 +475,48 @@ const SuccessForm = () => {
 							Share
 						</p>
 					</div>
+					<Link
+						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+							`https://champagne-topaz.vercel.app/share/${formData[
+								"College Name"
+							]
+								?.replace(/ /g, "+")
+								?.replace(" ", "+")}`
+						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
+					>
+						<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="15.013"
+								height="12.194"
+								viewBox="0 0 15.013 12.194"
+							>
+								<path
+									id="Icon_awesome-twitter"
+									data-name="Icon awesome-twitter"
+									d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
+									transform="translate(0 -3.381)"
+									fill="#fff"
+								/>
+							</svg>
 
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="17.145"
-							height="17.139"
-							viewBox="0 0 17.145 17.139"
-						>
-							<path
-								id="Icon_awesome-instagram"
-								data-name="Icon awesome-instagram"
-								d="M8.568,6.413a4.394,4.394,0,1,0,4.394,4.394A4.387,4.387,0,0,0,8.568,6.413Zm0,7.251a2.857,2.857,0,1,1,2.857-2.857A2.862,2.862,0,0,1,8.568,13.664Zm5.6-7.431a1.025,1.025,0,1,1-1.025-1.025A1.023,1.023,0,0,1,14.167,6.233Zm2.91,1.04a5.072,5.072,0,0,0-1.384-3.591A5.106,5.106,0,0,0,12.1,2.3c-1.415-.08-5.656-.08-7.071,0A5.1,5.1,0,0,0,1.439,3.679,5.089,5.089,0,0,0,.055,7.27c-.08,1.415-.08,5.656,0,7.071a5.072,5.072,0,0,0,1.384,3.591,5.112,5.112,0,0,0,3.591,1.384c1.415.08,5.656.08,7.071,0a5.072,5.072,0,0,0,3.591-1.384,5.106,5.106,0,0,0,1.384-3.591c.08-1.415.08-5.653,0-7.068ZM15.25,15.86a2.892,2.892,0,0,1-1.629,1.629c-1.128.447-3.805.344-5.052.344s-3.928.1-5.052-.344A2.892,2.892,0,0,1,1.887,15.86c-.447-1.128-.344-3.805-.344-5.052s-.1-3.928.344-5.052A2.892,2.892,0,0,1,3.516,4.126c1.128-.447,3.805-.344,5.052-.344s3.928-.1,5.052.344A2.892,2.892,0,0,1,15.25,5.755c.447,1.128.344,3.805.344,5.052S15.7,14.735,15.25,15.86Z"
-								transform="translate(0.006 -2.238)"
-								fill="#fff"
-							/>
-						</svg>
-
-						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
-							Share
-						</p>
-					</div>
-
-					<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
+							<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+								Share
+							</p>
+						</div>
+					</Link>
+					<Link
+						href={`sms:&body=${
+							diceOptions[diceIndex]
+						}+${encodeURIComponent(
+							`https://champagne-topaz.vercel.app/share/${formData[
+								"College Name"
+							]
+								?.replace(/ /g, "+")
+								?.replace(" ", "+")}`
+						)}`}
+						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="21.203"
@@ -496,10 +537,10 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px] truncate">
+						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share with friends
 						</p>
-					</div>
+					</Link>
 				</div>
 			</div>
 		</div>

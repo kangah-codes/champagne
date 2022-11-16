@@ -105,3 +105,9 @@ select {
 select {
   border-right: 32px solid transparent
 }
+select.paddedBox {
+  border-bottom: solid 22px transparent;
+  border-left: solid 32px transparent;
+  border-right: solid 32px transparent;
+  border-top: solid 22px transparent;
+}

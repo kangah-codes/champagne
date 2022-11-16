@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import Dating from "../components/index/Dating";
@@ -85,6 +86,16 @@ function Hero({
 		setFilteredLeaderboard(filtered);
 	};
 
+	const [diceIndex, setDiceIndex] = useState(0);
+
+	const diceOptionsNoSchool = [
+		`Check how your campus is ranking on champagne app`,
+		`Come and boost your school on Champagne leaderboard. Attached to link`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
+		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun! Attached to link`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school. Attached to link`,
+	];
+
 	useEffect(() => {
 		setFilteredLeaderboard(leaderboard);
 	}, [leaderboard]);
@@ -160,7 +171,17 @@ function Hero({
 									in your college.
 								</h1>{" "}
 								<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
-									<div className="bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black">
+									<div
+										onClick={() => {
+											navigator.clipboard.writeText(
+												`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
+													/ /g,
+													"+"
+												)}`
+											);
+										}}
+										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 18.725 17.604"
@@ -180,7 +201,17 @@ function Hero({
 										</p>
 									</div>
 
-									<div className="bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black">
+									<div
+										onClick={() => {
+											navigator.clipboard.writeText(
+												`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
+													/ /g,
+													"+"
+												)}`
+											);
+										}}
+										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="17.145"
@@ -200,27 +231,40 @@ function Hero({
 											Share
 										</p>
 									</div>
-									<div className="bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="15.013"
-											height="12.194"
-											viewBox="0 0 15.013 12.194"
-										>
-											<path
-												id="Icon_awesome-twitter"
-												data-name="Icon awesome-twitter"
-												d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
-												transform="translate(0 -3.381)"
-												fill="#101010"
-											/>
-										</svg>
 
-										<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
-											Share
-										</p>
-									</div>
-									<div className="xl:col-span-2 bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black">
+									<Link
+										href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+											`https://champagne-topaz.vercel.app`
+										)}&text=${encodeURIComponent(
+											diceOptionsNoSchool[diceIndex]
+										)}`}
+									>
+										<div className="bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="15.013"
+												height="12.194"
+												viewBox="0 0 15.013 12.194"
+											>
+												<path
+													id="Icon_awesome-twitter"
+													data-name="Icon awesome-twitter"
+													d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
+													transform="translate(0 -3.381)"
+													fill="#101010"
+												/>
+											</svg>
+
+											<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
+												Share
+											</p>
+										</div>
+									</Link>
+
+									<Link
+										href={`sms:&body=${diceOptionsNoSchool[0]}`}
+										className="xl:col-span-2 bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="15.132"
@@ -247,7 +291,7 @@ function Hero({
 												with friends
 											</span>
 										</span>
-									</div>
+									</Link>
 								</div>
 							</div>
 						</div>

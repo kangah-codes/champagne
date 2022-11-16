@@ -12,7 +12,7 @@ import {
 	shareModalState,
 } from "../recoil";
 
-export default function ShareModal() {
+export default function InstaModal() {
 	const [isOpen, setIsOpen] = useRecoilState(shareModalState);
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 	const [diceIndex, setDiceIndex] = useState(0);
