@@ -42,7 +42,9 @@ const Layout = ({
 				/>
 				<meta
 					property="og:image"
-					content="https://champagne-topaz.vercel.app/api/og/Your+Campus"
+					content={`https://champagne-topaz.vercel.app/api/og/${
+						college ? college : "Champagne"
+					}`}
 				/>
 				<meta
 					property="snapchat:sticker"
