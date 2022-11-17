@@ -9,7 +9,11 @@ import Dating from "../components/index/Dating";
 import Images from "../components/index/Images";
 import Layout from "../components/index/Layout";
 import ShareModal from "../components/ShareModal";
-import { shareModalSchoolState, shareModalState } from "../recoil";
+import {
+	instaModalState,
+	shareModalSchoolState,
+	shareModalState,
+} from "../recoil";
 import { table } from "../utils/airtable";
 import getNumberSuffix from "../utils/helpers";
 
@@ -70,6 +74,7 @@ function Hero({
 
 	const [isOpen, setIsOpen] = useRecoilState(shareModalState);
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
+	const [instaModal, setInstaModal] = useRecoilState(instaModalState);
 
 	const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { value } = e.target;
@@ -203,12 +208,7 @@ function Hero({
 
 									<div
 										onClick={() => {
-											navigator.clipboard.writeText(
-												`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-													/ /g,
-													"+"
-												)}`
-											);
+											setInstaModal(true);
 										}}
 										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
 									>

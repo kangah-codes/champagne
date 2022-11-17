@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/inline-script-id */
 import Head from "next/head";
 import Script from "next/script";
+import InstaModal from "../InstaModal";
 import Modal from "../Modal";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
@@ -71,6 +72,7 @@ const Layout = ({
 			<div className="sticky top-0 z-50">
 				<NavBar />
 				<Modal />
+				<InstaModal />
 			</div>
 
 			<div className="flex-grow overflow-hidden">{children}</div>

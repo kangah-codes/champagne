@@ -3,169 +3,23 @@ import { Transition, Dialog, Listbox, Combobox } from "@headlessui/react";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import { Fragment, useEffect, useState, useRef } from "react";
 import { useRecoilState } from "recoil";
-import { formDataState, modalState, reqSuccessfulState } from "../recoil";
+import {
+	formDataState,
+	instaModalState,
+	modalState,
+	reqSuccessfulState,
+} from "../recoil";
 import { colleges } from "../utils/data";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import classNames from "classnames";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import Link from "next/link";
 
-const people = [
-	{ name: "Wade Cooper" },
-	{ name: "Arlene Mccoy" },
-	{ name: "Devon Webb" },
-	{ name: "Tom Cook" },
-	{ name: "Tanya Fox" },
-	{ name: "Hellen Schmidt" },
-];
-
-type Props = {
-	name?: string;
-	items?: string[];
-	label?: string;
-	onChange?: (event: { target: any; type?: any }) => Promise<void | boolean>;
-	children?: never;
-	className: string;
-};
-
-function Select({ name, label, items, className, onChange }: Props) {
-	const [selected, setSelected] = useState<string>();
-	const [query, setQuery] = useState("");
-	const btnRef = useRef<HTMLButtonElement>(null);
-
-	const filteredItems =
-		query === ""
-			? items
-			: items?.filter((item: string) =>
-					(item ?? "")
-						.toLowerCase()
-						.replace(/\s+/g, "")
-						.includes(query.toLowerCase().replace(/\s+/g, ""))
-			  ) ?? [];
-
-	var classes = classNames(
-		// "relative w-full cursor-default overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300",
-		// "mt-1 block w-full h-9 bg-background-grey border rounded text-base text-dark-grey shadow-sm placeholder-light-grey focus:bg-white focus:outline-none focus:border-accent-purple focus:ring-2 focus:ring-accent-light disabled:bg-light-grey disabled:text-light-grey disabled:border-light-grey disabled:shadow-none invalid:border-red-100 invalid:text-light-grey focus:invalid:border-red-100 focus:invalid:ring-red-100 leading-none border-light-grey",
-		className
-	);
-
-	return (
-		<Combobox
-			value={selected}
-			onChange={(v) => {
-				setSelected(v);
-				onChange?.({ target: { name, value: v } });
-			}}
-		>
-			<div className={classes}>
-				<Combobox.Input
-					onFocus={(e: any) => {
-						e.target.select();
-						if (!e.relatedTarget) {
-							btnRef?.current?.click();
-						}
-					}}
-					className="w-full border-none text-sm leading-5 text-gray-900 focus:outline-none"
-					displayValue={(item: string) => item ?? ""}
-					onChange={(event) => setQuery(event.target.value)}
-				/>
-				<Combobox.Button
-					ref={btnRef}
-					className="absolute inset-y-0 right-0 flex items-center pr-2"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="14.541"
-						height="8.314"
-						viewBox="0 0 14.541 8.314"
-					>
-						<path
-							id="Icon_ionic-ios-arrow-down"
-							data-name="Icon ionic-ios-arrow-down"
-							d="M13.461,17.054l5.5-5.5a1.035,1.035,0,0,1,1.468,0,1.048,1.048,0,0,1,0,1.472L14.2,19.258a1.037,1.037,0,0,1-1.433.03l-6.273-6.26a1.039,1.039,0,0,1,1.468-1.472Z"
-							transform="translate(-6.188 -11.246)"
-						/>
-					</svg>
-				</Combobox.Button>
-			</div>
-
-			<Combobox.Options className="relative">
-				{filteredItems?.length === 0 && query !== "" ? (
-					<div className="relative cursor-default select-none py-2 px-4 text-gray-700">
-						Nothing found.
-					</div>
-				) : (
-					<VirtualizedList items={filteredItems ?? []} />
-				)}
-			</Combobox.Options>
-		</Combobox>
-	);
-}
-
-function VirtualizedList({ items }: { items: string[] }) {
-	const parentRef = useRef<HTMLDivElement>(null);
-
-	const rowVirtualizer = useVirtualizer({
-		count: items?.length,
-		getScrollElement: () => parentRef.current,
-		estimateSize: () => 35,
-		overscan: 5,
-	});
-
-	return (
-		<div
-			ref={parentRef}
-			className="absolute inset-0 z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-		>
-			<div
-				style={{
-					height: `${rowVirtualizer.getTotalSize()}px`,
-					width: "100%",
-					position: "relative",
-				}}
-			>
-				{rowVirtualizer.getVirtualItems().map((virtualRow: any) => (
-					<Combobox.Option
-						key={virtualRow.index}
-						style={{
-							position: "absolute",
-							top: 0,
-							left: 0,
-							width: "100%",
-							height: `${virtualRow.size}px`,
-							transform: `translateY(${virtualRow.start}px)`,
-						}}
-						className={({ active }) =>
-							`relative cursor-default select-none py-2 pl-2 pr-4 ${
-								active
-									? "bg-dark-grey text-white"
-									: "text-gray-900"
-							}`
-						}
-						value={items?.[virtualRow.index]}
-					>
-						{({ selected, active }) => (
-							<span
-								className={`block truncate ${
-									selected ? "font-medium" : "font-normal"
-								}`}
-							>
-								{items?.[virtualRow.index]}
-							</span>
-						)}
-					</Combobox.Option>
-				))}
-			</div>
-		</div>
-	);
-}
-
 const DataForm = () => {
 	const [formData, setFormData] = useRecoilState(formDataState);
 	const [reqSuccessful, setReqSuccessful] =
 		useRecoilState(reqSuccessfulState);
 	const [loading, setLoading] = useState(false);
-	const [selected, setSelected] = useState(people[0]);
 	const parentRef = useRef<HTMLDivElement>(null);
 
 	const rowVirtualizer = useVirtualizer({
@@ -317,6 +171,7 @@ const DataForm = () => {
 const SuccessForm = () => {
 	const [formData, setFormData] = useRecoilState(formDataState);
 	const [diceIndex, setDiceIndex] = useState(0);
+	const [instaModal, setInstaModal] = useRecoilState(instaModalState);
 
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${formData["College Name"]}`,
@@ -330,7 +185,7 @@ const SuccessForm = () => {
 	];
 
 	return (
-		<div className="flex flex-col lg1:flex-row p-5 lg1:p-14 w-full space-x-10">
+		<div className="flex flex-col lg1:flex-row p-5 lg1:p-14 w-full gap-x-10">
 			<div className="flex flex-col w-full lg1:w-1/2 my-auto">
 				<img
 					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
@@ -412,7 +267,7 @@ const SuccessForm = () => {
 					</p>
 				</div>
 
-				<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3">
+				<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
 					<div
 						onClick={() => {
 							navigator.clipboard.writeText(
@@ -446,13 +301,7 @@ const SuccessForm = () => {
 					</div>
 					<div
 						onClick={() => {
-							navigator.clipboard.writeText(
-								`https://champagne-topaz.vercel.app/share/${formData[
-									"College Name"
-								]
-									?.replace(/ /g, "+")
-									?.replace(/ /g, "+")}`
-							);
+							setInstaModal(true);
 						}}
 						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
 					>
@@ -483,27 +332,26 @@ const SuccessForm = () => {
 								?.replace(/ /g, "+")
 								?.replace(" ", "+")}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
+						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
 					>
-						<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="15.013"
-								height="12.194"
-								viewBox="0 0 15.013 12.194"
-							>
-								<path
-									id="Icon_awesome-twitter"
-									data-name="Icon awesome-twitter"
-									d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
-									transform="translate(0 -3.381)"
-									fill="#fff"
-								/>
-							</svg>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="15.013"
+							height="12.194"
+							viewBox="0 0 15.013 12.194"
+						>
+							<path
+								id="Icon_awesome-twitter"
+								data-name="Icon awesome-twitter"
+								d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
+								transform="translate(0 -3.381)"
+								fill="#fff"
+							/>
+						</svg>
 
-							<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
-								Share
-							</p>
-						</div>
+						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+							Share
+						</p>
 					</Link>
 					<Link
 						href={`sms:&body=${
