@@ -10,12 +10,14 @@ import {
 	formDataState,
 	shareModalSchoolState,
 	shareModalState,
+	instaModalState,
 } from "../recoil";
 
 export default function ShareModal() {
 	const [isOpen, setIsOpen] = useRecoilState(shareModalState);
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 	const [diceIndex, setDiceIndex] = useState(0);
+	const [instaModal, setInstaModal] = useRecoilState(instaModalState);
 
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${shareSchool}`,
@@ -210,12 +212,7 @@ export default function ShareModal() {
 										</div>
 										<div
 											onClick={() => {
-												navigator.clipboard.writeText(
-													`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-														/ /g,
-														"+"
-													)}`
-												);
+												setInstaModal(true);
 											}}
 											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
 										>

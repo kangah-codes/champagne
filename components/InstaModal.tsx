@@ -285,7 +285,7 @@ export default function InstaModal() {
 			<Transition appear show={isOpen} as={Fragment}>
 				<Dialog
 					as="div"
-					className="absolute right-0 left-0 -bottom-[23%] lg1:-bottom-[15%] xl:-bottom-[13%] xl1:-bottom-[18%] 2xl:-bottom-[25%] z-50 overflow-y-auto"
+					className="absolute right-0 left-0 -bottom-[90%] lg1:-bottom-[65%] xl:-bottom-[65%] xl1:-bottom-[65%] 2xl:-bottom-[60%] z-50 overflow-y-auto"
 					onClose={() => setIsOpen(false)}
 				>
 					<div className="min-h-screen px-4 text-center">
@@ -368,10 +368,62 @@ export default function InstaModal() {
 											currentStep !== 5
 												? "bg-champagne-pink"
 												: "bg-gradient-to-r from-[#F646B2] via-[#C1368A] to-[#FBAD50] border-[3px] border-black"
-										} rounded-full grid grid-cols-5 items-center justify-center py-3 w-full text-white text-base text-[15px]`}
+										} rounded-full grid grid-cols-5 items-center justify-center py-3 w-full text-white text-base text-[15px] cursor-pointer`}
 										onClick={() => {
-											if (currentStep < 5)
+											if (currentStep < 5) {
 												setCurrentStep(currentStep + 1);
+											}
+
+											if (currentStep === 1) {
+												fetch(
+													process.env.NODE_ENV ===
+														"production"
+														? `https://champagne-topaz.vercel.app/api/share-card?title=${shareSchool?.replace(
+																" ",
+																"+"
+														  )}`
+														: `http://localhost:3000/api/share-card?title=${shareSchool?.replace(
+																" ",
+																"+"
+														  )}`,
+													{
+														method: "GET",
+														headers: {},
+													}
+												)
+													.then((response) => {
+														response
+															.arrayBuffer()
+															.then(function (
+																buffer
+															) {
+																const url =
+																	window.URL.createObjectURL(
+																		new Blob(
+																			[
+																				buffer,
+																			]
+																		)
+																	);
+																const link =
+																	document.createElement(
+																		"a"
+																	);
+																link.href = url;
+																link.setAttribute(
+																	"download",
+																	"card.png"
+																); //or any other extension
+																document.body.appendChild(
+																	link
+																);
+																link.click();
+															});
+													})
+													.catch((err) => {
+														console.log(err);
+													});
+											}
 										}}
 									>
 										<div />
@@ -405,12 +457,13 @@ export default function InstaModal() {
 									</div>
 									{currentStep > 1 && (
 										<div
-											className="flex flex-row space-x-1 items-center"
+											className="flex flex-row space-x-1 items-center cursor-pointer"
 											onClick={() => {
-												if (currentStep > 1)
+												if (currentStep > 1) {
 													setCurrentStep(
 														currentStep - 1
 													);
+												}
 											}}
 										>
 											<svg

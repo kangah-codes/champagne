@@ -8,6 +8,7 @@ import {
 	instaModalState,
 	modalState,
 	reqSuccessfulState,
+	shareModalSchoolState,
 } from "../recoil";
 import { colleges } from "../utils/data";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
@@ -172,6 +173,7 @@ const SuccessForm = () => {
 	const [formData, setFormData] = useRecoilState(formDataState);
 	const [diceIndex, setDiceIndex] = useState(0);
 	const [instaModal, setInstaModal] = useRecoilState(instaModalState);
+	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${formData["College Name"]}`,
@@ -301,6 +303,7 @@ const SuccessForm = () => {
 					</div>
 					<div
 						onClick={() => {
+							setShareSchool(formData["College Name"]);
 							setInstaModal(true);
 						}}
 						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"

@@ -38,28 +38,29 @@ export default async function handler(req: NextRequest) {
 					borderRadius: "12px",
 				}}
 			>
-				{/* <div tw="w-full md:w-[70%] xl:w-[404px] h-[278px] xl:h-[409px] p-5 rounded-[14px] bg-white flex flex-col justify-between z-10">
-					<div tw="flex flex-row justify-between w-full">
+				{/* <div tw="flex flex-col text-5xl font-bold tracking-tight text-gray-900 text-left">
+					<div
+						tw="flex flex-row-reverse w-full bg-red-500"
+						style={{
+							padding: "0 2rem",
+						}}
+					>
 						<img
-							tw="w-[80px] xl:w-[103px] cursor-pointer"
-							src="/images/logo.png"
-							alt="Champagne Logo"
+							width="125"
+							height="58"
+							src={`https://champagne-topaz.vercel.app/images/logo.png`}
 						/>
 					</div>
-
-					<div>
-						<h1 tw="text-[29px] leading-[29px] xl:text-[44px] font-anton xl:leading-[44px] text-black">
-							Checkout the most eligible{" "}
-							<span tw="text-champagne-light-blue">
-								bachelors
-							</span>{" "}
-							&{" "}
-							<span tw="text-champagne-pink">bachelorettes</span>{" "}
-							in {title}
-						</h1>
-					</div>
+					<span>Sign up for the</span>
+					<span>newest & fun</span>
+					<span>dating experience</span>
+					<span tw="flex flex-row">
+						at<span tw="text-white">l</span>
+						<span>{title}</span>{" "}
+					</span>
 				</div> */}
-				<div tw="bg-white flex h-full items-center rounded-xl">
+
+				<div tw="bg-white flex h-full items-center rounded-xl px-20">
 					<div tw="flex flex-col w-full py-12 px-4 md:items-center justify-between p-2 mx-auto items-center">
 						<div
 							tw="flex flex-row-reverse w-full"
@@ -70,40 +71,28 @@ export default async function handler(req: NextRequest) {
 							<img
 								width="125"
 								height="58"
-								src={`https://champagne-topaz.vercel.app/images/logo.png`}
+								src={
+									process.env.NODE_ENV === "production"
+										? `https://champagne-topaz.vercel.app/images/logo.png`
+										: `http://localhost:3000/images/logo.png`
+								}
 							/>
 						</div>
 						<h2 tw="flex flex-col text-5xl font-bold tracking-tight text-gray-900 text-left">
-							<span>Checkout the most</span>
-							<span tw="flex flex-row">
-								eligible<span tw="text-white">l</span>
-								<span
-									style={{
-										color: "#27eef7",
-									}}
-								>
-									{" "}
-									{"bachelors"}
-								</span>{" "}
-								<span tw="text-white">l</span>
-								{" & "}
+							<span>Sign up for the</span>
+							<span>newest & fun</span>
+							<span>dating experience</span>
+							<span tw="flex flex-row line-clamp-4 truncate">
+								at<span tw="text-white">l</span>
+								<span>{title}</span>{" "}
 							</span>
-							<span
-								style={{
-									color: "#f646b2",
-								}}
-							>
-								bachelorettes <span tw="text-white">l</span>
-								<span tw="text-black">in</span>
-							</span>
-							<span>{title}</span>
 						</h2>
 					</div>
 				</div>
 			</div>
 		),
 		{
-			width: 504,
+			width: 804,
 			height: 404,
 			fonts: [
 				{
