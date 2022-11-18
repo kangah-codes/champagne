@@ -107,13 +107,14 @@ function Hero({
 
 	return (
 		<div className="w-full bg-white flex overflow-hidden px-4 flex-col">
-			<div className="grid grid-cols-1 lg1:grid-cols-2 w-full gap-5 lg1:max-w-[80%] 2xl:max-w-[90%] mx-auto py-20">
+			<div className="grid grid-cols-1 lg1:grid-cols-2 w-full gap-5 lg1:max-w-[80%] 2xl:max-w-[90%] 3xl:max-w-[75%] mx-auto py-20">
 				<div className="flex flex-col items-center justify-between">
 					<div className="w-full mx-auto self-end ml-0 lg1:ml-16 mb-5 lg1:mb-0">
 						<div className="mx-auto py-[rem]">
 							<div className="">
 								<h1 className="text-[47px] leading-[47px] lg1:text-[62px] lg1:leading-[62px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] text-center lg1:text-left 2xl:text-[97px] font-anton 2xl:leading-[92px] text-black w-full ">
-									See your college Ranking
+									See your college{" "}
+									<br className="hidden 3xl:block" /> Ranking
 								</h1>
 							</div>
 						</div>
@@ -299,7 +300,7 @@ function Hero({
 				</div>
 			</div>
 
-			<div className="w-full lg1:max-w-[80%] 2xl:max-w-[90%] mx-auto flex items-center justify-center py-20">
+			<div className="w-full lg1:max-w-[80%] 2xl:max-w-[90%] 3xl:max-w-[75%] mx-auto flex items-center justify-center py-20">
 				<div className="w-full pb-[8rem] flex flex-col">
 					{/* <div className="w-full max-w-5xl lg1:max-w-7xl mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem]"></div> */}
