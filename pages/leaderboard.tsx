@@ -177,16 +177,17 @@ function Hero({
 									in your college.
 								</h1>{" "}
 								<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
-									<div
-										onClick={() => {
-											navigator.clipboard.writeText(
-												`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-													/ /g,
-													"+"
-												)}`
-											);
-										}}
-										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+									<button
+										// onClick={() => {
+										// 	navigator.clipboard.writeText(
+										// 		`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
+										// 			/ /g,
+										// 			"+"
+										// 		)}`
+										// 	);
+										// }}
+										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black snapchat-share-button"
+										data-share-url="https://champagne-topaz.vercel.app/share/test"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +206,7 @@ function Hero({
 										<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 											Share
 										</p>
-									</div>
+									</button>
 
 									<div
 										onClick={() => {
@@ -311,14 +312,6 @@ function Hero({
 							Ranking 🍾
 						</h1>
 
-						<div
-							className="snapchat-creative-kit-share"
-							data-theme="dark"
-							data-size="large"
-							data-text="false"
-							data-share-url={`https://champagne-topaz.vercel.app/share/new`}
-						/>
-
 						<div className="relative w-full mt-5 lg1:mt-0 lg1:w-[300px] xl1:w-[320px]">
 							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
 								<svg
@@ -385,10 +378,10 @@ function Hero({
 											key={i}
 											className="relative flex items-end justify-end"
 										>
-											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-[-2px] -bottom-2.5" />
+											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
 											<div
 												className={`
-													border-[4px] lg1:border-[7px] text-white self-end absolute w-full border-black -left-[-12px]
+													border-[4px] lg1:border-[7px] text-white self-end absolute w-[97%] lg1:w-full border-black -left-[-12px] min-h-[221px]
 													rounded-[43px] ${
 														originalPositions.indexOf(
 															item[0]
