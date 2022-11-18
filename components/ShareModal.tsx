@@ -181,7 +181,7 @@ export default function ShareModal() {
 									</div>
 
 									<div className="flex flex-row gap-x-2 w-full lg:max-w-[89%] lg1:max-w-[90%] xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
-										<a
+										<button
 											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
 											data-share-url={encodeURIComponent(
 												`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
@@ -204,7 +204,7 @@ export default function ShareModal() {
 											<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 												Share
 											</p>
-										</a>
+										</button>
 										<div
 											onClick={() => {
 												setInstaModal(true);

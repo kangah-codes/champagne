@@ -25,7 +25,7 @@ export async function getServerSideProps(ctx: any) {
 	// Pass data to the page via props
 	return {
 		props: {
-			shared,
+			shared: shared || null,
 		},
 	};
 }
