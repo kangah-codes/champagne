@@ -15,7 +15,7 @@ import {
 	shareModalState,
 } from "../recoil";
 import { table } from "../utils/airtable";
-import getNumberSuffix from "../utils/helpers";
+import getNumberSuffix, { numberFormatter } from "../utils/helpers";
 
 export async function getStaticProps() {
 	// fetch all records from the airtable
@@ -125,7 +125,7 @@ function Hero({
 								Number of signups
 							</p>
 							<h1 className="text-[66px] leading-[66px] lg1:text-[141px] font-anton lg1:leading-[141px] text-black text-center">
-								{signups}
+								{numberFormatter(signups, 1)}
 							</h1>{" "}
 						</div>
 						<div className="flex flex-col space-y-5">
@@ -133,7 +133,7 @@ function Hero({
 								School represented
 							</p>
 							<h1 className="text-[66px] leading-[66px] lg1:text-[141px] font-anton lg1:leading-[141px] text-black text-center">
-								{uniqueSchools}
+								{numberFormatter(uniqueSchools, 1)}
 							</h1>{" "}
 						</div>
 					</div>

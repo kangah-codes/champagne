@@ -21,3 +21,22 @@ export default function getNumberSuffix(number: number): string {
 
 	return `${number}th`;
 }
+
+export const numberFormatter = (num: number, digits: number): string => {
+	const lookup = [
+		{ value: 1, symbol: "" },
+		{ value: 1e3, symbol: "k" },
+		{ value: 1e6, symbol: "M" },
+	];
+
+	const item = lookup
+		.slice()
+		.reverse()
+		.find((item) => num >= item.value);
+
+	return item
+		? (num / item.value)
+				.toFixed(digits)
+				.replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + item.symbol
+		: "0";
+};
