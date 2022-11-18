@@ -176,7 +176,7 @@ function Hero({
 									</span>{" "}
 									in your college.
 								</h1>{" "}
-								<div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
+								<div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
 									<button
 										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black snapchat-share-button"
 										data-share-url="https://champagne-topaz.vercel.app/share/test"
@@ -370,10 +370,10 @@ function Hero({
 											key={i}
 											className="relative flex items-end justify-end"
 										>
-											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
+											<div className="border-[4px] h-[231px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
 											<div
-												className={`
-													border-[4px] lg1:border-[7px] text-white self-end absolute w-[97%] lg1:w-full border-black -left-[-12px] min-h-[221px]
+												className={`	
+													border-[4px] lg1:border-[7px] text-white self-end absolute w-[97%] lg1:w-full border-black -left-[-12px] h-[231px] min-h-[221px]
 													rounded-[43px] ${
 														originalPositions.indexOf(
 															item[0]

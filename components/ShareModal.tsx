@@ -22,7 +22,7 @@ export default function ShareModal() {
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${shareSchool}`,
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost SJUS on Champagne leaderboard. Attached to link`,
+		`Come and boost ${shareSchool} on Champagne leaderboard. Attached to link`,
 		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
 		`Wanna be the prom queen or prom king at ${shareSchool}? Join the Champagne app - the new dating and fun friendship experience on campus! Attached to link`,
 		`Come and follow all the gists on ${shareSchool} Campus. Sign up for Champagne App. Attached to link`,
@@ -119,9 +119,10 @@ export default function ShareModal() {
 												<button
 													onClick={() => {
 														navigator.clipboard.writeText(
-															`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-																/ /g,
-																"+"
+															`https://champagne-topaz.vercel.app?shared=${encodeURIComponent(
+																diceOptions[
+																	diceIndex
+																]
 															)}`
 														);
 													}}
@@ -179,8 +180,8 @@ export default function ShareModal() {
 										</p>
 									</div>
 
-									<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
-										<button
+									<div className="flex flex-row gap-x-2 w-full lg:max-w-[89%] lg1:max-w-[90%] xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
+										<a
 											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
 											data-share-url={encodeURIComponent(
 												`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
@@ -203,7 +204,7 @@ export default function ShareModal() {
 											<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 												Share
 											</p>
-										</button>
+										</a>
 										<div
 											onClick={() => {
 												setInstaModal(true);
@@ -231,10 +232,7 @@ export default function ShareModal() {
 										</div>
 										<Link
 											href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-												`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-													" ",
-													"+"
-												)}`
+												`https://champagne-topaz.vercel.app?shared=${shareSchool}`
 											)}&text=${encodeURIComponent(
 												diceOptions[diceIndex]
 											)}`}
@@ -263,9 +261,8 @@ export default function ShareModal() {
 											href={`sms:&body=${
 												diceOptions[diceIndex]
 											}+${encodeURIComponent(
-												`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-													" ",
-													"+"
+												`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+													shareSchool || ""
 												)}`
 											)}`}
 											className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
