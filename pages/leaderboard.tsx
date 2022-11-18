@@ -372,7 +372,7 @@ function Hero({
 						data-theme="dark"
 						data-size="large"
 						data-text="false"
-						data-share-url="https://kit.snapchat.com/"
+						data-share-url={`https://champagne-topaz.vercel.app/share/new`}
 					/>
 
 					<div className="grid grid-cols-1 lg1:grid-cols-2 my-14 gap-x-8 gap-y-10">
