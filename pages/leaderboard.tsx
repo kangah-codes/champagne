@@ -367,6 +367,14 @@ function Hero({
 						</div>
 					</div>
 
+					<div
+						className="snapchat-creative-kit-share"
+						data-theme="dark"
+						data-size="large"
+						data-text="false"
+						data-share-url="https://kit.snapchat.com/"
+					/>
+
 					<div className="grid grid-cols-1 lg1:grid-cols-2 my-14 gap-x-8 gap-y-10">
 						{Object.entries(filteredLeaderboard).length > 1 ? (
 							Object.entries(filteredLeaderboard)

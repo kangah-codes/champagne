@@ -69,6 +69,25 @@ const Layout = ({
 				<link rel="icon" href="/images/logo.png" type="image/x-icon" />
 			</Head>
 
+			<div
+				className="snapchat-creative-kit-share"
+				data-theme="dark"
+				data-size="large"
+				data-text="false"
+				data-share-url="https://kit.snapchat.com/"
+			/>
+
+			<Script>
+				{`(function (d, s, id) {
+					var js,
+					sjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "https://sdk.snapkit.com/js/v1/create.js";
+					sjs.parentNode.insertBefore(js, sjs);
+				})(document, "script", "snapkit-creative-kit-sdk");`}
+			</Script>
 			<div className="sticky top-0 z-50">
 				<NavBar />
 				<Modal />
