@@ -64,8 +64,8 @@ const DataForm = () => {
 
 				<h1 className="text-[47px] text-center lg1:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
 					Where your <br />
-					friends <br />
-					recommend
+					friend <br />
+					recommends
 					<br /> your next date
 				</h1>
 
@@ -114,7 +114,7 @@ const DataForm = () => {
 					/>
 				</div>
 				<select
-					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full h-[61px]`}
+					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your college"
 					value={formData["College Name"]}
 					onChange={(e) =>
@@ -142,7 +142,7 @@ const DataForm = () => {
 					className="relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full"
 				/> */}
 				<select
-					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full h-[61px]`}
+					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
 					placeholder="Pick your year"
 					value={formData.Year}
 					onChange={(e) =>
@@ -297,7 +297,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share
 						</p>
 					</div>
@@ -323,7 +323,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share
 						</p>
 					</div>
@@ -352,7 +352,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share
 						</p>
 					</Link>
@@ -388,7 +388,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 							Share with friends
 						</p>
 					</Link>

@@ -206,7 +206,7 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+											<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 												Share
 											</p>
 										</div>
@@ -231,7 +231,7 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+											<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 												Share
 											</p>
 										</div>
@@ -261,7 +261,7 @@ export default function ShareModal() {
 													/>
 												</svg>
 
-												<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+												<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 													Share
 												</p>
 											</div>
@@ -297,7 +297,7 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[8px] leading-[8px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+											<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
 												Share with friends
 											</p>
 										</Link>

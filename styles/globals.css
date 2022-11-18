@@ -108,3 +108,10 @@ select {
 select.paddedBox {
   -webkit-appearance: textfield;
 }
+
+.MuiSvgIcon-root {
+  @apply mr-[32px];
+  background-image: url("../public/caret.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 30px) center;
+}
