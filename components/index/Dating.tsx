@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { modalState } from "../../recoil";
 
@@ -95,6 +95,20 @@ function Content2() {
 
 export default function Dating() {
 	const [selectedContent, setSelectedContent] = useState(1);
+
+	const switchContent = () =>
+		setInterval(() => {
+			setSelectedContent((prev) => (prev === 1 ? 2 : 1));
+		}, 6000);
+
+	useEffect(() => {
+		switchContent();
+
+		return () => {
+			// @ts-ignore
+			clearInterval(switchContent);
+		};
+	}, []);
 
 	return (
 		<div className="w-full bg-white flex px-4 relative pb-32">

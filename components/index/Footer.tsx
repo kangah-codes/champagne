@@ -2,18 +2,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import Router from "next/router";
+import { useRecoilState } from "recoil";
+import { modalState } from "../../recoil";
 
 interface FooterProps {
 	pt?: boolean;
 }
 
 const Footer = () => {
+	const [isOpen, setIsOpen] = useRecoilState(modalState);
+
 	return (
 		<div
 			className={`relative bg-gradient-to-r from-champagne-pink via-champagne-light-blue to-champagne-green text-black`}
 		>
+			{/* // 1366 - 140, 1920 - 191, 1280 - 128, 1440 - 140 */}
 			<div className="mx-auto px-10">
-				<div className="flex flex-col w-full py-20 items-start space-y-5 max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
+				<div className="flex flex-col w-full py-20 lg1:py-[128px] xl:py-[140px] 2xl:py-[191px] items-start space-y-5 max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
 					<div className="flex flex-row items-center space-x-5">
 						<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
 							Campus Gist
@@ -29,9 +34,9 @@ const Footer = () => {
 					<div className="relative">
 						<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
 							Get to know all the trending activities on your
-							campus
+							campus 🤩
 						</h1>
-						<div className="absolute right-5 bottom-2 xl:right-[11rem] xl:-bottom-[1.5rem]">
+						{/* <div className="absolute right-5 bottom-2 xl:right-[11rem] xl:-bottom-[1.5rem]">
 							<img
 								width={80}
 								height={80}
@@ -39,10 +44,13 @@ const Footer = () => {
 								src="/images/emojis/star-eyes.png"
 								className="xl:w-[80px] xl:h-[80px] w-[32px] h-[32px] rotate-[23deg]"
 							/>
-						</div>
+						</div> */}
 					</div>
-					<div className="bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] xl:text-[32px] font-black">
-						<p className="my-auto">Get Early Access</p>
+					<div
+						onClick={() => setIsOpen(true)}
+						className="bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] lg1:text-[32px] font-black"
+					>
+						<p className="my-auto">Join waitlist</p>
 					</div>
 				</div>
 
@@ -55,7 +63,7 @@ const Footer = () => {
 							&copy; {` Copyright ${new Date().getFullYear()}`}
 						</p>
 					</div>
-					<div className="flex flex-col xl:flex-row space-y-5 xl:space-y-0 xl:space-x-5">
+					<div className="flex flex-col lg1:flex-row space-y-5 lg1:space-y-0 lg1:space-x-5">
 						<Link
 							href="https://instagram.com/cham.pagneapp?igshid=MDM4ZDc5MmU="
 							className="flex flex-row items-center space-x-1"
@@ -110,7 +118,7 @@ const Footer = () => {
 							</p>
 						</Link>
 					</div>
-					<p className="text-[23px] font-medium leading-[23px] text-white hidden xl:block">
+					<p className="text-[23px] font-medium leading-[23px] text-white hidden lg1:block">
 						&copy; {` Copyright ${new Date().getFullYear()}`}
 					</p>
 				</div>
