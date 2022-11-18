@@ -16,9 +16,9 @@ const Footer = () => {
 		<div
 			className={`relative bg-gradient-to-r from-champagne-pink via-champagne-light-blue to-champagne-green text-black`}
 		>
-			{/* // 1366 - 140, 1920 - 191, 1280 - 128, 1440 - 140 */}
+			{/* // 1366 - 140, 1920 - 160, 1280 - 106, 1440 - 118 */}
 			<div className="mx-auto px-10">
-				<div className="flex flex-col w-full py-20 lg1:py-[128px] xl:py-[140px] 2xl:py-[191px] items-start space-y-5 max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
+				<div className="flex flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] items-start space-y-5 max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
 					<div className="flex flex-row items-center space-x-5">
 						<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
 							Campus Gist
@@ -48,18 +48,16 @@ const Footer = () => {
 					</div>
 					<div
 						onClick={() => setIsOpen(true)}
-						className="bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] lg1:text-[32px] font-black"
+						className="cursor-pointer bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
 					>
 						<p className="my-auto">Join waitlist</p>
 					</div>
 				</div>
 
-				<div className="max-w-full mx-auto py-10 border-t border-champagne-lighter-gray flex flex-row justify-between">
+				<div className="max-w-full mx-auto py-10 border-t border-champagne-lighter-gray flex flex-row justify-between text-[14px] leading-[14px] xl:text-[15px] font-medium xl:leading-[15px] 2xl:text-[23px] 2xl:leading-[23px]">
 					<div className="flex flex-col space-y-5">
-						<p className="text-[14px] leading-[14px] xl:text-[23px] font-medium xl:leading-[23px] text-white">
-							Champagne - BBSocial Inc.
-						</p>
-						<p className="text-[14px] leading-[14px] xl:text-[23px] font-medium xl:leading-[23px] text-white block xl:hidden">
+						<p className=" text-white">Champagne - BBSocial Inc.</p>
+						<p className=" text-white block xl:hidden">
 							&copy; {` Copyright ${new Date().getFullYear()}`}
 						</p>
 					</div>
@@ -115,6 +113,28 @@ const Footer = () => {
 							</svg>
 							<p className="text-[14px] xl:text-[22px] font-medium text-white">
 								LinkedIn
+							</p>
+						</Link>
+						<Link
+							href="https://www.tiktok.com/@champagneapp?_t=8XSRe3QFp8d&_r=1"
+							className="flex flex-row items-center space-x-1"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18.014"
+								height="20.735"
+								viewBox="0 0 18.014 20.735"
+							>
+								<path
+									id="Icon_simple-tiktok"
+									data-name="Icon simple-tiktok"
+									d="M11.83.017C12.962,0,14.085.009,15.208,0A5.381,5.381,0,0,0,16.72,3.6a6.093,6.093,0,0,0,3.663,1.546V8.631a9.248,9.248,0,0,1-3.629-.838,10.674,10.674,0,0,1-1.4-.8c-.009,2.523.009,5.046-.017,7.56a6.6,6.6,0,0,1-1.166,3.4,6.437,6.437,0,0,1-5.106,2.773,6.3,6.3,0,0,1-3.525-.89A6.515,6.515,0,0,1,2.387,14.9c-.017-.432-.026-.864-.009-1.287A6.5,6.5,0,0,1,9.92,7.845c.017,1.279-.035,2.557-.035,3.836A2.964,2.964,0,0,0,6.1,13.512,3.427,3.427,0,0,0,5.981,14.9,2.94,2.94,0,0,0,9,17.383,2.9,2.9,0,0,0,11.4,15.992a1.993,1.993,0,0,0,.354-.916c.086-1.546.052-3.084.06-4.631C11.821,6.964,11.8,3.49,11.83.017Z"
+									transform="translate(-2.369)"
+									fill="#fff"
+								/>
+							</svg>
+							<p className="text-[14px] xl:text-[22px] font-medium text-white">
+								Tiktok
 							</p>
 						</Link>
 					</div>
