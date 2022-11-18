@@ -285,7 +285,7 @@ export default function InstaModal() {
 			<Transition appear show={isOpen} as={Fragment}>
 				<Dialog
 					as="div"
-					className="absolute right-0 left-0 -bottom-[90%] lg1:-bottom-[65%] xl:-bottom-[65%] xl1:-bottom-[65%] 2xl:-bottom-[60%] z-50 overflow-y-auto"
+					className="fixed inset-0 z-50 overflow-y-auto"
 					onClose={() => setIsOpen(false)}
 				>
 					<div className="min-h-screen px-4 text-center">
