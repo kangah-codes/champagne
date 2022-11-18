@@ -179,23 +179,15 @@ export default function ShareModal() {
 										</p>
 									</div>
 
-									<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3">
-										<div
-											onClick={() => {
-												navigator.clipboard.writeText(
-													`https://champagne-topaz.vercel.app/share/${shareSchool?.replace(
-														/ /g,
-														"+"
-													)}`
-												);
-											}}
-											className=" cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+									<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
+										<button
+											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
+											data-share-url={`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`}
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												width="18.725"
-												height="17.604"
 												viewBox="0 0 18.725 17.604"
+												className="w-[11px] h-[11px] lg1:w-[18px] lg1:h-[18px]"
 											>
 												<path
 													id="Icon_awesome-snapchat-ghost"
@@ -206,10 +198,10 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+											<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 												Share
 											</p>
-										</div>
+										</button>
 										<div
 											onClick={() => {
 												setInstaModal(true);
@@ -244,27 +236,26 @@ export default function ShareModal() {
 											)}&text=${encodeURIComponent(
 												diceOptions[diceIndex]
 											)}`}
+											className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
 										>
-											<div className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black">
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="15.013"
-													height="12.194"
-													viewBox="0 0 15.013 12.194"
-												>
-													<path
-														id="Icon_awesome-twitter"
-														data-name="Icon awesome-twitter"
-														d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
-														transform="translate(0 -3.381)"
-														fill="#fff"
-													/>
-												</svg>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="15.013"
+												height="12.194"
+												viewBox="0 0 15.013 12.194"
+											>
+												<path
+													id="Icon_awesome-twitter"
+													data-name="Icon awesome-twitter"
+													d="M13.47,6.42c.01.133.01.267.01.4a8.7,8.7,0,0,1-8.755,8.755A8.7,8.7,0,0,1,0,14.193a6.365,6.365,0,0,0,.743.038,6.162,6.162,0,0,0,3.82-1.315,3.082,3.082,0,0,1-2.877-2.134,3.88,3.88,0,0,0,.581.048,3.254,3.254,0,0,0,.81-.1A3.077,3.077,0,0,1,.61,7.706V7.668A3.1,3.1,0,0,0,2,8.058a3.082,3.082,0,0,1-.953-4.115,8.746,8.746,0,0,0,6.344,3.22,3.473,3.473,0,0,1-.076-.7,3.08,3.08,0,0,1,5.325-2.105,6.058,6.058,0,0,0,1.953-.743,3.069,3.069,0,0,1-1.353,1.7,6.168,6.168,0,0,0,1.772-.476A6.614,6.614,0,0,1,13.47,6.42Z"
+													transform="translate(0 -3.381)"
+													fill="#fff"
+												/>
+											</svg>
 
-												<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
-													Share
-												</p>
-											</div>
+											<p className="text-[12px] leading-[12px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+												Share
+											</p>
 										</Link>
 										<Link
 											href={`sms:&body=${

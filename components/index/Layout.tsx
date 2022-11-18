@@ -18,7 +18,7 @@ interface LayoutProps {
 const Layout = ({
 	// @ts-ignore
 	children,
-	title = "Champagne",
+	title,
 	desc = `Champagne`,
 	footer = true,
 	college,
@@ -26,7 +26,7 @@ const Layout = ({
 	return (
 		<div className="flex flex-col min-h-screen">
 			<Head>
-				<title>{title}</title>
+				<title>Champagne</title>
 				<meta name="description" content={desc} />
 				<meta property="og:type" content="website" />
 				<meta
@@ -62,7 +62,7 @@ const Layout = ({
 					content={`https://champagne-topaz.vercel.app`}
 				/>
 				<meta name="twitter:card" content="summary" />
-				<meta name="twitter:title" content={title} />
+				<meta name="twitter:title" content={"Champagne"} />
 				<meta name="twitter:description" content={desc} />
 				<meta name="twitter:site" content="@propernounco" />
 				<meta name="twitter:creator" content="@propernounco" />
