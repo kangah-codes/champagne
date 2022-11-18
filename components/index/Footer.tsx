@@ -56,7 +56,10 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className="flex flex-col xl:flex-row space-y-5 xl:space-y-0 xl:space-x-5">
-						<div className="flex flex-row items-center space-x-1">
+						<Link
+							href="https://instagram.com/cham.pagneapp?igshid=MDM4ZDc5MmU="
+							className="flex flex-row items-center space-x-1"
+						>
 							<svg
 								fill="#fff"
 								xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +73,11 @@ const Footer = () => {
 							<p className="text-[14px] xl:text-[22px] font-medium text-white">
 								Instagram
 							</p>
-						</div>
-						<div className="flex flex-row items-center space-x-1">
+						</Link>
+						<Link
+							href="https://www.linkedin.com/company/champagneapp/"
+							className="flex flex-row items-center space-x-1"
+						>
 							<svg
 								fill="#FFFFFF"
 								xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +91,11 @@ const Footer = () => {
 							<p className="text-[14px] xl:text-[22px] font-medium text-white">
 								Twitter
 							</p>
-						</div>
-						<div className="flex flex-row items-center space-x-1">
+						</Link>
+						<Link
+							href="https://www.linkedin.com/company/champagneapp/"
+							className="flex flex-row items-center space-x-1"
+						>
 							<svg
 								fill="#FFFFFF"
 								xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +108,7 @@ const Footer = () => {
 							<p className="text-[14px] xl:text-[22px] font-medium text-white">
 								LinkedIn
 							</p>
-						</div>
+						</Link>
 					</div>
 					<p className="text-[23px] font-medium leading-[23px] text-white hidden xl:block">
 						&copy; {` Copyright ${new Date().getFullYear()}`}

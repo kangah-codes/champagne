@@ -64,8 +64,8 @@ const DataForm = () => {
 
 				<h1 className="text-[47px] text-center lg1:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
 					Where your <br />
-					friend <br />
-					recommends
+					friends <br />
+					recommend
 					<br /> your next date
 				</h1>
 
@@ -114,7 +114,7 @@ const DataForm = () => {
 					/>
 				</div>
 				<select
-					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
+					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full h-[61px]`}
 					placeholder="Pick your college"
 					value={formData["College Name"]}
 					onChange={(e) =>
@@ -142,7 +142,7 @@ const DataForm = () => {
 					className="relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full"
 				/> */}
 				<select
-					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
+					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full h-[61px]`}
 					placeholder="Pick your year"
 					value={formData.Year}
 					onChange={(e) =>
