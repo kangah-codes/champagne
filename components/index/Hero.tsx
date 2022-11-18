@@ -37,8 +37,8 @@ export default function Hero() {
 						</div>
 						<h1 className="text-[47px] leading-[47px] xl:text-[68px] xl:leading-[68px] lg1:text-[64px] lg1:leading-[64px] xl1:text-[72px] xl1:leading-[72px] 2lg1:text-[97px] 2lg1:leading-[92px] font-anton text-center text-black w-full">
 							Where your <br />
-							friend <br className="block md:hidden" />
-							recommends your <br />
+							friends <br className="block md:hidden" />
+							recommend your <br />
 							next date
 						</h1>
 					</div>
