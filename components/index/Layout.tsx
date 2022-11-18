@@ -13,6 +13,7 @@ interface LayoutProps {
 	pt?: boolean;
 	college?: string;
 	footer?: boolean;
+	shared?: string;
 }
 
 const Layout = ({
@@ -22,6 +23,7 @@ const Layout = ({
 	desc = `Champagne`,
 	footer = true,
 	college,
+	shared,
 }: LayoutProps) => {
 	return (
 		<div className="flex flex-col min-h-screen">
@@ -33,7 +35,9 @@ const Layout = ({
 					name="og:title"
 					property="og:title"
 					content={
-						"Join other bachelors & bachelorettes on Champagne"
+						shared
+							? shared
+							: "Join other bachelors & bachelorettes on Champagne"
 					}
 				/>
 				<meta

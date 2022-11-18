@@ -182,7 +182,9 @@ export default function ShareModal() {
 									<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
 										<button
 											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
-											data-share-url={`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`}
+											data-share-url={encodeURIComponent(
+												`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
+											)}
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
