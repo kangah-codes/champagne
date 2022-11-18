@@ -69,14 +69,6 @@ const Layout = ({
 				<link rel="icon" href="/images/logo.png" type="image/x-icon" />
 			</Head>
 
-			<div
-				className="snapchat-creative-kit-share"
-				data-theme="dark"
-				data-size="large"
-				data-text="false"
-				data-share-url="https://kit.snapchat.com/"
-			/>
-
 			<Script>
 				{`(function (d, s, id) {
 					var js,

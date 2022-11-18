@@ -311,6 +311,14 @@ function Hero({
 							Ranking 🍾
 						</h1>
 
+						<div
+							className="snapchat-creative-kit-share"
+							data-theme="dark"
+							data-size="large"
+							data-text="false"
+							data-share-url={`https://champagne-topaz.vercel.app/share/new`}
+						/>
+
 						<div className="relative w-full mt-5 lg1:mt-0 lg1:w-[300px] xl1:w-[320px]">
 							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
 								<svg
@@ -366,14 +374,6 @@ function Hero({
 							/>
 						</div>
 					</div>
-
-					<div
-						className="snapchat-creative-kit-share"
-						data-theme="dark"
-						data-size="large"
-						data-text="false"
-						data-share-url={`https://champagne-topaz.vercel.app/share/new`}
-					/>
 
 					<div className="grid grid-cols-1 lg1:grid-cols-2 my-14 gap-x-8 gap-y-10">
 						{Object.entries(filteredLeaderboard).length > 1 ? (
