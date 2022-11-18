@@ -305,13 +305,13 @@ function Hero({
 					{/* <div className="w-full max-w-5xl lg1:max-w-7xl mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem]"></div> */}
 					<div className="relative w-full mx-auto flex flex-col lg1:flex-row items-center justify-between self-end pl-0 lg1:pl-16">
-						<h1 className="text-[47px] leading-[47px] lg1:text-[62px] lg1:leading-[62px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] text-center lg1:text-left 2xl:text-[97px] font-anton 2xl:leading-[92px] text-black w-full ">
+						<h1 className="text-[47px] leading-[47px] lg1:text-[62px] lg1:leading-[62px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] text-center lg1:text-left 2xl:text-[97px] font-anton 2xl:leading-[92px] text-black">
 							College Hallway
 							<br />
 							Ranking 🍾
 						</h1>
 
-						<div className="relative p-2 w-full mt-5 lg1:mt-0 lg1:w-[280px]">
+						<div className="relative w-full mt-5 lg1:mt-0 lg1:w-[300px] xl1:w-[320px]">
 							<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +359,7 @@ function Hero({
 							</div>
 							<input
 								type="text"
-								className="focus:ring-none font-bold text-[12px] block w-full rounded-full bg-[#EFEFEF] px-2 py-2.5 pl-8 text-gray-900 focus:outline-none"
+								className="focus:ring-none font-bold text-[12px] block w-full rounded-full bg-[#EFEFEF] px-2 h-[45px] pl-10 text-gray-900 focus:outline-none"
 								placeholder="Search your college"
 								value={searchTerm}
 								onChange={handleFilter}

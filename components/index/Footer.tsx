@@ -18,7 +18,7 @@ const Footer = () => {
 		>
 			{/* // 1366 - 140, 1920 - 160, 1280 - 106, 1440 - 118 */}
 			<div className="mx-auto px-10">
-				<div className="flex flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] items-start space-y-5 max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
+				<div className="flex flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] items-start space-y-[14px] max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
 					<div className="flex flex-row items-center space-x-5">
 						<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
 							Campus Gist
@@ -31,7 +31,7 @@ const Footer = () => {
 							className="xl:w-[59px] xl:h-[59px] w-[32px] h-[32px] rotate-[23deg]"
 						/>
 					</div>
-					<div className="relative">
+					<div className="">
 						<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
 							Get to know all the trending activities on your
 							campus 🤩
@@ -61,7 +61,7 @@ const Footer = () => {
 							&copy; {` Copyright ${new Date().getFullYear()}`}
 						</p>
 					</div>
-					<div className="flex flex-col lg1:flex-row space-y-5 lg1:space-y-0 lg1:space-x-5">
+					<div className="flex flex-col lg1:flex-row space-y-5 lg1:space-y-0 lg1:space-x-[40px]">
 						<Link
 							href="https://instagram.com/cham.pagneapp?igshid=MDM4ZDc5MmU="
 							className="flex flex-row items-center space-x-1"
