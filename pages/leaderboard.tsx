@@ -368,17 +368,18 @@ function Hero({
 					</div>
 
 					<div className="grid grid-cols-1 lg1:grid-cols-2 my-14 gap-x-8 gap-y-10">
-						{Object.entries(filteredLeaderboard)
-							.sort((a, b) => b[1] - a[1])
-							.map((item, i) =>
-								originalPositions.indexOf(item[0]) <= 1 ? (
-									<div
-										key={i}
-										className="relative flex items-end justify-end"
-									>
-										<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-0.5 -bottom-2.5" />
+						{Object.entries(filteredLeaderboard).length > 1 ? (
+							Object.entries(filteredLeaderboard)
+								.sort((a, b) => b[1] - a[1])
+								.map((item, i) =>
+									originalPositions.indexOf(item[0]) <= 1 ? (
 										<div
-											className={`
+											key={i}
+											className="relative flex items-end justify-end"
+										>
+											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full z-[1] -left-0.5 -bottom-2.5" />
+											<div
+												className={`
 											border-[4px] lg1:border-[7px] text-white self-end w-[98%] border-black 
 											rounded-[43px] ${
 												originalPositions.indexOf(
@@ -389,7 +390,41 @@ function Hero({
 											}
 											p-5 lg1:p-10 z-[20] flex flex-col justify-between h-full
 										`}
-										>
+											>
+												<div className="grid w-full items-end justify-items-end">
+													<h1 className="text-[46px] leading-[46px] xl1:text-[79px] font-anton xl1:leading-[79px]">
+														{getNumberSuffix(
+															originalPositions.indexOf(
+																item[0]
+															) + 1
+														)}
+													</h1>
+												</div>
+												<div className="flex flex-col w-full lg1:max-w-[80%] mt-8 lg1:mt-0">
+													<h1 className="uppercase text-[9px] leading-[9px] lg1:text-[18px] font-black lg1:leading-[18px]">
+														{item[1]} student
+														{item[1] > 1 ? "s" : ""}
+													</h1>
+													<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[80px] w-full line-clamp-2 break-words">
+														{item[0]}
+													</h1>
+												</div>
+
+												<div
+													onClick={() => {
+														setShareSchool(item[0]);
+														setIsOpen(true);
+													}}
+													className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
+												>
+													<p className="text-[20px] font-anton leading-[20px]">
+														Share
+													</p>
+												</div>
+											</div>
+										</div>
+									) : (
+										<div className="border-[4px] lg1:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 lg1:p-10 z-[20] flex flex-col lg1:col-span-full">
 											<div className="grid w-full items-end justify-items-end">
 												<h1 className="text-[46px] leading-[46px] xl1:text-[79px] font-anton xl1:leading-[79px]">
 													{getNumberSuffix(
@@ -404,7 +439,7 @@ function Hero({
 													{item[1]} student
 													{item[1] > 1 ? "s" : ""}
 												</h1>
-												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[80px] w-full line-clamp-2 break-words">
+												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words">
 													{item[0]}
 												</h1>
 											</div>
@@ -414,49 +449,27 @@ function Hero({
 													setShareSchool(item[0]);
 													setIsOpen(true);
 												}}
-												className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
+												className="cursor-pointer text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-[#DEDBDB]"
 											>
 												<p className="text-[20px] font-anton leading-[20px]">
 													Share
 												</p>
 											</div>
 										</div>
-									</div>
-								) : (
-									<div className="border-[4px] lg1:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 lg1:p-10 z-[20] flex flex-col lg1:col-span-full">
-										<div className="grid w-full items-end justify-items-end">
-											<h1 className="text-[46px] leading-[46px] xl1:text-[79px] font-anton xl1:leading-[79px]">
-												{getNumberSuffix(
-													originalPositions.indexOf(
-														item[0]
-													) + 1
-												)}
-											</h1>
-										</div>
-										<div className="flex flex-col w-full lg1:max-w-[80%] mt-8 lg1:mt-0">
-											<h1 className="uppercase text-[9px] leading-[9px] lg1:text-[18px] font-black lg1:leading-[18px]">
-												{item[1]} student
-												{item[1] > 1 ? "s" : ""}
-											</h1>
-											<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words">
-												{item[0]}
-											</h1>
-										</div>
-
-										<div
-											onClick={() => {
-												setShareSchool(item[0]);
-												setIsOpen(true);
-											}}
-											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
-										>
-											<p className="text-[20px] font-anton leading-[20px]">
-												Share
-											</p>
-										</div>
-									</div>
+									)
 								)
-							)}
+						) : (
+							<div className="w-full rounded-[28px] lg1:rounded-[43px] border-[4px] lg1:border-[7px] border-black py-8 px-8 items-center justify-center flex flex-row space-x-14 col-span-1 lg1:col-span-2 h-[290px]">
+								<h1 className="text-[50px] leading-[50px] font-anton text-black text-center">
+									No School Match your search request.
+									<br />
+									<span className="text-champagne-pink">
+										{" "}
+										Try again
+									</span>
+								</h1>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
