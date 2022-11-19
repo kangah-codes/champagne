@@ -377,15 +377,15 @@ function Hero({
 											key={i}
 											className="relative flex items-end justify-end"
 										>
-											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
+											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-[97%] h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
 											<div
 												className={`	
-													border-[4px] lg1:border-[7px] text-white self-end absolute w-[97%] lg1:w-full border-black -left-[-12px] h-full min-h-[221px]
+													border-[4px] lg1:border-[7px] text-white self-end w-[96.5%] lg1:w-[97%] 2xl:w-[98.5%] border-black -left-[-12px] h-full min-h-[221px]
 													rounded-[43px] ${
 														originalPositions.indexOf(
 															item[0]
 														) === 0
-															? "bg-gradient-to-br from-champagne-pink relative via-champagne-light-blue to-champagne-green"
+															? "bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green"
 															: "bg-champagne-pink"
 													}
 													p-5 lg1:p-10 z-[20] flex flex-col justify-between h-full
