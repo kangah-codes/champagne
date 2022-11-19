@@ -178,7 +178,7 @@ const SuccessForm = () => {
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${formData["College Name"]}`,
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost SJUS on Champagne leaderboard. Attached to link`,
+		`Come and boost ${formData["College Name"]} on Champagne leaderboard. Attached to link`,
 		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
 		`Wanna be the prom queen or prom king at ${formData["College Name"]}? Join the Champagne app - the new dating and fun friendship experience on campus! Attached to link`,
 		`Come and follow all the gists on ${formData["College Name"]} Campus. Sign up for Champagne App. Attached to link`,
@@ -187,7 +187,7 @@ const SuccessForm = () => {
 	];
 
 	return (
-		<div className="flex flex-col lg1:flex-row p-5 lg1:p-14 w-full gap-x-10">
+		<div className="flex flex-col lg1:flex-row p-5 lg1:p-14 w-full gap-x-5">
 			<div className="flex flex-col w-full lg1:w-1/2 my-auto">
 				<img
 					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto xl:mx-0"
@@ -204,8 +204,9 @@ const SuccessForm = () => {
 				</h1>
 
 				<p className="text-white font-bold text-[12px] xl:text-[23px] leading-[12px] xl:leading-[23px] mt-5 text-center xl:text-left">
-					Invite your friends to win a bottle of Champagne. The more
-					of your friends join, the better your chances
+					Invite your friends to win a bottle of <br />
+					Champagne. The more of your friends join, the better your
+					chances
 				</p>
 			</div>
 
@@ -217,9 +218,9 @@ const SuccessForm = () => {
 							<button
 								onClick={() => {
 									navigator.clipboard.writeText(
-										`https://champagne-topaz.vercel.app/share/${formData[
-											"College Name"
-										]?.replace(/ /g, "+")}`
+										`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+											formData["College Name"] || ""
+										)}`
 									);
 								}}
 								className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-5 text-base font-black"
@@ -270,23 +271,16 @@ const SuccessForm = () => {
 				</div>
 
 				<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
-					<div
-						onClick={() => {
-							navigator.clipboard.writeText(
-								`https://champagne-topaz.vercel.app/share/${formData[
-									"College Name"
-								]
-									?.replace(/ /g, "+")
-									?.replace(/ /g, "+")}`
-							);
-						}}
-						className=" cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+					<button
+						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
+						data-share-url={encodeURIComponent(
+							`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
+						)}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="18.725"
-							height="17.604"
 							viewBox="0 0 18.725 17.604"
+							className="w-[11px] h-[11px] lg1:w-[18px] lg1:h-[18px]"
 						>
 							<path
 								id="Icon_awesome-snapchat-ghost"
@@ -297,10 +291,10 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[13px] leading-[13px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
 							Share
 						</p>
-					</div>
+					</button>
 					<div
 						onClick={() => {
 							setShareSchool(formData["College Name"]);
@@ -329,11 +323,9 @@ const SuccessForm = () => {
 					</div>
 					<Link
 						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-							`https://champagne-topaz.vercel.app/share/${formData[
-								"College Name"
-							]
-								?.replace(/ /g, "+")
-								?.replace(" ", "+")}`
+							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+								formData["College Name"] || ""
+							)}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
 						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
 					>
@@ -360,11 +352,9 @@ const SuccessForm = () => {
 						href={`sms:&body=${
 							diceOptions[diceIndex]
 						}+${encodeURIComponent(
-							`https://champagne-topaz.vercel.app/share/${formData[
-								"College Name"
-							]
-								?.replace(/ /g, "+")
-								?.replace(" ", "+")}`
+							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+								formData["College Name"] || ""
+							)}`
 						)}`}
 						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
 					>
@@ -388,7 +378,7 @@ const SuccessForm = () => {
 							/>
 						</svg>
 
-						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+						<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px] truncate">
 							Share with friends
 						</p>
 					</Link>
@@ -445,7 +435,7 @@ export default function Modal() {
 					>
 						<div
 							className={`
-									py-5 my-8 inline-block w-full max-w-[866px] lg1:max-w-[80%] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-xl transform overflow-hidden 
+									py-5 my-8 inline-block w-full max-w-[866px] lg1:max-w-[80%] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl transform overflow-hidden 
 									rounded-[29px] xl:rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green 
 									text-left align-middle shadow-xl transition-all relative
 								`}

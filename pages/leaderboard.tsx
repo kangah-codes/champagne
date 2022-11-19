@@ -179,7 +179,14 @@ function Hero({
 								<div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
 									<button
 										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black snapchat-share-button"
-										data-share-url="https://champagne-topaz.vercel.app/share/test"
+										data-share-url={`https://champagne-topaz.vercel.app?shared=${encodeURIComponent(
+											diceOptionsNoSchool[
+												Math.floor(
+													Math.random() *
+														diceOptionsNoSchool.length
+												)
+											]
+										)}`}
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -370,10 +377,10 @@ function Hero({
 											key={i}
 											className="relative flex items-end justify-end"
 										>
-											<div className="border-[4px] h-[231px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
+											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-full h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
 											<div
 												className={`	
-													border-[4px] lg1:border-[7px] text-white self-end absolute w-[97%] lg1:w-full border-black -left-[-12px] h-[231px] min-h-[221px]
+													border-[4px] lg1:border-[7px] text-white self-end absolute w-[97%] lg1:w-full border-black -left-[-12px] h-full min-h-[221px]
 													rounded-[43px] ${
 														originalPositions.indexOf(
 															item[0]
@@ -398,7 +405,7 @@ function Hero({
 														{item[1]} student
 														{item[1] > 1 ? "s" : ""}
 													</h1>
-													<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[80px] w-full line-clamp-2 break-words">
+													<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[80px] w-full line-clamp-1 break-words">
 														{item[0]}
 													</h1>
 												</div>

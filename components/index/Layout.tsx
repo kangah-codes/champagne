@@ -88,10 +88,6 @@ const Layout = ({
 					snap.creativekit.initalizeShareButtons(
 						document.getElementsByClassName("snapchat-share-button")
 					);
-
-					snap.creativekit.initalizeShareButtons(
-						document.getElementsByClassName("snapchat-share-button-1")
-					);
 				};
 				`}
 			</Script>
