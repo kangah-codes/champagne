@@ -16,16 +16,11 @@ import Link from "next/link";
 import classNames from "classnames";
 import { useVirtualizer } from "@tanstack/react-virtual";
 
-type ListItem = {
-	value: string | number;
-	text: string | undefined | null;
-};
-
 type Props = {
 	name?: string;
 	items?: string[];
 	label?: string;
-	onChange: (event: { target: any; type?: any }) => void;
+	onSelect: (val: any) => void;
 	children?: never;
 	className?: string;
 	placeholder?: string;
@@ -36,10 +31,10 @@ export function Select({
 	label,
 	items,
 	className,
-	onChange,
+	onSelect,
 	placeholder,
 }: Props) {
-	const [selected, setSelected] = useState<ListItem>();
+	const [selected, setSelected] = useState<string>();
 	const [query, setQuery] = useState("");
 	const btnRef = useRef<HTMLButtonElement>(null);
 	const [formData, setFormData] = useRecoilState(formDataState);
@@ -61,16 +56,16 @@ export function Select({
 	);
 
 	return (
-		<div className={`block w-full ${className}`}>
-			<div className="relative">
+		<div className={`block w-full h-full ${className}`}>
+			<div className="relative h-full">
 				<Combobox
 					value={selected}
 					onChange={(v) => {
 						setSelected(v);
-						onChange?.({ target: { name, value: v?.value } });
+						onSelect(v);
 					}}
 				>
-					<div className="relative">
+					<div className="relative h-full">
 						<div
 							className={`relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] ${className}`}
 						>
@@ -81,9 +76,11 @@ export function Select({
 										btnRef?.current?.click();
 									}
 								}}
-								className="w-full border-none text-sm leading-5 text-gray-900 focus:outline-none"
+								className="w-full border-none text-sm leading-5 text-gray-900 focus:outline-none text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px]"
 								value={formData["College Name"]}
-								onChange={(e) => onChange(e)}
+								onChange={(e) => {
+									setQuery(e.target.value);
+								}}
 								placeholder={placeholder}
 							/>
 							<Combobox.Button
@@ -113,7 +110,10 @@ export function Select({
 									Nothing found.
 								</div>
 							) : (
-								<VirtualizedList items={filteredItems ?? []} />
+								<VirtualizedList
+									items={filteredItems ?? []}
+									onSelect={onSelect}
+								/>
 							)}
 						</Combobox.Options>
 					</div>
@@ -123,8 +123,15 @@ export function Select({
 	);
 }
 
-function VirtualizedList({ items }: { items: string[] }) {
+function VirtualizedList({
+	items,
+	onSelect,
+}: {
+	items: string[];
+	onSelect: (val: any) => void;
+}) {
 	const parentRef = useRef<HTMLDivElement>(null);
+	const [formData, setFormData] = useRecoilState(formDataState);
 
 	const rowVirtualizer = useVirtualizer({
 		count: items?.length,
@@ -139,7 +146,7 @@ function VirtualizedList({ items }: { items: string[] }) {
 			className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
 		>
 			<div
-				className="h-[200px] max-h-[500px]"
+				className="h-[120px] lg1:h-[200px] max-h-[500px]"
 				style={{
 					// height: `${rowVirtualizer.getTotalSize()}px`,
 					width: "100%",
@@ -161,6 +168,9 @@ function VirtualizedList({ items }: { items: string[] }) {
 							`relative cursor-default select-none py-2 pl-2 pr-4`
 						}
 						value={items?.[virtualRow.index]}
+						onClick={() => {
+							onSelect(items?.[virtualRow.index]);
+						}}
 					>
 						{({ selected, active }) => (
 							<span
@@ -192,6 +202,7 @@ const DataForm = () => {
 	});
 
 	const onSubmit = () => {
+		console.log(formData);
 		setLoading(true);
 		fetch("/api/create-record", {
 			method: "POST",
@@ -259,14 +270,14 @@ const DataForm = () => {
 					<Select
 						items={["+1"]}
 						placeholder="+1"
-						onChange={
+						onSelect={
 							(e) => {}
 							// setFormData({
 							// 	...formData,
 							// 	Year: e.target.value,
 							// })
 						}
-						className="col-span-2 w-full"
+						className="col-span-2 w-full h-full"
 					/>
 					{/* <select
 						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[20px] col-span-1`}
@@ -275,7 +286,7 @@ const DataForm = () => {
 					</select> */}
 					<input
 						type="text"
-						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 						placeholder="Phone Number"
 						value={formData["Phone Number"]}
 						onChange={(e) =>
@@ -290,12 +301,13 @@ const DataForm = () => {
 				<Select
 					items={colleges}
 					placeholder="Pick your College"
-					onChange={(e) =>
+					onSelect={(e) => {
+						console.log(e);
 						setFormData({
 							...formData,
-							"College Name": e.target.value,
-						})
-					}
+							"College Name": e,
+						});
+					}}
 				/>
 				<Select
 					items={[
@@ -305,10 +317,10 @@ const DataForm = () => {
 						"Senior Year",
 					]}
 					placeholder="Pick your Year"
-					onChange={(e) =>
+					onSelect={(e) =>
 						setFormData({
 							...formData,
-							Year: e.target.value,
+							Year: e,
 						})
 					}
 				/>
@@ -429,7 +441,7 @@ const SuccessForm = () => {
 
 				<div className="flex flex-row gap-x-2 w-full xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
 					<button
-						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
+						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-2.5 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
 						data-share-url={encodeURIComponent(
 							`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
 						)}
@@ -457,7 +469,7 @@ const SuccessForm = () => {
 							setShareSchool(formData["College Name"]);
 							setInstaModal(true);
 						}}
-						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-2.5 lg:py-3 lg:px-6 text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -484,7 +496,7 @@ const SuccessForm = () => {
 								formData["College Name"] || ""
 							)}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
-						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-2.5 lg:py-3 lg:px-6 text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -513,7 +525,7 @@ const SuccessForm = () => {
 								formData["College Name"] || ""
 							)}`
 						)}`}
-						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+						className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-2.5 lg:py-3 lg:px-6 text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
