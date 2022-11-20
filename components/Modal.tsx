@@ -12,10 +12,171 @@ import {
 } from "../recoil";
 import { colleges } from "../utils/data";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 import classNames from "classnames";
 import { useVirtualizer } from "@tanstack/react-virtual";
-import Link from "next/link";
 
+type ListItem = {
+	value: string | number;
+	text: string | undefined | null;
+};
+
+type Props = {
+	name?: string;
+	items?: string[];
+	label?: string;
+	onChange: (event: { target: any; type?: any }) => void;
+	children?: never;
+	className?: string;
+	placeholder?: string;
+};
+
+export function Select({
+	name,
+	label,
+	items,
+	className,
+	onChange,
+	placeholder,
+}: Props) {
+	const [selected, setSelected] = useState<ListItem>();
+	const [query, setQuery] = useState("");
+	const btnRef = useRef<HTMLButtonElement>(null);
+	const [formData, setFormData] = useRecoilState(formDataState);
+
+	const filteredItems =
+		query === ""
+			? items
+			: items?.filter((item: string) =>
+					item
+						.toLowerCase()
+						.replace(/\s+/g, "")
+						.includes(query.toLowerCase().replace(/\s+/g, ""))
+			  ) ?? [];
+
+	var classes = classNames(
+		"relative w-full cursor-default overflow-hidden text-left focus:outline-none",
+		"block w-full placeholder-light-grey",
+		className
+	);
+
+	return (
+		<div className={`block w-full ${className}`}>
+			<div className="relative">
+				<Combobox
+					value={selected}
+					onChange={(v) => {
+						setSelected(v);
+						onChange?.({ target: { name, value: v?.value } });
+					}}
+				>
+					<div className="relative">
+						<div
+							className={`relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] ${className}`}
+						>
+							<Combobox.Input
+								onFocus={(e: any) => {
+									e.target.select();
+									if (!e.relatedTarget) {
+										btnRef?.current?.click();
+									}
+								}}
+								className="w-full border-none text-sm leading-5 text-gray-900 focus:outline-none"
+								value={formData["College Name"]}
+								onChange={(e) => onChange(e)}
+								placeholder={placeholder}
+							/>
+							<Combobox.Button
+								ref={btnRef}
+								className="flex items-center"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14.541"
+									height="8.314"
+									viewBox="0 0 14.541 8.314"
+									className="w-[11px] h-[6px] lg1:w-[14px] lg1:h-[8px]"
+								>
+									<path
+										id="Icon_ionic-ios-arrow-down"
+										data-name="Icon ionic-ios-arrow-down"
+										d="M13.461,17.054l5.5-5.5a1.035,1.035,0,0,1,1.468,0,1.048,1.048,0,0,1,0,1.472l-3.2,3.205L14.2,19.258a1.037,1.037,0,0,1-1.433.03l-6.273-6.26a1.039,1.039,0,0,1,1.468-1.472Z"
+										transform="translate(-6.188 -11.246)"
+									/>
+								</svg>
+							</Combobox.Button>
+						</div>
+
+						<Combobox.Options>
+							{filteredItems?.length === 0 && query !== "" ? (
+								<div className="relative cursor-default select-none py-2 px-4 text-gray-700">
+									Nothing found.
+								</div>
+							) : (
+								<VirtualizedList items={filteredItems ?? []} />
+							)}
+						</Combobox.Options>
+					</div>
+				</Combobox>
+			</div>
+		</div>
+	);
+}
+
+function VirtualizedList({ items }: { items: string[] }) {
+	const parentRef = useRef<HTMLDivElement>(null);
+
+	const rowVirtualizer = useVirtualizer({
+		count: items?.length,
+		getScrollElement: () => parentRef.current,
+		estimateSize: () => 35,
+		overscan: 5,
+	});
+
+	return (
+		<div
+			ref={parentRef}
+			className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+		>
+			<div
+				className="h-[200px] max-h-[500px]"
+				style={{
+					// height: `${rowVirtualizer.getTotalSize()}px`,
+					width: "100%",
+					position: "relative",
+				}}
+			>
+				{rowVirtualizer.getVirtualItems().map((virtualRow: any) => (
+					<Combobox.Option
+						key={virtualRow.index}
+						style={{
+							position: "absolute",
+							top: 0,
+							left: 0,
+							width: "100%",
+							height: `${virtualRow.size}px`,
+							transform: `translateY(${virtualRow.start}px)`,
+						}}
+						className={({ active }) =>
+							`relative cursor-default select-none py-2 pl-2 pr-4`
+						}
+						value={items?.[virtualRow.index]}
+					>
+						{({ selected, active }) => (
+							<span
+								className={`block truncate ${
+									selected ? "font-medium" : "font-normal"
+								}`}
+							>
+								{items?.[virtualRow.index]}
+							</span>
+						)}
+					</Combobox.Option>
+				))}
+			</div>
+		</div>
+	);
+}
 const DataForm = () => {
 	const [formData, setFormData] = useRecoilState(formDataState);
 	const [reqSuccessful, setReqSuccessful] =
@@ -94,15 +255,27 @@ const DataForm = () => {
 						setFormData({ ...formData, Email: e.target.value })
 					}
 				/>
-				<div className="flex flex-row space-x-3 w-full">
-					<select
+				<div className="w-full grid grid-cols-6 gap-3">
+					<Select
+						items={["+1"]}
+						placeholder="+1"
+						onChange={
+							(e) => {}
+							// setFormData({
+							// 	...formData,
+							// 	Year: e.target.value,
+							// })
+						}
+						className="col-span-2 w-full"
+					/>
+					{/* <select
 						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[20px] col-span-1`}
 					>
 						<option>+1</option>
-					</select>
+					</select> */}
 					<input
 						type="text"
-						className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
 						placeholder="Phone Number"
 						value={formData["Phone Number"]}
 						onChange={(e) =>
@@ -113,48 +286,32 @@ const DataForm = () => {
 						}
 					/>
 				</div>
-				<select
-					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
-					placeholder="Pick your college"
-					value={formData["College Name"]}
+
+				<Select
+					items={colleges}
+					placeholder="Pick your College"
 					onChange={(e) =>
 						setFormData({
 							...formData,
 							"College Name": e.target.value,
 						})
 					}
-				>
-					<option className="text-champagne-light-gray">
-						Pick your college
-					</option>
-
-					{colleges.map((college, index) => (
-						<option key={index} value={college}>
-							{college}
-						</option>
-					))}
-				</select>
-
-				{/* <Select
-					name="LOL"
-					label="LOL"
-					items={colleges}
-					className="relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full"
-				/> */}
-				<select
-					className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] col-span-1 w-full`}
-					placeholder="Pick your year"
-					value={formData.Year}
+				/>
+				<Select
+					items={[
+						"Freshman Year",
+						"Sophomore Year",
+						"Junior Year",
+						"Senior Year",
+					]}
+					placeholder="Pick your Year"
 					onChange={(e) =>
-						setFormData({ ...formData, Year: e.target.value })
+						setFormData({
+							...formData,
+							Year: e.target.value,
+						})
 					}
-				>
-					<option>Pick your year</option>
-					<option value="Freshman Year">Freshman Year</option>
-					<option value="Sophomore Year">Sophomore Year</option>
-					<option value="Junior Year">Junior Year</option>
-					<option value="Senior Year">Senior Year</option>
-				</select>
+				/>
 
 				<div className="pt-3 w-full">
 					<button
