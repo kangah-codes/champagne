@@ -280,7 +280,7 @@ const DataForm = () => {
 						className="col-span-2 w-full h-full"
 					/> */}
 					<select
-						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[20px] col-span-1`}
+						className={`rounded-[14px] col-span-2 bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[20px]`}
 					>
 						<option>+1</option>
 					</select>
