@@ -267,7 +267,7 @@ const DataForm = () => {
 					}
 				/>
 				<div className="w-full grid grid-cols-6 gap-3">
-					<Select
+					{/* <Select
 						items={["+1"]}
 						placeholder="+1"
 						onSelect={
@@ -278,12 +278,12 @@ const DataForm = () => {
 							// })
 						}
 						className="col-span-2 w-full h-full"
-					/>
-					{/* <select
+					/> */}
+					<select
 						className={`rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[20px] col-span-1`}
 					>
 						<option>+1</option>
-					</select> */}
+					</select>
 					<input
 						type="text"
 						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
