@@ -378,14 +378,8 @@ export default function InstaModal() {
 												fetch(
 													process.env.NODE_ENV ===
 														"production"
-														? `https://champagne-topaz.vercel.app/api/share-card?title=${shareSchool?.replace(
-																" ",
-																"+"
-														  )}`
-														: `http://localhost:3000/api/share-card?title=${shareSchool?.replace(
-																" ",
-																"+"
-														  )}`,
+														? `https://champagne-topaz.vercel.app/images/content/instagram-card.png`
+														: `http://localhost:3000/images/content/instagram-card.png`,
 													{
 														method: "GET",
 														headers: {},
