@@ -18,6 +18,7 @@ export default function InstaModal() {
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 	const [diceIndex, setDiceIndex] = useState(0);
 	const [currentStep, setCurrentStep] = useState(1);
+	const [linkCopied, setLinkCopied] = useState(false);
 
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${shareSchool}`,
@@ -378,6 +379,7 @@ export default function InstaModal() {
 												navigator.clipboard.writeText(
 													`https://champagne-topaz.vercel.app`
 												);
+												setLinkCopied(true);
 											}
 
 											if (currentStep === 1) {
@@ -432,6 +434,8 @@ export default function InstaModal() {
 												? "Download & Next"
 												: currentStep !== 5
 												? "Next Step"
+												: linkCopied
+												? "Link Copied"
 												: "Copy & Share Link"}
 										</span>
 										<p className="pr-5 flex flex-row-reverse font-black">
