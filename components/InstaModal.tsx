@@ -374,6 +374,12 @@ export default function InstaModal() {
 												setCurrentStep(currentStep + 1);
 											}
 
+											if (currentStep === 5) {
+												navigator.clipboard.writeText(
+													`https://champagne-topaz.vercel.app`
+												);
+											}
+
 											if (currentStep === 1) {
 												fetch(
 													process.env.NODE_ENV ===

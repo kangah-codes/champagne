@@ -172,7 +172,7 @@ export default function ShareModal() {
 									</div>
 
 									<div className="max-w-sm">
-										<p className="text-white font-bold text-[14px] leading-[14px] text-center">
+										<p className="text-black font-bold text-[14px] leading-[14px] text-center">
 											Share our this card on your social
 											or send this card to a friend In
 											your contact. You may win a bottle
@@ -180,36 +180,12 @@ export default function ShareModal() {
 										</p>
 									</div>
 
-									<div className="flex flex-row gap-x-2 w-full md:max-w-[69%] lg:max-w-[89%] lg1:max-w-[90%] xl:max-w-[90%] 2xl:max-w-[97%] justify-between lg:gap-x-3 items-stretch">
-										<button
-											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
-											data-share-url={encodeURIComponent(
-												`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
-											)}
-										>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												viewBox="0 0 18.725 17.604"
-												className="w-[11px] h-[11px] lg1:w-[18px] lg1:h-[18px]"
-											>
-												<path
-													id="Icon_awesome-snapchat-ghost"
-													data-name="Icon awesome-snapchat-ghost"
-													d="M18.682,14.878c-.191.445-1,.771-2.463,1a6.859,6.859,0,0,0-.238.876.423.423,0,0,1-.444.324h-.011c-.344,0-.7-.158-1.421-.158a2.894,2.894,0,0,0-2.057.753,4.119,4.119,0,0,1-2.707,1,4.2,4.2,0,0,1-2.665-1,2.891,2.891,0,0,0-2.057-.753,13.813,13.813,0,0,0-1.421.173.434.434,0,0,1-.454-.331,6.774,6.774,0,0,0-.239-.882C1.749,15.761.044,15.464,0,14.7a.389.389,0,0,1,.325-.4,5.5,5.5,0,0,0,3.739-3.143l.009-.019a.831.831,0,0,0,.09-.686c-.185-.435-.983-.591-1.318-.724-.867-.343-.988-.736-.937-1.006a.941.941,0,0,1,1.207-.565,2.093,2.093,0,0,0,.861.23.746.746,0,0,0,.364-.079c-.075-1.314-.26-3.192.208-4.241A4.982,4.982,0,0,1,9.173,1.081l.37,0a4.948,4.948,0,0,1,4.634,2.986c.467,1.048.283,2.918.208,4.243a.717.717,0,0,0,.314.078,2.185,2.185,0,0,0,.807-.229.99.99,0,0,1,.749,0h0a.76.76,0,0,1,.57.654c.007.356-.312.664-.946.915-.077.031-.172.061-.272.092-.358.114-.9.285-1.047.632a.831.831,0,0,0,.09.686l.009.019A5.5,5.5,0,0,0,18.4,14.3.4.4,0,0,1,18.682,14.878Z"
-													transform="translate(0 -1.078)"
-													fill="#fff"
-												/>
-											</svg>
-
-											<p className="text-[10px] leading-[10px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
-												Join Discord
-											</p>
-										</button>
+									<div className="grid grid-cols-7 gap-2 max-w-lg justify-between lg:gap-x-3 items-stretch">
 										<div
 											onClick={() => {
 												setInstaModal(true);
 											}}
-											className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+											className="cursor-pointer col-span-2 bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +202,7 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[16px] font-anton xl:leading-[16px]">
 												Share
 											</p>
 										</div>
@@ -236,7 +212,7 @@ export default function ShareModal() {
 											)}&text=${encodeURIComponent(
 												diceOptions[diceIndex]
 											)}`}
-											className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+											className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +229,7 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px]">
+											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[16px] font-anton xl:leading-[16px]">
 												Share
 											</p>
 										</Link>
@@ -265,7 +241,7 @@ export default function ShareModal() {
 													shareSchool || ""
 												)}`
 											)}`}
-											className="bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-3 lg:px-6 text-base font-black"
+											className="bg-black text-white col-span-3 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -287,8 +263,37 @@ export default function ShareModal() {
 												/>
 											</svg>
 
-											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[20px] font-anton xl:leading-[20px] truncate">
+											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[16px] font-anton xl:leading-[16px] truncate">
 												Share with friends
+											</p>
+										</Link>
+										<Link
+											href={`sms:&body=${
+												diceOptions[diceIndex]
+											}+${encodeURIComponent(
+												`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+													shareSchool || ""
+												)}`
+											)}`}
+											className="bg-black col-span-full text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="16.417"
+												height="18.192"
+												viewBox="0 0 16.417 18.192"
+											>
+												<path
+													id="Icon_simple-discord"
+													data-name="Icon simple-discord"
+													d="M16.2,0a1.994,1.994,0,0,1,1.976,1.876V18.192l-2.029-1.723-1.114-1.014-1.216-1.06.508,1.671H3.68a1.881,1.881,0,0,1-1.925-1.877V1.88A1.919,1.919,0,0,1,3.684,0H16.191ZM11.559,4.308h-.023l-.153.152a6.106,6.106,0,0,1,2.332,1.165,8.245,8.245,0,0,0-2.838-.862A7.793,7.793,0,0,0,9,4.762H8.849a6.758,6.758,0,0,0-2.13.557c-.354.154-.557.255-.557.255A5.408,5.408,0,0,1,8.6,4.409l-.1-.1a4.555,4.555,0,0,0-2.636.963,11.863,11.863,0,0,0-1.368,5.321,3.308,3.308,0,0,0,2.837,1.369s.3-.4.61-.76a3,3,0,0,1-1.622-1.064,2.514,2.514,0,0,1,.254.152h.045a.06.06,0,0,1,.045.023v0a.058.058,0,0,0,.045.023c.25.1.5.2.7.3a6.2,6.2,0,0,0,1.364.406,7.785,7.785,0,0,0,2.433,0,7.005,7.005,0,0,0,1.364-.406,10.934,10.934,0,0,0,1.059-.559,3.012,3.012,0,0,1-1.671,1.064c.25.353.6.758.6.758A3.956,3.956,0,0,0,15.5,10.6a11.839,11.839,0,0,0-1.376-5.321,4.559,4.559,0,0,0-2.6-.955l.042-.015Zm.127,3.345a1.015,1.015,0,1,1-.963,1.016.989.989,0,0,1,.963-1.016Zm-3.444,0a1.015,1.015,0,1,1-.966,1.016.988.988,0,0,1,.966-1.016Z"
+													transform="translate(-1.755)"
+													fill="#fff"
+												/>
+											</svg>
+
+											<p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-[14px] xl:text-[16px] font-anton xl:leading-[16px] truncate">
+												Join Discord
 											</p>
 										</Link>
 									</div>
