@@ -67,7 +67,7 @@ export function Select({
 				>
 					<div className="relative h-full">
 						<div
-							className={`relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] ${className}`}
+							className={`relative flex flex-row items-center justify-between rounded-[14px] bg-white text-black text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] 3xl:py-[36px] px-[32.8px] ${className}`}
 						>
 							<Combobox.Input
 								onFocus={(e: any) => {
@@ -229,28 +229,29 @@ const DataForm = () => {
 		>
 			<div className="flex flex-col justify-between">
 				<img
-					className="w-[142px] xl:w-[252px] cursor-pointer mx-auto lg1:mx-0"
+					className="w-[142px] xl:w-[175px] 2xl:w-[254px] 3xl:w-[336px] cursor-pointer mx-auto lg1:mx-0"
 					src="/images/logo.png"
 					alt="Champagne Logo"
 				/>
 
-				<h1 className="text-[47px] text-center lg1:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
+				<h1 className="text-[38px] leading-[38px] text-center lg1:text-left lg1:text-[56px] lg1:leading-[56px] xl1:text-[56px] xl1:leading-[56px] 2xl:text-[79px] 2xl:leading-[79px] 3xl:text-[105px] 3xl:leading-[105px] font-anton text-white">
 					Where your <br />
 					friends <br />
 					recommend
 					<br /> your next date
 				</h1>
 
-				<p className="text-white font-bold text-center lg1:text-left text-[12px] xl:text-[23px] leading-[12px] xl:leading-[23px] mt-5">
-					The platform where dating and friendship happen for college
+				<p className="text-white font-bold text-[15px] leading-[15px] xl:text-[16px] xl:leading-[16px] 2xl:text-[23px] 2xl:leading-[23px] 3xl:text-[30px] 3xl:leading-[30px] mt-5 text-center lg1:text-left">
+					The platform where dating and friendship{" "}
+					<br className="hidden 3xl:block" /> happen for college
 					students
 				</p>
 			</div>
 
-			<div className="flex flex-col items-center relative space-y-3 max-w-[404px] text-black mx-auto md:py-16 lg:py-10">
+			<div className="flex flex-col items-center relative space-y-3 max-w-full 2xl:max-w-[404px] 3xl:max-w-[539px] text-black mx-auto md:py-16 lg:py-10 2xl:py-[103px] 3xl:py-[138px]">
 				<input
 					type="text"
-					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] 3xl:py-[36px] px-[32.8px] w-full"
 					placeholder="Type your name"
 					value={formData.Name}
 					onChange={(e) =>
@@ -259,7 +260,7 @@ const DataForm = () => {
 				/>
 				<input
 					type="email"
-					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+					className="rounded-[14px] bg-white placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] 3xl:py-[36px] px-[32.8px] w-full"
 					placeholder="Email"
 					value={formData.Email}
 					onChange={(e) =>
@@ -281,20 +282,20 @@ const DataForm = () => {
 					/> */}
 					{/* <select
 						disabled
-						className={`rounded-[14px] col-span-2 bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] pl-[32.8px]`}
+						className={`rounded-[14px] col-span-2 bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] 3xl:py-[36px] pl-[32.8px]`}
 					>
 						<option>+1</option>
 					</select> */}
 					<input
 						type="text"
-						className="rounded-[14px] bg-white col-span-2 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full flex text-center"
+						className="rounded-[14px] bg-white col-span-2 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] 3xl:py-[36px] px-[32.8px] w-full flex text-center"
 						placeholder="Country Code"
 						value={"+1"}
 						disabled
 					/>
 					<input
 						type="text"
-						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
+						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] 3xl:py-[36px] px-[32.8px] w-full"
 						placeholder="Phone Number"
 						value={formData["Phone Number"]}
 						onChange={(e) =>
@@ -727,7 +728,7 @@ export default function Modal() {
 					>
 						<div
 							className={`
-									my-8 inline-block w-full lg1:max-w-4xl xl:max-w-5xl 2xl:max-w-[1355px] 3xl:max-w-[1806px] transform overflow-hidden 
+									my-8 inline-block w-full lg1:max-w-4xl xl:max-w-5xl 2xl:max-w-[1355px] 3xl:max-w-[1800px] transform overflow-hidden 
 									rounded-[29px] xl:rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green 
 									text-left align-middle shadow-xl transition-all relative max-w-7xl px-5 lg1:px-[69px] xl:px-[74px] xl1:px-[78px] 2xl:px-[104px]
 								`}
@@ -771,7 +772,7 @@ export default function Modal() {
 								</svg>
 							</span>
 
-							{!reqSuccessful ? <SuccessForm /> : <DataForm />}
+							{reqSuccessful ? <SuccessForm /> : <DataForm />}
 						</div>
 					</Transition.Child>
 				</div>
