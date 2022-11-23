@@ -5,20 +5,20 @@ import Image from "next/image";
 export default function Images() {
 	return (
 		<div className="w-full flex overflow-hidden  relative">
-			<div className="w-full lg1:max-w-[1083px] xl:max-w-[1164px] xl1:max-w-[1227px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
+			<div className="w-full max-w-[85%] 3xl:max-w-[70%] mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem] xl:py-[12rem] w-full">
 					<img
 						alt="img"
 						src="/images/content/group-mobile.png"
 						className="w-screen block md:hidden"
 					/>
-					<div className="m-auto px-4 gap-10 xl:gap-5 relative w-full grid-cols-3 lg1:grid-cols-4 items-start hidden md:grid">
+					<div className="m-auto">
 						<img
 							alt="img"
-							src="/images/content/group-1.png"
+							src="/images/content/dating-group.png"
 							className="w-full"
 						/>
-						<div className="relative mt-20">
+						{/* <div className="relative mt-20">
 							<img
 								alt="img"
 								src="/images/content/group-2.png"
@@ -33,14 +33,12 @@ export default function Images() {
 							/>
 						</div>
 						<div className="relative mt-20 hidden lg1:block">
-							{" "}
-							{/* <div className="h-[211px] w-[140px] xl:h-[523px] xl:w-[347px] rounded-[20px] xl:rounded-[39px] overflow-hidden rotate-[3deg] absolute border border-champagne-light-gray top-3 right-3 bg-white" /> */}
 							<img
 								alt="img"
 								src="/images/content/group-4.png"
 								className="w-full"
 							/>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

@@ -202,7 +202,7 @@ export default function ShareModal() {
 											</svg>
 
 											<p className="text-[10px] leading-[10px] lg1:text-[15px] lg1:leading-[15px] 2xl:text-[20px] font-anton 2xl:leading-[20px]">
-												Share
+												Join Discord
 											</p>
 										</button>
 										<div

@@ -263,7 +263,7 @@ function Hero({
 
 									<Link
 										href={`sms:&body=${diceOptionsNoSchool[0]}`}
-										className="lg1:col-span-2 bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+										className="xl:col-span-2 bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"

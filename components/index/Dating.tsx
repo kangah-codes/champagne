@@ -69,7 +69,7 @@ function Content2() {
 				</div>
 				<div
 					onClick={() => setIsOpen(true)}
-					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl:text-[22px] xl1-[24px] 2xl:text-[32px] font-black"
+					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
 				>
 					<p className="my-auto">Join Waitlist</p>
 				</div>
@@ -78,7 +78,7 @@ function Content2() {
 						alt="Champagne app mockup"
 						src="/images/content/woman-5.png"
 						// className="rotate-[1deg]"
-						className="xl1:w-[537px] xl1:h-[340px] lg:w-[477px] lg:h-[302px] w-[289px] h-[229px]"
+						className="xl1:w-[522px] xl1:h-[271px] lg:w-[477px] lg:h-[302px] w-[289px] h-[229px] lg1:w-[463px] lg1:h-[242px] xl:w-[522px] xl:h-[273px] "
 					/>
 
 					<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2 rotate-[1deg]">
@@ -232,7 +232,7 @@ export default function Dating() {
 												</p>
 											</div> */}
 
-											<div className="bg-champagne-light-blue rounded-full rotate-[-355deg] flex items-center justify-center py-4 px-12 my-10 text-black text-[18px] lg1:text-[21px] xl:text-[22px] xl1-[24px] 2xl:text-[32px] font-black">
+											<div className="bg-champagne-light-blue rounded-full rotate-[-355deg] flex items-center justify-center py-4 px-12 my-10 text-black text-[18px] lg1:text-[21px] xl1:text-[23px] font-black">
 												<p className="my-auto">
 													Activate your campus
 												</p>
@@ -286,7 +286,7 @@ export default function Dating() {
 									</span>{" "}
 									on your campus
 								</h1>
-								<div className="bg-black rounded-full xl:my-auto flex items-center justify-center py-4 px-12 my-5 lg:mt-14 text-white text-[18px] xl:text-[32px] font-black">
+								<div className="bg-black rounded-full xl:my-auto flex items-center justify-center py-4 px-12 my-5 lg:mt-14 text-white text-[18px] lg1:text-[21px] xl1:text-[23px] font-black">
 									<p className="my-auto">Join Waitlist</p>
 								</div>
 							</div>
@@ -330,7 +330,7 @@ export default function Dating() {
 												height={100}
 												alt="Champagne app mockup"
 												src="/images/emojis/gamepad.png"
-												className="lg1:w-[59px] lg1:h-[59px] w-[32px] h-[32px]"
+												className="lg1:w-[59px] lg1:h-[59px] w-[32px] h-[32px] 2xl:w-[100px] 2xl:h-[100px]"
 											/>
 										</div>
 									</div>
@@ -350,7 +350,7 @@ export default function Dating() {
 												height={100}
 												alt="Champagne app mockup"
 												src="/images/emojis/bottle.png"
-												className="lg1:w-[59px] lg1:h-[59px] w-[32px] h-[32px]"
+												className="lg1:w-[59px] lg1:h-[59px] w-[32px] h-[32px] 2xl:w-[100px] 2xl:h-[100px]"
 											/>
 										</div>
 									</div>

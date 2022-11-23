@@ -18,39 +18,42 @@ const Footer = () => {
 		>
 			{/* // 1366 - 140, 1920 - 160, 1280 - 106, 1440 - 118 */}
 			<div className="mx-auto px-10">
-				<div className="flex flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] items-start space-y-[14px] max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto">
-					<div className="flex flex-row items-center space-x-5">
-						<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
-							Campus Gist
-						</p>
-						<img
-							width={35}
-							height={35}
-							alt="Champagne app mockup"
-							src="/images/emojis/bus.png"
-							className="xl:w-[59px] xl:h-[59px] w-[32px] h-[32px] rotate-[23deg]"
-						/>
-					</div>
-					<div className="">
-						<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
-							Get to know all the trending activities on your
-							campus 🤩
-						</h1>
-						{/* <div className="absolute right-5 bottom-2 xl:right-[11rem] xl:-bottom-[1.5rem]">
+				<div className="flex flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto items-center">
+					<div className="flex flex-col items-start space-y-[14px]">
+						<div className="flex flex-row items-center space-x-5">
+							<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
+								Campus Gist
+							</p>
+							<img
+								width={35}
+								height={35}
+								alt="Champagne app mockup"
+								src="/images/emojis/bus.png"
+								className="xl:w-[59px] xl:h-[59px] w-[32px] h-[32px] rotate-[23deg]"
+							/>
+						</div>
+						<div className="">
+							<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
+								Get to know all the trending{" "}
+								<br className="hidden 2xl:block" /> activities
+								on your campus 🤩
+							</h1>
+							{/* <div className="absolute right-5 bottom-2 xl:right-[11rem] xl:-bottom-[1.5rem]">
 							<img
 								width={80}
 								height={80}
 								alt="Heart eyes"
 								src="/images/emojis/star-eyes.png"
 								className="xl:w-[80px] xl:h-[80px] w-[32px] h-[32px] rotate-[23deg]"
-							/>
+								/>
 						</div> */}
-					</div>
-					<div
-						onClick={() => setIsOpen(true)}
-						className="cursor-pointer bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
-					>
-						<p className="my-auto">Join waitlist</p>
+						</div>
+						<div
+							onClick={() => setIsOpen(true)}
+							className="cursor-pointer bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
+						>
+							<p className="my-auto">Join waitlist</p>
+						</div>
 					</div>
 				</div>
 

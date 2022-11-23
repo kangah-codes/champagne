@@ -35,7 +35,7 @@ export default function Hero() {
 								src="/images/emojis/clinking-glasses.png"
 							/>
 						</div>
-						<h1 className="text-[47px] leading-[47px] xl:text-[68px] xl:leading-[68px] lg1:text-[64px] lg1:leading-[64px] xl1:text-[72px] xl1:leading-[72px] 2lg1:text-[97px] 2lg1:leading-[92px] font-anton text-center text-black w-full">
+						<h1 className="text-[47px] leading-[47px] xl:text-[68px] xl:leading-[68px] lg1:text-[64px] lg1:leading-[64px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-center text-black w-full">
 							Where your <br />
 							friends <br className="block md:hidden" />
 							recommend your <br />
