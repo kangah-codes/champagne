@@ -76,7 +76,7 @@ export function Select({
 										btnRef?.current?.click();
 									}
 								}}
-								className="w-full border-none text-sm leading-5 text-gray-900 focus:outline-none text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px]"
+								className="w-full border-none text-sm text-gray-900 focus:outline-none text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px]"
 								value={formData["College Name"]}
 								onChange={(e) => {
 									setQuery(e.target.value);
@@ -236,12 +236,12 @@ const DataForm = () => {
 
 				<h1 className="text-[47px] text-center lg1:text-left xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white">
 					Where your <br />
-					friend <br />
-					recommends
+					friends <br />
+					recommend
 					<br /> your next date
 				</h1>
 
-				<p className="text-white font-bold text-center xl:text-left text-[12px] xl:text-[23px] leading-[12px] xl:leading-[23px] mt-5">
+				<p className="text-white font-bold text-center lg1:text-left text-[12px] xl:text-[23px] leading-[12px] xl:leading-[23px] mt-5">
 					The platform where dating and friendship happen for college
 					students
 				</p>
@@ -279,12 +279,19 @@ const DataForm = () => {
 						}
 						className="col-span-2 w-full h-full"
 					/> */}
-					<select
+					{/* <select
 						disabled
 						className={`rounded-[14px] col-span-2 bg-white text-black text-[14px] leading-[14px] xl:text-[20px] leading-[20xl:px] font-bold focus:outline-none py-[22px] pl-[32.8px]`}
 					>
 						<option>+1</option>
-					</select>
+					</select> */}
+					<input
+						type="text"
+						className="rounded-[14px] bg-white col-span-2 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full flex text-center"
+						placeholder="Country Code"
+						value={"+1"}
+						disabled
+					/>
 					<input
 						type="text"
 						className="rounded-[14px] bg-white col-span-4 placeholder-champagne-light-gray text-[14px] leading-[14px] xl:text-[20px] xl:leading-[20px] font-bold focus:outline-none py-[22px] px-[32.8px] w-full"
@@ -365,18 +372,16 @@ const SuccessForm = () => {
 					alt="Champagne Logo"
 				/>
 
-				<h1 className="text-[47px] xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white text-center xl:text-left">
+				<h1 className="text-[47px] xl:text-[52px] font-anton leading-[47px] xl:leading-[52px] text-white text-center lg1:text-left">
 					Congratulations
 					<br /> for joining the
 					<br /> Champagne waitlist.
-					<br /> We will keep you
-					<br /> abreast of progress!
+					<br /> We will keep you abreast of progress!
 				</h1>
 
 				<p className="text-white font-bold text-[12px] xl:text-[23px] leading-[12px] xl:leading-[23px] mt-5 text-center xl:text-left">
-					Invite your friends to win a bottle of <br />
-					Champagne. The more of your friends join, the better your
-					chances
+					Invite your friends to win a bottle of Champagne. The more
+					of your friends join, the better your chances
 				</p>
 			</div>
 
@@ -433,7 +438,7 @@ const SuccessForm = () => {
 				</div>
 
 				<div className="max-w-sm">
-					<p className="text-white font-bold text-[14px] leading-[14px] text-center">
+					<p className="text-black font-bold text-[14px] leading-[14px] text-center">
 						Share our this card on your social or send this card to
 						a friend In your contact. You may win a bottle of
 						BeSocial Champagne
@@ -605,9 +610,9 @@ export default function Modal() {
 					>
 						<div
 							className={`
-									py-5 my-8 inline-block w-full max-w-[866px] lg1:max-w-[80%] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl transform overflow-hidden 
+									py-5 my-8 inline-block w-full max-w-[876px] xl:max-w-[933px] xl1:max-w-5xl 2xl:max-w-screen-xl transform overflow-hidden 
 									rounded-[29px] xl:rounded-[53px] bg-gradient-to-br from-champagne-pink via-champagne-light-blue to-champagne-green 
-									text-left align-middle shadow-xl transition-all relative
+									text-left align-middle shadow-xl transition-all relative px-20
 								`}
 						>
 							<span
