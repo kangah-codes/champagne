@@ -22,20 +22,20 @@ export default function ShareModal() {
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${shareSchool}`,
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost ${shareSchool} on Champagne leaderboard. Attached to link`,
-		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
-		`Wanna be the prom queen or prom king at ${shareSchool}? Join the Champagne app - the new dating and fun friendship experience on campus! Attached to link`,
-		`Come and follow all the gists on ${shareSchool} Campus. Sign up for Champagne App. Attached to link`,
-		`Champagne - dating, friendship, games, social and banking app at ${shareSchool}. Join the fun! Attached to link`,
-		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${shareSchool}. Attached to link`,
+		`Come and boost ${shareSchool} on Champagne leaderboard.`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app.`,
+		`Wanna be the prom queen or prom king at ${shareSchool}? Join the Champagne app - the new dating and fun friendship experience on campus!`,
+		`Come and follow all the gists on ${shareSchool} Campus. Sign up for Champagne App.`,
+		`Champagne - dating, friendship, games, social and banking app at ${shareSchool}. Join the fun!`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${shareSchool}.`,
 	];
 
 	const diceOptionsNoSchool = [
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost your school on Champagne leaderboard. Attached to link`,
-		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
-		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun! Attached to link`,
-		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school. Attached to link`,
+		`Come and boost your school on Champagne leaderboard.`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app.`,
+		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun!`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school.`,
 	];
 
 	return (
@@ -173,10 +173,10 @@ export default function ShareModal() {
 
 									<div className="max-w-sm">
 										<p className="text-black font-bold text-[14px] leading-[14px] text-center">
-											Share our this card on your social
-											or send this card to a friend In
-											your contact. You may win a bottle
-											of BeSocial Champagne
+											Share this card on your socials or
+											send this card to a friend In your
+											contacts. You may win a bottle of
+											BeSocial Champagne
 										</p>
 									</div>
 
@@ -235,7 +235,7 @@ export default function ShareModal() {
 										</Link>
 										<Link
 											href={`sms:&body=${
-												diceOptions[diceIndex]
+												diceOptions[9]
 											}+${encodeURIComponent(
 												`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
 													shareSchool || ""
@@ -269,7 +269,7 @@ export default function ShareModal() {
 										</Link>
 										<Link
 											href={`sms:&body=${
-												diceOptions[diceIndex]
+												diceOptions[8]
 											}+${encodeURIComponent(
 												`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
 													shareSchool || ""

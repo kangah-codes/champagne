@@ -84,7 +84,7 @@ const Footer = () => {
 							</p>
 						</Link>
 						<Link
-							href="https://www.linkedin.com/company/champagneapp/"
+							href="https://twitter.com/champagne_app"
 							className="flex flex-row items-center space-x-1"
 						>
 							<svg

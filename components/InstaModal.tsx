@@ -23,20 +23,20 @@ export default function InstaModal() {
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${shareSchool}`,
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost SJUS on Champagne leaderboard. Attached to link`,
-		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
-		`Wanna be the prom queen or prom king at ${shareSchool}? Join the Champagne app - the new dating and fun friendship experience on campus! Attached to link`,
-		`Come and follow all the gists on ${shareSchool} Campus. Sign up for Champagne App. Attached to link`,
-		`Champagne - dating, friendship, games, social and banking app at ${shareSchool}. Join the fun! Attached to link`,
-		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${shareSchool}. Attached to link`,
+		`Come and boost SJUS on Champagne leaderboard.`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app.`,
+		`Wanna be the prom queen or prom king at ${shareSchool}? Join the Champagne app - the new dating and fun friendship experience on campus!`,
+		`Come and follow all the gists on ${shareSchool} Campus. Sign up for Champagne App.`,
+		`Champagne - dating, friendship, games, social and banking app at ${shareSchool}. Join the fun!`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${shareSchool}.`,
 	];
 
 	const diceOptionsNoSchool = [
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost your school on Champagne leaderboard. Attached to link`,
-		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
-		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun! Attached to link`,
-		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school. Attached to link`,
+		`Come and boost your school on Champagne leaderboard.`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app.`,
+		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun!`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school.`,
 	];
 
 	const getCurrentStep = () => {

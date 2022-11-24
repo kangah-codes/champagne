@@ -146,7 +146,7 @@ function VirtualizedList({
 			className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
 		>
 			<div
-				className="h-[120px] lg1:h-[200px] max-h-[500px]"
+				className="h-[120px] lg1:h-[180px] max-h-[500px]"
 				style={{
 					// height: `${rowVirtualizer.getTotalSize()}px`,
 					width: "100%",
@@ -356,12 +356,12 @@ const SuccessForm = () => {
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${formData["College Name"]}`,
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost ${formData["College Name"]} on Champagne leaderboard. Attached to link`,
-		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
-		`Wanna be the prom queen or prom king at ${formData["College Name"]}? Join the Champagne app - the new dating and fun friendship experience on campus! Attached to link`,
-		`Come and follow all the gists on ${formData["College Name"]} Campus. Sign up for Champagne App. Attached to link`,
-		`Champagne - dating, friendship, games, social and banking app at ${formData["College Name"]}. Join the fun! Attached to link`,
-		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${formData["College Name"]}. Attached to link`,
+		`Come and boost ${formData["College Name"]} on Champagne leaderboard.`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app.`,
+		`Wanna be the prom queen or prom king at ${formData["College Name"]}? Join the Champagne app - the new dating and fun friendship experience on campus!`,
+		`Come and follow all the gists on ${formData["College Name"]} Campus. Sign up for Champagne App.`,
+		`Champagne - dating, friendship, games, social and banking app at ${formData["College Name"]}. Join the fun!`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at ${formData["College Name"]}.`,
 	];
 
 	return (
@@ -441,8 +441,8 @@ const SuccessForm = () => {
 
 				<div className="max-w-sm">
 					<p className="text-black font-bold text-[9px] leading-[9px] xl:text-[14px] xl:leading-[14px] 3xl:text-[18px] 3xl:leading-[18px] text-center">
-						Share our this card on your social or send this card to
-						a friend In your contact. You may win a bottle of
+						Share this card on your socials or send this card to a
+						friend In your contacts. You may win a bottle of
 						BeSocial Champagne
 					</p>
 				</div>
@@ -499,9 +499,7 @@ const SuccessForm = () => {
 						</p>
 					</Link>
 					<Link
-						href={`sms:&body=${
-							diceOptions[diceIndex]
-						}+${encodeURIComponent(
+						href={`sms:&body=${diceOptions[8]}+${encodeURIComponent(
 							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
@@ -533,9 +531,7 @@ const SuccessForm = () => {
 						</p>
 					</Link>
 					<Link
-						href={`sms:&body=${
-							diceOptions[diceIndex]
-						}+${encodeURIComponent(
+						href={`sms:&body=${diceOptions[8]} ${encodeURIComponent(
 							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`

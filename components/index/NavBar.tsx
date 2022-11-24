@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import { useRecoilState } from "recoil";
@@ -11,6 +11,7 @@ import useOutsideClickRef from "@rooks/use-outside-click-ref";
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useRecoilState(modalState);
+	const [path, setPath] = useState("");
 
 	const [menu1, setMenu1] = useState(false);
 
@@ -19,6 +20,12 @@ const NavBar = () => {
 	};
 
 	const [ref1] = useOutsideClickRef(closeMenu1);
+
+	useEffect(() => {
+		// get current path
+		setPath(window.location.pathname);
+		console.log(path);
+	}, []);
 
 	return (
 		<div className="relative">
@@ -42,13 +49,28 @@ const NavBar = () => {
 						</div>
 						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-2 cursor-pointer">
 							<button
-								className="bg-champagne-pink rounded-full flex items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]"
+								className={`
+									border border-champagne-pink rounded-full flex items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12
+									text-champagne-pink text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]
+									${path === "/leaderboard" ? "hidden lg1:block" : "hidden"}
+								`}
+								onClick={() => setIsOpen(true)}
+							>
+								Share
+							</button>
+							<button
+								className={`bg-champagne-pink rounded-full flex items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]`}
 								onClick={() => setIsOpen(true)}
 							>
 								Join Waitlist
 							</button>
 							<Link href="/leaderboard">
-								<div className="bg-champagne-pink rounded-full items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black hidden lg1:flex text-[10px] lg1:text-[13px] 2xl:text-[20px]">
+								<div
+									className={`
+										bg-champagne-pink rounded-full items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]\
+										${path === "/leaderboard" ? "hidden" : "hidden lg1:block"}
+									`}
+								>
 									<p className="my-auto">
 										Activate your campus
 									</p>

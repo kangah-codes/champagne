@@ -95,10 +95,10 @@ function Hero({
 
 	const diceOptionsNoSchool = [
 		`Check how your campus is ranking on champagne app`,
-		`Come and boost your school on Champagne leaderboard. Attached to link`,
-		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app. Attached to link`,
-		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun! Attached to link`,
-		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school. Attached to link`,
+		`Come and boost your school on Champagne leaderboard.`,
+		`Checkout the most eligible bachelors & bachelorettes on your campus in Champagne app.`,
+		`Champagne - dating, friendship, games, social and banking app in your school. Join the fun!`,
+		`I just joined the waitlist for the Champagne App. Join me and let's activate this fun dating and friendship app at your school.`,
 	];
 
 	useEffect(() => {
@@ -262,7 +262,7 @@ function Hero({
 									</Link>
 
 									<Link
-										href={`sms:&body=${diceOptionsNoSchool[0]}`}
+										href={`sms:&body=${diceOptionsNoSchool[4]}`}
 										className="xl:col-span-2 bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
 									>
 										<svg

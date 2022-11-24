@@ -25,7 +25,7 @@ function Content1() {
 				</div>
 				<div
 					onClick={() => setIsOpen(true)}
-					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl:text-[22px] xl1-[24px] 2xl:text-[32px] font-black"
+					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
 				>
 					<p className="my-auto">Join Waitlist</p>
 				</div>
@@ -78,7 +78,13 @@ function Content2() {
 						alt="Champagne app mockup"
 						src="/images/content/woman-5.png"
 						// className="rotate-[1deg]"
-						className="xl1:w-[522px] xl1:h-[271px] lg:w-[477px] lg:h-[302px] w-[289px] h-[229px] lg1:w-[463px] lg1:h-[242px] xl:w-[522px] xl:h-[273px] "
+						className="xl1:w-[522px] xl1:h-[271px] lg:w-[477px] lg:h-[302px] w-[full] h-[220px] lg1:w-[463px] lg1:h-[242px] xl:w-[522px] xl:h-[273px] hidden lg:block"
+					/>
+					<img
+						alt="Champagne app mockup"
+						src="/images/content/mobile-image-content-2.png"
+						// className="rotate-[1deg]"
+						className="w-full block lg:hidden"
 					/>
 
 					<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2 rotate-[1deg]">
