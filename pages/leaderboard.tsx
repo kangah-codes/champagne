@@ -179,7 +179,7 @@ function Hero({
 								<div className="grid grid-cols-4 xl:grid-cols-5 gap-3 xl:gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
 									<button
 										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black snapchat-share-button"
-										data-share-url={`https://champagne-topaz.vercel.app?shared=${encodeURIComponent(
+										data-share-url={`https://joinchampagne.com?shared=${encodeURIComponent(
 											diceOptionsNoSchool[
 												Math.floor(
 													Math.random() *
@@ -235,7 +235,7 @@ function Hero({
 
 									<Link
 										href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-											`https://champagne-topaz.vercel.app`
+											`https://joinchampagne.com`
 										)}&text=${encodeURIComponent(
 											diceOptionsNoSchool[diceIndex]
 										)}`}

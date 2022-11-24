@@ -396,7 +396,7 @@ const SuccessForm = () => {
 							<button
 								onClick={() => {
 									navigator.clipboard.writeText(
-										`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+										`https://joinchampagne.com/share/${encodeURIComponent(
 											formData["College Name"] || ""
 										)}`
 									);
@@ -475,7 +475,7 @@ const SuccessForm = () => {
 					</div>
 					<Link
 						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-							`https://champagne-topaz.vercel.app?shared=${shareSchool}`
+							`https://joinchampagne.com?shared=${shareSchool}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
 						className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
 					>
@@ -500,7 +500,7 @@ const SuccessForm = () => {
 					</Link>
 					<Link
 						href={`sms:&body=${diceOptions[8]}+${encodeURIComponent(
-							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+							`https://joinchampagne.com/share/${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
 						)}`}
@@ -532,7 +532,7 @@ const SuccessForm = () => {
 					</Link>
 					<Link
 						href={`sms:&body=${diceOptions[8]} ${encodeURIComponent(
-							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+							`https://joinchampagne.com/share/${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
 						)}`}
@@ -563,7 +563,7 @@ const SuccessForm = () => {
 					<button
 						className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-2.5 lg:py-3 lg:px-6  text-base font-black snapchat-share-button"
 						data-share-url={encodeURIComponent(
-							`https://champagne-topaz.vercel.app?shared=${diceOptions[diceIndex]}`
+							`https://joinchampagne.com?shared=${diceOptions[diceIndex]}`
 						)}
 					>
 						<svg
@@ -612,7 +612,7 @@ const SuccessForm = () => {
 					</div>
 					<Link
 						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+							`https://joinchampagne.com/share/${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
@@ -641,7 +641,7 @@ const SuccessForm = () => {
 						href={`sms:&body=${
 							diceOptions[diceIndex]
 						}+${encodeURIComponent(
-							`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+							`https://joinchampagne.com/share/${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
 						)}`}

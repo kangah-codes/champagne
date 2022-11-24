@@ -48,7 +48,7 @@ export default async function handler(req: NextRequest) {
 						<img
 							width="125"
 							height="58"
-							src={`https://champagne-topaz.vercel.app/images/logo.png`}
+							src={`https://joinchampagne.com/images/logo.png`}
 						/>
 					</div>
 					<span>Sign up for the</span>
@@ -73,7 +73,7 @@ export default async function handler(req: NextRequest) {
 								height="58"
 								src={
 									process.env.NODE_ENV === "production"
-										? `https://champagne-topaz.vercel.app/images/logo.png`
+										? `https://joinchampagne.com/images/logo.png`
 										: `http://localhost:3000/images/logo.png`
 								}
 							/>

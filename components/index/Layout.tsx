@@ -47,11 +47,11 @@ const Layout = ({
 				/>
 				<meta
 					property="og:image"
-					content={`https://champagne-topaz.vercel.app/images/content/preview.png`}
+					content={`https://joinchampagne.com/images/content/preview.png`}
 				/>
 				<meta
 					property="snapchat:sticker"
-					content={`https://champagne-topaz.vercel.app/images/logos/logo.png`}
+					content={`https://joinchampagne.com/images/logos/logo.png`}
 				/>
 				<meta
 					name="keywords"
@@ -59,10 +59,7 @@ const Layout = ({
 				/>
 				<meta name="author" content="Champagne" />
 				<meta property="og:site_name" content="Champagne" />
-				<meta
-					property="og:url"
-					content={`https://champagne-topaz.vercel.app`}
-				/>
+				<meta property="og:url" content={`https://joinchampagne.com`} />
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:title" content={"Champagne"} />
 				<meta name="twitter:description" content={desc} />

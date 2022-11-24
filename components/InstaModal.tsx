@@ -377,7 +377,7 @@ export default function InstaModal() {
 
 											if (currentStep === 5) {
 												navigator.clipboard.writeText(
-													`https://champagne-topaz.vercel.app`
+													`https://joinchampagne.com`
 												);
 												setLinkCopied(true);
 											}
@@ -386,7 +386,7 @@ export default function InstaModal() {
 												fetch(
 													process.env.NODE_ENV ===
 														"production"
-														? `https://champagne-topaz.vercel.app/images/content/instagram-card.png`
+														? `https://joinchampagne.com/images/content/instagram-card.png`
 														: `http://localhost:3000/images/content/instagram-card.png`,
 													{
 														method: "GET",

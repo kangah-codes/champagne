@@ -119,7 +119,7 @@ export default function ShareModal() {
 												<button
 													onClick={() => {
 														navigator.clipboard.writeText(
-															`https://champagne-topaz.vercel.app?shared=${encodeURIComponent(
+															`https://joinchampagne.com?shared=${encodeURIComponent(
 																diceOptions[
 																	diceIndex
 																]
@@ -208,7 +208,7 @@ export default function ShareModal() {
 										</div>
 										<Link
 											href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-												`https://champagne-topaz.vercel.app?shared=${shareSchool}`
+												`https://joinchampagne.com?shared=${shareSchool}`
 											)}&text=${encodeURIComponent(
 												diceOptions[diceIndex]
 											)}`}
@@ -237,7 +237,7 @@ export default function ShareModal() {
 											href={`sms:&body=${
 												diceOptions[9]
 											}+${encodeURIComponent(
-												`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+												`https://joinchampagne.com/share/${encodeURIComponent(
 													shareSchool || ""
 												)}`
 											)}`}
@@ -271,7 +271,7 @@ export default function ShareModal() {
 											href={`sms:&body=${
 												diceOptions[8]
 											}+${encodeURIComponent(
-												`https://champagne-topaz.vercel.app/share/${encodeURIComponent(
+												`https://joinchampagne.com/share/${encodeURIComponent(
 													shareSchool || ""
 												)}`
 											)}`}
