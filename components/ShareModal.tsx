@@ -18,6 +18,7 @@ export default function ShareModal() {
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
 	const [diceIndex, setDiceIndex] = useState(0);
 	const [instaModal, setInstaModal] = useRecoilState(instaModalState);
+	const [linkCopied, setLinkCopied] = useState(false);
 
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${shareSchool}`,
@@ -118,6 +119,7 @@ export default function ShareModal() {
 											<div className="flex flex-row space-x-2">
 												<button
 													onClick={() => {
+														setLinkCopied(true);
 														navigator.clipboard.writeText(
 															`https://joinchampagne.com?shared=${encodeURIComponent(
 																diceOptions[
@@ -130,7 +132,9 @@ export default function ShareModal() {
 												>
 													<LinkIcon className="text-champagne-light-gray w-5 h-5" />
 													<p className="text-black text-[10px] leading-[10px] xl:text-[16px] font-anton xl:leading-[16px]">
-														Copy Card Link
+														{linkCopied
+															? "Link Copied"
+															: "🔗 Copy Card Link"}
 													</p>
 												</button>
 												<div

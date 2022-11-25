@@ -352,6 +352,7 @@ const SuccessForm = () => {
 	const [diceIndex, setDiceIndex] = useState(0);
 	const [instaModal, setInstaModal] = useRecoilState(instaModalState);
 	const [shareSchool, setShareSchool] = useRecoilState(shareModalSchoolState);
+	const [linkCopied, setLinkCopied] = useState(false);
 
 	const diceOptions = [
 		`Sign up for the newest and fun dating experience in ${formData["College Name"]}`,
@@ -395,6 +396,7 @@ const SuccessForm = () => {
 						<div className="flex flex-row space-x-2">
 							<button
 								onClick={() => {
+									setLinkCopied(true);
 									navigator.clipboard.writeText(
 										`https://joinchampagne.com/share/${encodeURIComponent(
 											formData["College Name"] || ""
@@ -404,7 +406,9 @@ const SuccessForm = () => {
 								className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 pl-[12px] pr-[17px] text-base font-black"
 							>
 								<p className="text-black text-[10px] leading-[10px] 2xl:text-[16px] 2xl:leading-[16px] font-anton">
-									🔗 Copy Card Link
+									{linkCopied
+										? "Link Copied"
+										: "🔗 Copy Card Link"}
 								</p>
 							</button>
 							<div
