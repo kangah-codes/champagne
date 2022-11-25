@@ -452,7 +452,7 @@ const SuccessForm = () => {
 						onClick={() => {
 							setInstaModal(true);
 						}}
-						className="cursor-pointer col-span-2 bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
+						className="cursor-pointer col-span-2 bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -477,7 +477,7 @@ const SuccessForm = () => {
 						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
 							`https://joinchampagne.com?shared=${shareSchool}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
-						className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
+						className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -504,7 +504,7 @@ const SuccessForm = () => {
 								formData["College Name"] || ""
 							)}`
 						)}`}
-						className="bg-black text-white col-span-3 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
+						className="bg-black text-white col-span-3 rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -536,7 +536,7 @@ const SuccessForm = () => {
 								formData["College Name"] || ""
 							)}`
 						)}`}
-						className="bg-black col-span-full text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
+						className="bg-black col-span-full text-white rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
