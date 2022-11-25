@@ -17,8 +17,8 @@ const Footer = () => {
 			className={`relative bg-gradient-to-r from-champagne-pink via-champagne-light-blue to-champagne-green text-black`}
 		>
 			{/* // 1366 - 140, 1920 - 160, 1280 - 106, 1440 - 118 */}
-			<div className="mx-auto px-10">
-				<div className="flex flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto items-center">
+			<div className="mx-auto px-[15px] lg1:px-10">
+				<div className="flex px-[30px] flex-col w-full pt-20 pb-20 lg1:pb-[118px] lg1:pt-[128px] xl:pt-[140px] 2xl:pt-[191px] 2xl:pb-[160px] max-w-[866px] xl:max-w-[923px] xl1:max-w-[975px] 2xl:max-w-screen-2xl mx-auto items-center">
 					<div className="flex flex-col items-start space-y-[14px]">
 						<div className="flex flex-row items-center space-x-5">
 							<p className="text-white text-[14px] leading-[14px] xl:text-[37px] xl:leading-[37px] font-black">
@@ -33,7 +33,7 @@ const Footer = () => {
 							/>
 						</div>
 						<div className="">
-							<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
+							<h1 className="text-[45px] leading-[45px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] font-anton 2xl:leading-[92px] text-white">
 								Get to know all the trending{" "}
 								<br className="hidden 2xl:block" /> activities
 								on your campus 🤩
@@ -50,7 +50,7 @@ const Footer = () => {
 						</div>
 						<div
 							onClick={() => setIsOpen(true)}
-							className="cursor-pointer bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-4 px-10 text-black text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
+							className="cursor-pointer bg-white rounded-full rotate-[-1deg] my-auto flex items-center justify-center py-[20px] px-[59px] text-black text-[18px] leading-[18px] lg1:leading-[21px] lg1:text-[21px] xl1:text-[23px] xl1:leading-[23px] font-black"
 						>
 							<p className="my-auto">Join waitlist</p>
 						</div>

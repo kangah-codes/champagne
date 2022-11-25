@@ -10,19 +10,21 @@ function Content1() {
 
 	return (
 		<div className="w-full flex flex-col mt-5 md:mt-0">
-			<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
-				Champagne - a dating and <br />
-				friendship app for college
-				<br /> students
-			</h1>
-			<div className="w-full flex flex-col space-y-5 lg1:flex-row gap-x-5 items-start justify-between relative">
-				<div className="absolute right-0 -top-[150px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
+			<div className="relative">
+				<h1 className="text-[45px] leading-[45px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
+					Champagne - a dating and <br />
+					friendship app for college
+					<br /> students
+				</h1>
+				<div className="absolute right-0 bottom-[0px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
 					<img
 						alt="Champagne app mockup"
 						src="/images/content/arrow.png"
 						className="w-[48px] h-[48px] xl:w-[93px] xl:h-[77px]"
 					/>
 				</div>
+			</div>
+			<div className="w-full flex flex-col space-y-5 lg1:flex-row gap-x-5 items-start justify-between mt-[17px]">
 				<div
 					onClick={() => setIsOpen(true)}
 					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
@@ -52,21 +54,23 @@ function Content2() {
 	const [isOpen, setIsOpen] = useRecoilState(modalState);
 
 	return (
-		<div className="w-full flex flex-col">
-			<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
-				Find new date recommended
-				<br /> to you by your friends and
-				<br /> develop it into something <br />
-				meaningful
-			</h1>
-			<div className="w-full flex flex-col space-y-5 lg1:flex-row gap-x-5 items-start justify-between relative">
-				<div className="absolute right-0 -top-[150px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
+		<div className="w-full flex flex-col pt-[18px] lg1:pt-0">
+			<div className="relative">
+				<h1 className="text-[45px] leading-[45px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
+					Find new date recommended
+					<br /> to you by your friends and
+					<br /> develop it into something <br />
+					meaningful
+				</h1>
+				<div className="absolute right-0 bottom-[0px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
 					<img
 						alt="Champagne app mockup"
 						src="/images/content/arrow.png"
 						className="w-[48px] h-[48px] xl:w-[93px] xl:h-[77px]"
 					/>
 				</div>
+			</div>
+			<div className="w-full flex flex-col space-y-5 lg1:flex-row gap-x-5 items-start justify-between mt-[17px]">
 				<div
 					onClick={() => setIsOpen(true)}
 					className="bg-champagne-pink rounded-full rotate-[357deg] my-auto flex items-center justify-center py-4 px-12 text-white text-[18px] lg1:text-[21px] xl1:text-[23px] font-black"
@@ -117,7 +121,7 @@ export default function Dating() {
 	}, []);
 
 	return (
-		<div className="w-full bg-white flex px-4 relative pb-32">
+		<div className="w-full bg-white flex px-4 relative pb-[64.3px] lg1:pb-32">
 			<div className="w-full max-w-5xl lg1:max-w-[985px] xl:max-w-[1066px] xl1:max-w-[1107px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center">
 				<div className="mx-auto w-full flex flex-col space-y-32">
 					<div className="relative w-full">
@@ -194,11 +198,11 @@ export default function Dating() {
 											}}
 											className="w-[223px] h-[175px] lg1:w-[242px] lg1:h-[189px] xl:w-[252px] xl:h-[202px] xl1:w-[272px] xl1:h-[213px] 2xl:w-[363px] 2xl:h-[284px] relative"
 										>
-											<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 right-5 space-y-2">
+											<div className="absolute py-[12px] px-[8px] bg-white rounded-[12px] lg1:rounded-[18px] flex flex-col bottom-[10px] right-[10px] space-y-2 w-[122px] lg1:w-auto">
 												<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
 													Freshman
 												</p>
-												<p className="text-[14px] leading-[14px] text-black font-black">
+												<p className="text-[8px] leading-[8px] text-black font-black">
 													Stanford University
 												</p>
 											</div>
@@ -214,11 +218,11 @@ export default function Dating() {
 											// src="/images/content/woman-4.png"
 											className="w-[223px] h-[175px] lg1:w-[242px] lg1:h-[189px] xl:w-[252px] xl:h-[202px] xl1:w-[272px] xl1:h-[213px] 2xl:w-[363px] 2xl:h-[284px] relative"
 										>
-											<div className="absolute p-5 bg-white rounded-[18px] flex flex-col bottom-5 left-5 space-y-2">
+											<div className="absolute py-[12px] px-[8px] bg-white rounded-[12px] lg1:rounded-[18px] flex flex-col bottom-[10px] left-[10px] space-y-2 w-[122px] lg1:w-auto">
 												<p className="text-[13px] leading-[13px] xl:text-[27px] font-anton xl:leading-[27px] text-black">
 													Junior
 												</p>
-												<p className="text-[14px] leading-[14px] text-black font-black">
+												<p className="text-[8px] leading-[8px] text-black font-black">
 													Stanford University
 												</p>
 											</div>
@@ -227,7 +231,7 @@ export default function Dating() {
 								</div>
 								<div className="w-full lg:w-1/2 flex flex-col h-full items-center xl:pt-10">
 									<div className="flex flex-col items-start my-auto">
-										<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
+										<h1 className="text-[45px] leading-[45px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full">
 											Make and connect with new friends at
 											your college
 										</h1>
@@ -265,23 +269,23 @@ export default function Dating() {
 								</p>
 							</div>
 						</div> */}
-						<div className="bg-white z-20 absolute rotate-[-355deg] border-[3px] border-black left-2 -top-10 2xl:-left-[30px] 2xl:top-5">
+						<div className="bg-white z-[40] absolute rotate-[-355deg] border-[3px] border-black left-2 -top-10 2xl:-left-[30px] 2xl:top-5">
 							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
 									games
 								</p>
 							</div>
 						</div>
-						<div className="bg-white z-[19] absolute rotate-[-355deg] border-[3px] border-black left-0 -top-3 2xl:-left-[36px] 2xl:top-7">
+						<div className="bg-white z-[39] absolute rotate-[-355deg] border-[3px] border-black left-0 -top-3 2xl:-left-[36px] 2xl:top-7">
 							<div className="relative px-5 py-0.5 xl:py-5 xl:px-10">
 								<p className="text-[18px] xl:text-[34px] uppercase leading-[34px] text-champagne-pink font-black">
 									games
 								</p>
 							</div>
 						</div>
-						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-col lg:flex-row p-5 md:p-10 xl:p-16 z-[15] bg-white">
+						<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-col lg:flex-row p-5 md:p-10 xl:p-16 z-[30] lg1:z-[15] bg-white">
 							<div className="w-full lg:w-2/3 flex flex-col items-start xl:gap-y-10 mt-5 xl:mt-0">
-								<h1 className="text-[47px] leading-[47px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full xl:pt-20">
+								<h1 className="text-[45px] leading-[45px] lg1:text-[64px] lg1:leading-[64px] xl:text-[68px] xl:leading-[68px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton text-black w-full xl:pt-20">
 									Checkout the most eligible{" "}
 									<span className="text-champagne-light-blue">
 										bachelors
@@ -292,7 +296,7 @@ export default function Dating() {
 									</span>{" "}
 									on your campus
 								</h1>
-								<div className="bg-black rounded-full xl:my-auto flex items-center justify-center py-4 px-12 my-5 lg:mt-14 text-white text-[18px] lg1:text-[21px] xl1:text-[23px] font-black">
+								<div className="bg-black rounded-full xl:my-auto flex items-center justify-center py-[20px] px-[59px] my-5 lg:mt-14 text-white text-[18px] leading-[18px] lg1:leading-[21px] lg1:text-[21px] xl1:text-[23px] font-black">
 									<p className="my-auto">Join Waitlist</p>
 								</div>
 							</div>
@@ -321,7 +325,7 @@ export default function Dating() {
 								</div>
 							</div>
 
-							<div className="grid grid-rows-2 -space-y-3 relative items-stretch">
+							<div className="grid grid-rows-2 -space-y-3 relative items-start lg1:items-stretch">
 								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row bg-white z-20 relative py-8 px-8 -top-5 lg1:-top-0 lg1:py-10 lg1:px-16 lg1:-left-[0.3rem] xl:-left-[1.5rem]">
 									<div className="w-full flex flex-col items-start">
 										<h1 className="text-[30px] xl:text-[36px] xl:leading-[36px] xl1:text-[38px] font-anton leading-[30px] xl1:leading-[38px] text-black w-full">
@@ -330,7 +334,7 @@ export default function Dating() {
 											<br /> mates
 										</h1>
 
-										<div className="absolute right-10 bottom-10">
+										<div className="absolute lg1:right-10 lg1:bottom-10 right-[15px] bottom-[15px]">
 											<img
 												width={100}
 												height={100}
@@ -342,15 +346,15 @@ export default function Dating() {
 									</div>
 								</div>
 
-								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row bg-white z-1 relative py-8 px-8 -top-5 lg1:-top-0 lg1:py-10 lg1:px-16 lg1:-left-[0.3rem] xl:-left-[1.5rem] lg1:-top-0">
-									<div className="w-full flex flex-row items-start justify-between relative">
+								<div className="w-full border-[4px] xl:border-[7px] border-black rounded-[36px] xl:rounded-[52px] 2xl:rounded-[73px] flex flex-row bg-white z-1 relative py-8 px-8 -top-5 lg1:-top-0 lg1:py-10 lg1:px-16 lg1:-left-[0.3rem] xl:-left-[1.5rem]">
+									<div className="w-full flex flex-row items-start justify-between">
 										<h1 className="text-[30px] xl:text-[36px] xl:leading-[36px] xl1:text-[38px] font-anton leading-[30px] xl1:leading-[38px] text-black w-full">
 											You may get
 											<br /> Champagne delivered
 											<br /> to you for each date
 										</h1>
 
-										<div className="absolute right-0 bottom-0">
+										<div className="absolute lg1:right-10 lg1:bottom-10 right-[15px] bottom-[15px]">
 											<img
 												width={100}
 												height={100}

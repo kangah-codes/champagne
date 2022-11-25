@@ -143,42 +143,44 @@ function Hero({
 
 				<div className="w-full flex mx-auto h-full">
 					<div className="mx-auto w-full">
-						<div className="w-full rounded-[28px] lg1:rounded-[43px] border-[4px] lg1:border-[7px] border-black text-white p-5 md:p-10 2xl:p-16 items-center justify-center flex h-full flex-row space-x-5 bg-black">
+						<div className="w-full rounded-[28px] lg1:rounded-[43px] border-[4px] lg1:border-[7px] border-black text-white p-[14px] md:p-10 2xl:p-16 items-center justify-center flex h-full flex-row space-x-5 bg-black">
 							<div className="flex flex-col justify-between space-y-5">
-								<p className="text-[#919191] font-black text-[13px]">
-									How to activate your campus
-								</p>
-								<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
-									<span className="text-champagne-pink">
-										Invite
-									</span>{" "}
-									or{" "}
-									<span className="text-champagne-light-blue">
-										share
-									</span>{" "}
-									Champagne app with your schoolmates.{" "}
-								</h1>
-								<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
-									<span className="text-champagne-pink">
-										Champagne
-									</span>{" "}
-									will be activated on your campus when{" "}
-									<span className="text-champagne-light-blue">
-										200 or more students
-									</span>{" "}
-									join the waitlist
-								</h1>{" "}
-								<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
-									Share with friends on your socials or your
-									contact to activate{" "}
-									<span className="text-champagne-pink">
-										Champagne app
-									</span>{" "}
-									in your college.
-								</h1>{" "}
-								<div className="grid grid-cols-4 xl:grid-cols-5 gap-3 xl:gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
+								<div className="flex flex-col px-[14px]">
+									<p className="text-[#919191] font-black text-[13px]">
+										How to activate your campus
+									</p>
+									<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
+										<span className="text-champagne-pink">
+											Invite
+										</span>{" "}
+										or{" "}
+										<span className="text-champagne-light-blue">
+											share
+										</span>{" "}
+										Champagne app with your schoolmates.{" "}
+									</h1>
+									<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
+										<span className="text-champagne-pink">
+											Champagne
+										</span>{" "}
+										will be activated on your campus when{" "}
+										<span className="text-champagne-light-blue">
+											200 or more students
+										</span>{" "}
+										join the waitlist
+									</h1>{" "}
+									<h1 className="text-[33px] leading-[33px] lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[36px] 2xl:leading-[36px]  font-anton">
+										Share with friends on your socials or
+										your contact to activate{" "}
+										<span className="text-champagne-pink">
+											Champagne app
+										</span>{" "}
+										in your college.
+									</h1>{" "}
+								</div>
+								<div className="grid grid-cols-4 xl:grid-cols-5 gap-[4.6px] xl:gap-5 justify-between w-full pt-5 max-w-3xl mx-auto">
 									<button
-										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black snapchat-share-button"
+										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-[4px] items-center justify-center py-2 px-3 2xl:py-5 text-base font-black snapchat-share-button"
 										data-share-url={`https://joinchampagne.com?shared=${encodeURIComponent(
 											diceOptionsNoSchool[
 												Math.floor(
@@ -211,7 +213,7 @@ function Hero({
 										onClick={() => {
 											setInstaModal(true);
 										}}
-										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+										className="cursor-pointer bg-white text-black rounded-full flex flex-row space-x-[4px] items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +241,7 @@ function Hero({
 										)}&text=${encodeURIComponent(
 											diceOptionsNoSchool[diceIndex]
 										)}`}
-										className="bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+										className="bg-white text-black rounded-full flex flex-row space-x-[4px] items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +265,7 @@ function Hero({
 
 									<Link
 										href={`sms:&body=${diceOptionsNoSchool[4]}`}
-										className="xl:col-span-2 bg-white text-black rounded-full flex flex-row space-x-2 items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
+										className="xl:col-span-2 bg-white text-black rounded-full flex flex-row space-x-[4px] items-center justify-center py-2 px-3 2xl:py-5 text-base font-black"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +301,7 @@ function Hero({
 				</div>
 			</div>
 
-			<div className="w-full lg1:max-w-[80%] 2xl:max-w-[90%] 3xl:max-w-[75%] mx-auto flex items-center justify-center py-20">
+			<div className="w-full lg1:max-w-[80%] 2xl:max-w-[90%] 3xl:max-w-[75%] mx-auto flex items-center justify-center pb-[66.5px]">
 				<div className="w-full pb-[8rem] flex flex-col">
 					{/* <div className="w-full max-w-5xl lg1:max-w-7xl mx-auto flex items-center justify-center">
 				<div className="mx-auto py-[5rem]"></div> */}
@@ -366,7 +368,7 @@ function Hero({
 						</div>
 					</div>
 
-					<div className="grid grid-cols-1 lg1:grid-cols-2 my-14 gap-x-8 gap-y-10">
+					<div className="grid grid-cols-1 lg1:grid-cols-2 my-14 gap-x-8 gap-y-[20.4px] lg1:gap-y-10">
 						{Object.entries(filteredLeaderboard).length > 1 ? (
 							Object.entries(filteredLeaderboard)
 								.sort((a, b) => b[1] - a[1])
@@ -376,11 +378,11 @@ function Hero({
 											key={i}
 											className="relative flex items-end justify-end"
 										>
-											<div className="border-[4px] lg1:border-[7px] border-black rounded-[43px] bg-white p-10 absolute w-[97%] h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
+											<div className="border-[4px] lg1:border-[7px] border-black rounded-[28px] lg1:rounded-[43px] bg-white p-10 absolute w-[97%] h-full min-h-[221px] z-[1] -left-[-2px] -bottom-2.5" />
 											<div
 												className={`	
 													border-[4px] lg1:border-[7px] text-white self-end w-[96.5%] lg1:w-[97%] 2xl:w-[98.5%] border-black -left-[-12px] h-full min-h-[221px]
-													rounded-[43px] ${
+													rounded-[28px] lg1:rounded-[43px] ${
 														originalPositions.indexOf(
 															item[0]
 														) === 0
@@ -414,18 +416,18 @@ function Hero({
 														setShareSchool(item[0]);
 														setIsOpen(true);
 													}}
-													className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
+													className="cursor-pointer bg-black text-white rounded-full flex flex-row space-x-[4px] items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-opacity-40"
 												>
-													<p className="text-[20px] font-anton leading-[20px]">
+													<p className="lg1:text-[20px] font-anton lg1:leading-[20px] text-[9px] leading-[9px]">
 														Share
 													</p>
 												</div>
 											</div>
 										</div>
 									) : (
-										<div className="border-[4px] lg1:border-[7px] text-black self-end w-full border-black rounded-[43px] bg-white relative p-5 lg1:p-10 z-[20] flex flex-col lg1:col-span-full">
+										<div className="border-[4px] lg1:border-[7px] text-black self-end w-full border-black rounded-[28px] lg1:rounded-[43px] bg-white relative p-5 lg1:p-10 z-[20] flex flex-col lg1:col-span-full">
 											<div className="grid w-full items-end justify-items-end">
-												<h1 className="text-[46px] leading-[46px] xl1:text-[79px] font-anton xl1:leading-[79px]">
+												<h1 className="text-[32px] leading-[32px] xl1:text-[79px] font-anton xl1:leading-[79px]">
 													{getNumberSuffix(
 														originalPositions.indexOf(
 															item[0]
@@ -438,7 +440,7 @@ function Hero({
 													{item[1]} student
 													{item[1] > 1 ? "s" : ""}
 												</h1>
-												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words line-clamp-2">
+												<h1 className="text-[32px] leading-[32px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words line-clamp-3 max-w-[220px]">
 													{item[0]}
 												</h1>
 											</div>
@@ -448,9 +450,9 @@ function Hero({
 													setShareSchool(item[0]);
 													setIsOpen(true);
 												}}
-												className="cursor-pointer text-white rounded-full flex flex-row space-x-2 items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-[#DEDBDB]"
+												className="cursor-pointer text-white rounded-full flex flex-row space-x-[4px] items-center justify-center py-3 px-6 text-base font-black absolute lg1:bottom-5 lg1:right-5 bg-[#DEDBDB]"
 											>
-												<p className="text-[20px] font-anton leading-[20px]">
+												<p className="lg1:text-[20px] font-anton lg1:leading-[20px] text-[9px] leading-[9px]">
 													Share
 												</p>
 											</div>

@@ -142,7 +142,7 @@ const NavBar = () => {
 					ref={ref1}
 					onMouseEnter={() => setMenu1(true)}
 					onMouseLeave={() => setMenu1(false)}
-					className="absolute left-0 -top-0 bg-white py-10 transform px-2 sm:px-0 w-full"
+					className="absolute left-0 -top-0 bg-white pb-[20px] sm:py-[33px] transform px-2 xs:px-0 w-full"
 					style={{ zIndex: 99999999999999 }}
 				>
 					<span
@@ -186,7 +186,7 @@ const NavBar = () => {
 						</svg>
 					</span>
 					<div className="overflow-hidden">
-						<div className="relative flex flex-col items-center space-y-10 mt-10">
+						<div className="relative flex flex-col items-center space-y-[33px] mt-[32.4px]">
 							<div className="flex flex-row-reverse"></div>
 							<div className="flex flex-col items-center">
 								<img
@@ -195,15 +195,19 @@ const NavBar = () => {
 									alt="Champagne Logo"
 								/>
 
-								<h1 className="text-[55px] leading-[55px] font-anton text-center text-black w-full">
-									Where your friend recommends your next date{" "}
+								<h1 className="text-[40px] leading-[40px] sm:text-[52px] sm:leading-[52px] font-anton text-center text-black w-full px-[35px]">
+									Where your <br />
+									friends
+									<br /> recommend{" "}
+									<br className="block sm:hidden" /> your next
+									date{" "}
 								</h1>
 								<p className="text-black font-bold text-[14px] leading-[14px] mt-5 text-center max-w-xs">
 									The platform where dating and friendship
 									happen for college students
 								</p>
 							</div>
-							<div className="flex flex-col space-y-5 w-full px-4">
+							<div className="flex flex-col space-y-[11px] w-full px-4">
 								<button
 									className="bg-champagne-pink rounded-full flex items-center justify-center py-4 w-full text-white text-base font-black text-[15px]"
 									onClick={() => setIsOpen(true)}

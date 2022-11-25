@@ -143,7 +143,7 @@ function VirtualizedList({
 	return (
 		<div
 			ref={parentRef}
-			className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+			className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none xs:text-sm"
 		>
 			<div
 				className="h-[120px] lg1:h-[180px] max-h-[500px]"
@@ -368,7 +368,7 @@ const SuccessForm = () => {
 		<div
 			className={`w-full py-[34px] grid grid-cols-1 md:grid-cols-2 mx-auto items-center lg1:gap-x-[55px] gap-x-[100px]`}
 		>
-			<div className="flex flex-col w-full my-auto">
+			<div className="flex flex-col w-full my-auto pb-[16px]">
 				<img
 					className="w-[142px] xl:w-[175px] 2xl:w-[254px] 3xl:w-[336px] cursor-pointer mx-auto lg1:mx-0"
 					src="/images/logo.png"
@@ -389,8 +389,8 @@ const SuccessForm = () => {
 			</div>
 
 			<div className="flex flex-col items-center relative space-y-5 xl:my-0">
-				<div className="w-[90%] md:w-[60%] lg1:w-[257px] lg1:h-[275px] 2xl:w-[386px] 3xl:w-[515px] 3xl:h-[551px] rounded-[14px] bg-champagne-yellow absolute -top-0.5 xl:-top-1 z-1" />
-				<div className="w-full md:w-[70%] lg1:w-[269px] lg1:h-[273px] 2xl:h-[409px] 2xl:w-[404px] 3xl:w-[539px] 3xl:h-[546px] p-[12px] 2xl:p-[26px] 3xl:p-[34px] rounded-[14px] bg-white flex flex-col justify-between z-10">
+				<div className="w-[264px] md:w-[60%] h-[238px] lg1:w-[257px] lg1:h-[275px] 2xl:w-[386px] 3xl:w-[515px] 3xl:h-[551px] rounded-[14px] bg-champagne-yellow absolute top-2 xl:-top-1 z-1" />
+				<div className="p-[19px] md:w-[70%] w-[275px] h-[230px] lg1:w-[269px] lg1:h-[273px] 2xl:h-[409px] 2xl:w-[404px] 3xl:w-[539px] 3xl:h-[546px] 2xl:p-[26px] 3xl:p-[34px] rounded-[14px] bg-white flex flex-col justify-between z-10">
 					<div className="flex flex-row justify-between w-full">
 						<div className="flex flex-row space-x-2">
 							<button
@@ -433,7 +433,7 @@ const SuccessForm = () => {
 					</div>
 
 					<div>
-						<h1 className="text-[29px] leading-[29px] xl:text-[31px] xl:leading-[31px] 2xl:text-[44px] 2xl:leading-[44px] font-anton text-black line-clamp-5 3xl:line-clamp-[7] mt-10 lg1:mt-0">
+						<h1 className="text-[29px] leading-[29px] xl:text-[31px] xl:leading-[31px] 2xl:text-[44px] 2xl:leading-[44px] font-anton text-black line-clamp-4 3xl:line-clamp-[7] mt-10 lg1:mt-0">
 							{diceOptions[diceIndex]}
 						</h1>
 					</div>
@@ -447,7 +447,7 @@ const SuccessForm = () => {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-7 gap-2 max-w-lg justify-between lg:gap-x-3 items-stretch">
+				<div className="grid grid-cols-7 gap-2 max-w-[327px] w-full justify-between lg:gap-x-3 items-stretch">
 					<div
 						onClick={() => {
 							setInstaModal(true);
@@ -768,7 +768,7 @@ export default function Modal() {
 								</svg>
 							</span>
 
-							{reqSuccessful ? <SuccessForm /> : <DataForm />}
+							{!reqSuccessful ? <SuccessForm /> : <DataForm />}
 						</div>
 					</Transition.Child>
 				</div>
