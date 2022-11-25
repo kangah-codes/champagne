@@ -9,13 +9,13 @@ export default function Images() {
 				<div className="mx-auto py-[5rem] xl:py-[12rem] w-full">
 					<img
 						alt="img"
-						src="/images/content/group-mobile.png"
+						src="/images/content/groupmobile.png"
 						className="w-screen block lg1:hidden"
 					/>
 					<div className="m-auto hidden lg1:block">
 						<img
 							alt="img"
-							src="/images/content/dating-group.png"
+							src="/images/content/datinggroup.png"
 							className="w-full"
 						/>
 						{/* <div className="relative mt-20">
