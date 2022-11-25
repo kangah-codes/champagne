@@ -51,7 +51,7 @@ const Layout = ({
 				/>
 				<meta
 					property="snapchat:sticker"
-					content={`https://joinchampagne.com/images/logos/logo.png`}
+					content={`https://joinchampagne.com/images/logos/logo.jpg`}
 				/>
 				<meta
 					name="keywords"
@@ -65,7 +65,35 @@ const Layout = ({
 				<meta name="twitter:description" content={desc} />
 				<meta name="twitter:site" content="@propernounco" />
 				<meta name="twitter:creator" content="@propernounco" />
-				<link rel="icon" href="/images/logo.png" type="image/x-icon" />
+				<link
+					rel="apple-touch-icon"
+					sizes="180x180"
+					href="/apple-touch-icon.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="32x32"
+					href="/favicon-32x32.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="16x16"
+					href="/favicon-16x16.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="192x192"
+					href="/android-chrome-192x192.png"
+				/>
+				<link
+					rel="icon"
+					type="image/png"
+					sizes="512x512"
+					href="/android-chrome-512x512.png"
+				/>
 			</Head>
 
 			<Script>
