@@ -225,7 +225,7 @@ const DataForm = () => {
 
 	return (
 		<div
-			className={`w-full py-5 xl:py-10 grid grid-cols-1 md:grid-cols-2 mx-auto items-center  gap-x-[100px]`}
+			className={`w-full py-5 xl:py-10 grid grid-cols-1 md:grid-cols-2 mx-auto items-center gap-y-5 gap-x-[100px]`}
 		>
 			<div className="flex flex-col justify-between">
 				<img

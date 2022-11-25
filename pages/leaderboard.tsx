@@ -438,7 +438,7 @@ function Hero({
 													{item[1]} student
 													{item[1] > 1 ? "s" : ""}
 												</h1>
-												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words">
+												<h1 className="text-[61px] leading-[61px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words line-clamp-2">
 													{item[0]}
 												</h1>
 											</div>

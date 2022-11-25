@@ -180,12 +180,12 @@ export default function ShareModal() {
 										</p>
 									</div>
 
-									<div className="grid grid-cols-7 gap-2 max-w-lg justify-between lg:gap-x-3 items-stretch">
+									<div className="grid grid-cols-7 gap-2 max-w-[327px] w-full justify-between lg:gap-x-3 items-stretch">
 										<div
 											onClick={() => {
 												setInstaModal(true);
 											}}
-											className="cursor-pointer col-span-2 bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
+											className="cursor-pointer col-span-2 bg-black text-white rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ export default function ShareModal() {
 											)}&text=${encodeURIComponent(
 												diceOptions[diceIndex]
 											)}`}
-											className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
+											className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +241,7 @@ export default function ShareModal() {
 													shareSchool || ""
 												)}`
 											)}`}
-											className="bg-black text-white col-span-3 rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
+											className="bg-black text-white col-span-3 rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -275,7 +275,7 @@ export default function ShareModal() {
 													shareSchool || ""
 												)}`
 											)}`}
-											className="bg-black col-span-full text-white rounded-full flex flex-row space-x-2 items-center justify-center py-1 px-2 lg:py-5 lg:px-6 text-base font-black"
+											className="bg-black col-span-full text-white rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-5 lg:px-6 text-base font-black"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
