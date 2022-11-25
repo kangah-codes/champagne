@@ -386,8 +386,8 @@ export default function InstaModal() {
 												fetch(
 													process.env.NODE_ENV ===
 														"production"
-														? `https://joinchampagne.com/images/content/instagram-card.png`
-														: `http://localhost:3000/images/content/instagram-card.png`,
+														? `https://joinchampagne.com/images/content/instagramcard.png`
+														: `http://localhost:3000/images/content/instagramcard.png`,
 													{
 														method: "GET",
 														headers: {},
