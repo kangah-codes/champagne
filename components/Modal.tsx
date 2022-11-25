@@ -772,7 +772,7 @@ export default function Modal() {
 								</svg>
 							</span>
 
-							{!reqSuccessful ? <SuccessForm /> : <DataForm />}
+							{reqSuccessful ? <SuccessForm /> : <DataForm />}
 						</div>
 					</Transition.Child>
 				</div>
