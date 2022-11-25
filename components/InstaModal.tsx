@@ -390,7 +390,10 @@ export default function InstaModal() {
 														: `http://localhost:3000/images/content/instagramcard.png`,
 													{
 														method: "GET",
-														headers: {},
+														headers: {
+															"Access-Control-Allow-Origin":
+																"*",
+														},
 													}
 												)
 													.then((response) => {
