@@ -316,7 +316,7 @@ export default function InstaModal() {
 								`}
 							>
 								<span
-									className="rounded-full bg-champagne-yellow lg1:bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
+									className="rounded-full bg-champagne-yellow flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 									onClick={() => setIsOpen(false)}
 								>
 									<svg
