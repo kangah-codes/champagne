@@ -183,7 +183,7 @@ export default function ShareModal() {
 										</p>
 									</div>
 
-									<div className="grid grid-cols-7 gap-2 max-w-[327px] w-full justify-between lg:gap-x-3 items-stretch">
+									<div className="grid grid-cols-7 gap-2 max-w-[327px] lg1:max-w-[80%] w-full justify-between lg:gap-x-3 items-stretch">
 										<div
 											onClick={() => {
 												setInstaModal(true);

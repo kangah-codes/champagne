@@ -440,7 +440,7 @@ function Hero({
 													{item[1]} student
 													{item[1] > 1 ? "s" : ""}
 												</h1>
-												<h1 className="text-[32px] leading-[32px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words line-clamp-3 max-w-[220px]">
+												<h1 className="text-[32px] leading-[32px] lg1:text-[71px] font-anton lg1:leading-[71px] w-full break-words line-clamp-3 max-w-[220px] lg1:max-w-[70%]">
 													{item[0]}
 												</h1>
 											</div>
