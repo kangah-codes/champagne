@@ -479,7 +479,9 @@ const SuccessForm = () => {
 					</div>
 					<Link
 						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-							`https://joinchampagne.com?shared=${shareSchool}`
+							`https://joinchampagne.com?shared=${encodeURIComponent(
+								shareSchool || ""
+							)}`
 						)}&text=${encodeURIComponent(diceOptions[diceIndex])}`}
 						className="bg-black text-white col-span-2 rounded-full flex flex-row space-x-2 items-center justify-center py-[10px] px-2 lg:py-[11px] xl:py-[12px] lg:px-[15px] 2xl:py-[17px] text-base font-black"
 					>

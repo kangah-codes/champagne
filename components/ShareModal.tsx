@@ -211,7 +211,9 @@ export default function ShareModal() {
 										</div>
 										<Link
 											href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-												`https://joinchampagne.com?shared=${shareSchool}`
+												`https://joinchampagne.com?shared=${encodeURIComponent(
+													shareSchool || ""
+												)}`
 											)}&text=${encodeURIComponent(
 												diceOptions[diceIndex]
 											)}`}
