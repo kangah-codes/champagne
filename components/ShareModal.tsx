@@ -240,7 +240,7 @@ export default function ShareModal() {
 											href={`sms:&body=${
 												diceOptions[7]
 											} ${encodeURIComponent(
-												`https://joinchampagne.com/share/${encodeURIComponent(
+												`https://joinchampagne.com?shared=${encodeURIComponent(
 													shareSchool || ""
 												)}`
 											)}`}
@@ -274,7 +274,7 @@ export default function ShareModal() {
 											href={`sms:&body=${
 												diceOptions[7]
 											} ${encodeURIComponent(
-												`https://joinchampagne.com/share/${encodeURIComponent(
+												`https://joinchampagne.com?shared=${encodeURIComponent(
 													shareSchool || ""
 												)}`
 											)}`}

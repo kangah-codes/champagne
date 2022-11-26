@@ -398,7 +398,7 @@ const SuccessForm = () => {
 								onClick={() => {
 									setLinkCopied(true);
 									navigator.clipboard.writeText(
-										`https://joinchampagne.com/share/${encodeURIComponent(
+										`https://joinchampagne.com?shared=${encodeURIComponent(
 											formData["College Name"] || ""
 										)}`
 									);
@@ -504,7 +504,7 @@ const SuccessForm = () => {
 					</Link>
 					<Link
 						href={`sms:&body=${diceOptions[8]} ${encodeURIComponent(
-							`https://joinchampagne.com/share/${encodeURIComponent(
+							`https://joinchampagne.com?shared${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
 						)}`}
@@ -536,7 +536,7 @@ const SuccessForm = () => {
 					</Link>
 					<Link
 						href={`sms:&body=${diceOptions[8]} ${encodeURIComponent(
-							`https://joinchampagne.com/share/${encodeURIComponent(
+							`https://joinchampagne.com?shared=${encodeURIComponent(
 								formData["College Name"] || ""
 							)}`
 						)}`}
