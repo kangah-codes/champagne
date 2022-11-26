@@ -20,7 +20,7 @@ const Layout = ({
 	// @ts-ignore
 	children,
 	title,
-	desc = `Champagne`,
+	desc = `Champagne - the real social app for college students`,
 	footer = true,
 	college,
 	shared,

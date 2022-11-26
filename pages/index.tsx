@@ -6,8 +6,19 @@ import Hero from "../components/index/Hero";
 import Images from "../components/index/Images";
 import Layout from "../components/index/Layout";
 import { useRouter } from "next/router";
+import { useRecoilState } from "recoil";
+import { modalState } from "../recoil";
+import { useEffect } from "react";
 
 export default function Home({ shared }: any) {
+	const [, setShowModal] = useRecoilState(modalState);
+
+	useEffect(() => {
+		if (shared) {
+			setShowModal(true);
+		}
+	}, []);
+
 	return (
 		<Layout footer={false} shared={shared}>
 			<Hero />

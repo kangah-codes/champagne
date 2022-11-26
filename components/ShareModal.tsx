@@ -73,19 +73,19 @@ export default function ShareModal() {
 								`}
 						>
 							<span
-								className="rounded-full bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
+								className="rounded-full bg-champagne-yellow lg1:bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 								onClick={() => setIsOpen(false)}
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 42 42"
 								>
-									<path
+									{/* <path
 										id="Path_14562"
 										data-name="Path 14562"
 										d="M21,0A21,21,0,1,1,0,21,21,21,0,0,1,21,0Z"
 										fill="#fff"
-									/>
+									/> */}
 									<line
 										id="Line_50"
 										data-name="Line 50"
@@ -130,7 +130,6 @@ export default function ShareModal() {
 													}}
 													className="bg-champagne-lighter-gray rounded-full flex flex-row items-center justify-center py-2 px-3 lg:px-5 text-base font-black"
 												>
-													<LinkIcon className="text-champagne-light-gray w-5 h-5" />
 													<p className="text-black text-[10px] leading-[10px] xl:text-[16px] font-anton xl:leading-[16px]">
 														{linkCopied
 															? "Link Copied"
@@ -239,8 +238,8 @@ export default function ShareModal() {
 										</Link>
 										<Link
 											href={`sms:&body=${
-												diceOptions[9]
-											}+${encodeURIComponent(
+												diceOptions[7]
+											} ${encodeURIComponent(
 												`https://joinchampagne.com/share/${encodeURIComponent(
 													shareSchool || ""
 												)}`
@@ -273,8 +272,8 @@ export default function ShareModal() {
 										</Link>
 										<Link
 											href={`sms:&body=${
-												diceOptions[8]
-											}+${encodeURIComponent(
+												diceOptions[7]
+											} ${encodeURIComponent(
 												`https://joinchampagne.com/share/${encodeURIComponent(
 													shareSchool || ""
 												)}`

@@ -16,11 +16,11 @@ function Content1() {
 					friendship app for college
 					<br /> students
 				</h1>
-				<div className="absolute right-0 bottom-[0px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
+				<div className="absolute right-0 bottom-[0px]">
 					<img
 						alt="Champagne app mockup"
 						src="/images/content/arrow.png"
-						className="w-[48px] h-[48px] xl:w-[93px] xl:h-[77px]"
+						className="w-[48px] h-[48px] xl:h-[93px] xl:w-[77px]"
 					/>
 				</div>
 			</div>
@@ -62,11 +62,11 @@ function Content2() {
 					<br /> develop it into something <br />
 					meaningful
 				</h1>
-				<div className="absolute right-0 bottom-[0px] lg1:right-20 2xl:-top-[180px] 2xl:right-[130px]">
+				<div className="absolute right-0 bottom-0">
 					<img
 						alt="Champagne app mockup"
 						src="/images/content/arrow.png"
-						className="w-[48px] h-[48px] xl:w-[93px] xl:h-[77px]"
+						className="w-[48px] h-[48px] xl:h-[93px] xl:w-[77px]"
 					/>
 				</div>
 			</div>

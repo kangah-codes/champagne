@@ -316,19 +316,19 @@ export default function InstaModal() {
 								`}
 							>
 								<span
-									className="rounded-full bg-champagne-yellow flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-3 top-3 xl:right-6 xl:top-6 cursor-pointer"
+									className="rounded-full bg-champagne-yellow lg1:bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 									onClick={() => setIsOpen(false)}
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 42 42"
 									>
-										<path
+										{/* <path
 											id="Path_14562"
 											data-name="Path 14562"
 											d="M21,0A21,21,0,1,1,0,21,21,21,0,0,1,21,0Z"
 											fill="#f0f943"
-										/>
+										/> */}
 										<line
 											id="Line_50"
 											data-name="Line 50"
