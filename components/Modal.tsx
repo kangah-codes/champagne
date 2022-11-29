@@ -739,16 +739,16 @@ export default function Modal() {
 								className="rounded-full bg-champagne-yellow lg1:bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 								onClick={() => setIsOpen(false)}
 							>
-								<svg
+								<img
+									src="/images/content/x.png"
+									className="m-auto w-4 h-4"
+									alt="x"
+								/>
+								{/* <svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 42 42"
 								>
-									{/* <path
-										id="Path_14562"
-										data-name="Path 14562"
-										d="M21,0A21,21,0,1,1,0,21,21,21,0,0,1,21,0Z"
-										fill="#fff"
-									/> */}
+									
 									<line
 										id="Line_50"
 										data-name="Line 50"
@@ -771,7 +771,7 @@ export default function Modal() {
 										stroke-linecap="round"
 										strokeWidth="5"
 									/>
-								</svg>
+								</svg> */}
 							</span>
 
 							{reqSuccessful ? <SuccessForm /> : <DataForm />}

@@ -319,16 +319,21 @@ export default function InstaModal() {
 									className="rounded-full bg-champagne-yellow flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 									onClick={() => setIsOpen(false)}
 								>
-									<svg
+									<img
+										src="/images/content/x.png"
+										className="m-auto w-4 h-4"
+										alt="x"
+									/>
+									{/* <svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 42 42"
 									>
-										{/* <path
+										<path
 											id="Path_14562"
 											data-name="Path 14562"
 											d="M21,0A21,21,0,1,1,0,21,21,21,0,0,1,21,0Z"
 											fill="#f0f943"
-										/> */}
+										/>
 										<line
 											id="Line_50"
 											data-name="Line 50"
@@ -351,7 +356,7 @@ export default function InstaModal() {
 											stroke-linecap="round"
 											strokeWidth="5"
 										/>
-									</svg>
+									</svg> */}
 								</span>
 
 								<div className="flex flex-col p-5 xl:p-7 2xl:p-8 w-full items-center space-y-2 max-w-xl 2xl:max-w-2xl mx-auto">

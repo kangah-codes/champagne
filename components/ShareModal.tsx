@@ -76,39 +76,11 @@ export default function ShareModal() {
 								className="rounded-full bg-champagne-yellow lg1:bg-white flex items-center w-[30px] h-[30px] lg1:w-[42px] lg1:h-[42px] absolute right-6 top-6 cursor-pointer"
 								onClick={() => setIsOpen(false)}
 							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 42 42"
-								>
-									{/* <path
-										id="Path_14562"
-										data-name="Path 14562"
-										d="M21,0A21,21,0,1,1,0,21,21,21,0,0,1,21,0Z"
-										fill="#fff"
-									/> */}
-									<line
-										id="Line_50"
-										data-name="Line 50"
-										x2="13.413"
-										y2="13.413"
-										transform="translate(14.381 14.48)"
-										fill="none"
-										stroke="#000"
-										stroke-linecap="round"
-										strokeWidth="5"
-									/>
-									<line
-										id="Line_51"
-										data-name="Line 51"
-										x1="13.586"
-										y2="13.785"
-										transform="translate(14.207 14.107)"
-										fill="none"
-										stroke="#000"
-										stroke-linecap="round"
-										strokeWidth="5"
-									/>
-								</svg>
+								<img
+									src="/images/content/x.png"
+									className="m-auto w-4 h-4"
+									alt="x"
+								/>
 							</span>
 
 							<div className="flex flex-col xl:flex-row p-5 2xl:p-14 w-full">
