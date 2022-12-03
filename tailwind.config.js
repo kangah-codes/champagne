@@ -30,6 +30,7 @@ module.exports = {
 					"deep-blue": "#16B5BC",
 					"light-blue": "#27eef7",
 					"lighter-blue": "#0deef7",
+					"lightest-blue": "#F2FEFF",
 					"deep-gray": "#7c7c7c",
 					"light-gray": "#a09f9f",
 					"lighter-gray": "#eaeaea",

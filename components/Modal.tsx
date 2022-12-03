@@ -49,12 +49,6 @@ export function Select({
 						.includes(query.toLowerCase().replace(/\s+/g, ""))
 			  ) ?? [];
 
-	var classes = classNames(
-		"relative w-full cursor-default overflow-hidden text-left focus:outline-none",
-		"block w-full placeholder-light-grey",
-		className
-	);
-
 	return (
 		<div className={`block w-full h-full ${className}`}>
 			<div className="relative h-full">
