@@ -14,6 +14,7 @@ interface LayoutProps {
 	college?: string;
 	footer?: boolean;
 	shared?: string;
+	navbar?: boolean;
 }
 
 const Layout = ({
@@ -24,6 +25,7 @@ const Layout = ({
 	footer = true,
 	college,
 	shared,
+	navbar = true,
 }: LayoutProps) => {
 	return (
 		<div className="flex flex-col min-h-screen">
@@ -127,13 +129,17 @@ const Layout = ({
 					gtag('config', 'G-Q2KH8H5GV6');
 				`}
 			</Script>
-			<div className="sticky top-0 z-50">
-				<NavBar />
-				<Modal />
-				<InstaModal />
-			</div>
 
-			<div className="flex-grow overflow-hidden">{children}</div>
+			{navbar && (
+				<div className="sticky top-0 z-50">
+					<NavBar />
+				</div>
+			)}
+
+			<Modal />
+			<InstaModal />
+
+			<>{children}</>
 			{footer && <Footer />}
 		</div>
 	);
