@@ -12,6 +12,9 @@ import Champions from "../components/ambassador/Champions";
 import ChampionsTask from "../components/ambassador/ChampionsTasks";
 import Ranks from "../components/ambassador/Ranks";
 import Footer from "../components/ambassador/Footer";
+import Benefits from "../components/ambassador/Benefits";
+import NavBar from "../components/ambassador/NavBar";
+import ChampionsDo from "../components/ambassador/ChampionsDo";
 
 export default function Ambassador({ shared }: any) {
 	const [, setShowModal] = useRecoilState(modalState);
@@ -23,15 +26,12 @@ export default function Ambassador({ shared }: any) {
 	}, []);
 
 	return (
-		<Layout footer={false} shared={shared}>
+		<Layout footer={false} navbar={false} shared={shared}>
+			<NavBar />
 			<Hero />
 			<Champions />
-			<ChampionsTask />
-			<ChampionsTask />
-			<ChampionsTask />
-			<ChampionsTask />
-			<ChampionsTask />
-			<ChampionsTask />
+			<ChampionsDo />
+			<Benefits />
 			<Ranks />
 			<Footer />
 		</Layout>
