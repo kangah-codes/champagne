@@ -1,6 +1,17 @@
 import Image from "next/image";
+import { useRef, useState, useLayoutEffect } from "react";
 
 export default function ChampionsDo() {
+	const targetRef = useRef();
+	const [desktopScrollWidth, setDesktopScrollWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		if (targetRef.current) {
+			// @ts-ignore
+			setDesktopScrollWidth(targetRef.current.offsetWidth);
+		}
+	}, []);
+
 	return (
 		<div className="w-full bg-white flex relative pb-[64.3px] lg1:pb-32">
 			<div className="w-full mx-auto flex flex-col items-center justify-center">
@@ -10,30 +21,35 @@ export default function ChampionsDo() {
 					</h1>
 				</div>
 				<div className="flex flex-col">
-					<div className="mx-auto w-full flex flex-row space-x-[16px] lg1:space-x-[80px] items-center justify-center">
-						<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
-							<Image
-								className="object-cover"
-								fill
-								src="/images/content/champions-do.png"
-								alt="img"
-							/>
-						</div>
-						<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
-							<Image
-								className="object-cover"
-								fill
-								src="/images/content/champions-do.png"
-								alt="img"
-							/>
-						</div>
-						<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
-							<Image
-								className="object-cover"
-								fill
-								src="/images/content/champions-do.png"
-								alt="img"
-							/>
+					<div className="w-screen max-w-[screen]">
+						<div
+							ref={targetRef as any}
+							className="mx-auto w-full flex flex-row space-x-[16px] lg1:space-x-[80px] items-center justify-center overflow-x-scroll hide-scrollbar desktop-scroll"
+						>
+							<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
+								<Image
+									className="object-cover"
+									fill
+									src="/images/content/champions-do.png"
+									alt="img"
+								/>
+							</div>
+							<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
+								<Image
+									className="object-cover"
+									fill
+									src="/images/content/champions-do.png"
+									alt="img"
+								/>
+							</div>
+							<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
+								<Image
+									className="object-cover"
+									fill
+									src="/images/content/champions-do.png"
+									alt="img"
+								/>
+							</div>
 						</div>
 					</div>
 
@@ -43,7 +59,30 @@ export default function ChampionsDo() {
 							width="51.766"
 							height="78.251"
 							viewBox="0 0 51.766 78.251"
-							className="w-[13px] h-[23px] lg1:w-[51px] lg1:h-[78px]"
+							className="w-[13px] h-[23px] lg1:w-[51px] lg1:h-[78px] cursor-pointer"
+							onClick={() => {
+								// check if the screen size is mobile
+								if (window.innerWidth < 768) {
+									// scroll the desktop-scroll div to the left
+									// @ts-ignore
+									document
+										.querySelector(".desktop-scroll")
+										.scrollBy({
+											left: -335,
+											behavior: "smooth",
+										});
+									return;
+								}
+
+								// scroll the desktop-scroll div to the left
+								// @ts-ignore
+								document
+									.querySelector(".desktop-scroll")
+									.scrollBy({
+										left: -desktopScrollWidth,
+										behavior: "smooth",
+									});
+							}}
 						>
 							<path
 								id="Path_14573"
@@ -229,7 +268,30 @@ export default function ChampionsDo() {
 							width="51.765"
 							height="78.251"
 							viewBox="0 0 51.765 78.251"
-							className="w-[13px] h-[23px] lg1:w-[51px] lg1:h-[78px]"
+							className="w-[13px] h-[23px] lg1:w-[51px] lg1:h-[78px] cursor-pointer"
+							onClick={() => {
+								// check if the screen size is mobile
+								if (window.innerWidth < 768) {
+									// scroll the desktop-scroll div to the left
+									// @ts-ignore
+									document
+										.querySelector(".desktop-scroll")
+										.scrollBy({
+											left: 335,
+											behavior: "smooth",
+										});
+									return;
+								}
+
+								// scroll the desktop-scroll div to the left
+								// @ts-ignore
+								document
+									.querySelector(".desktop-scroll")
+									.scrollBy({
+										left: desktopScrollWidth,
+										behavior: "smooth",
+									});
+							}}
 						>
 							<path
 								id="Path_14572"

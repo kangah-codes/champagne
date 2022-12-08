@@ -32,17 +32,100 @@ export default function Champions() {
 
 					<div className="grid grid-cols-2 gap-[25px] overflow-hidden">
 						<div className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden desktop-scroll">
-							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Souvenirs & swags
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									All Champions will receive Champagne
+									Souvenirs and Swags including Tee Shirts,
+									Cups, Banners, bags, books, water bottles
+									etc.
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Account Promotion
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									As an ambassador, your profile in Champagne
+									will be promoted to get more views and
+									matches. Be on your way to becoming popular
+									in your school.
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Shares
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									The top 1000 Champions will receive stock
+									options in the Champagne app. Imagine
+									receiving an average of $50K when the value
+									of Champagne increases to $1B
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Resume Credits
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									You can include your role as a Champion on
+									your resume. We will provide feedback and
+									support whenever needed. We may also offer
+									you internship and FT work depending on your
+									performance and role availability
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Meet other Champions
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									We will organize meetups either in person or
+									virtual meetups for all Champions. You get
+									the opportunity to meet others ambassadors
+									at other campuses
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									One month subscription credit
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									We will give you one month free credit that
+									you can use to activate the premium version
+									of the Champagne app
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Free access to Champagne events
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									Champagne team will work with our Champions
+									to organize events on your campus, each
+									ambassador will be given free access to all
+									such events
+								</p>
+							</div>
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<h1 className="text-[30px] leading-[30px] font-anton">
+									Bragging rights
+								</h1>
+								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
+									Be the toast of your campus as you hold the
+									bragging rights as an ambassador of the
+									Champagne app
+								</p>
+							</div>
 						</div>
 						<div
 							ref={targetRef as any}
 							className={`
 								desktop-scroll scroll-smooth col-span-2 flex-row overflow-x-scroll hide-scrollbar 
-								hidden lg1:flex space-x-[25px] lg1:max-w-[483px] xl:max-w-[513px] 
-								xl1:max-w-[533px] 2xl:max-w-[711px] transform duration-500 ease-in-out
+								hidden lg1:flex space-x-[25px] lg1:max-w-[491px] xl:max-w-[519px] 
+								xl1:max-w-[539px] 2xl:max-w-[711px] transform duration-500 ease-in-out
 								
 							`}
 						>
