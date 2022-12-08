@@ -1,6 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export default function Champions() {
+	const targetRef = useRef();
+	const [desktopScrollWidth, setDesktopScrollWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		if (targetRef.current) {
+			// @ts-ignore
+			setDesktopScrollWidth(targetRef.current.offsetWidth);
+		}
+	}, []);
+
 	return (
 		<div className="w-full flex bg-white px-4">
 			<div className="w-full max-w-5xl lg1:max-w-[1044px] xl:max-w-[1110px] xl1:max-w-[1154px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center py-[105px]">
@@ -21,13 +31,14 @@ export default function Champions() {
 					</div>
 
 					<div className="grid grid-cols-2 gap-[25px] overflow-hidden">
-						<div className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden">
-							<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-							<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-							<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-							<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+						<div className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden desktop-scroll">
+							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+							<div className="shrink-0 w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
 						</div>
 						<div
+							ref={targetRef as any}
 							className={`
 								desktop-scroll scroll-smooth col-span-2 flex-row overflow-x-scroll hide-scrollbar 
 								hidden lg1:flex space-x-[25px] lg1:max-w-[483px] xl:max-w-[513px] 
@@ -52,7 +63,7 @@ export default function Champions() {
 								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
 							</div>
 						</div>
-						<div className="col-span-2 flex flex-row items-center justify-end">
+						<div className="col-span-2 flex flex-row items-center justify-center lg1:justify-end">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="21.277"
@@ -60,12 +71,18 @@ export default function Champions() {
 								viewBox="0 0 21.277 31.737"
 								className="cursor-pointer"
 								onClick={() => {
-									// get width of desktop-scroll div
-									const desktopScrollWidth =
+									// check if the screen size is mobile
+									if (window.innerWidth < 768) {
+										// scroll the desktop-scroll div to the left
 										// @ts-ignore
-										document.querySelector(
-											".desktop-scroll"
-										).scrollWidth;
+										document
+											.querySelector(".desktop-scroll")
+											.scrollBy({
+												left: -335,
+												behavior: "smooth",
+											});
+										return;
+									}
 
 									// scroll the desktop-scroll div to the left
 									// @ts-ignore
@@ -142,12 +159,23 @@ export default function Champions() {
 								viewBox="0 0 21.277 31.737"
 								className="ml-[19px] cursor-pointer"
 								onClick={() => {
-									// get width of desktop-scroll div
-									const desktopScrollWidth =
+									// check if the screen size is mobile
+									if (window.innerWidth < 768) {
+										// scroll the desktop-scroll div to the left
 										// @ts-ignore
-										document.querySelector(
-											".desktop-scroll"
-										).scrollWidth;
+										document
+											.querySelector(".desktop-scroll")
+											.scrollBy({
+												left: 335,
+												behavior: "smooth",
+											});
+										return;
+									}
+
+									console.log(
+										"desktopScrollWidth",
+										desktopScrollWidth
+									);
 
 									// scroll the desktop-scroll div to the left
 									// @ts-ignore

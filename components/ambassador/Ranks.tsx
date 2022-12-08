@@ -5,8 +5,8 @@ export default function Ranks() {
 	return (
 		<div className="w-full flex px-4 relative bg-[#F5F2F2]">
 			<div className="w-full max-w-5xl lg1:max-w-[1044px] xl:max-w-[1110px] xl1:max-w-[1154px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center py-[76px]">
-				<div className="mx-auto flex flex-row space-x-[56px] justify-between w-full pr-[56px]">
-					<div className="my-auto itens-center flex flex-col relative w-full space-y-[15px] items-start lg1:pl-[86px] xl:pl-[92px] xl1:pl-[95px] 2xl:pl-[127px]">
+				<div className="mx-auto flex flex-col lg1:flex-row lg1:space-x-[56px] space-y-[47px] lg1:justify-between w-full lg1:pr-[56px] justify-center items-center">
+					<div className="my-auto items-center flex flex-col relative w-full space-y-[15px] lg1:items-start lg1:pl-[86px] xl:pl-[92px] xl1:pl-[95px] 2xl:pl-[127px] text-center lg1:text-left">
 						<h1 className="text-[47px] leading-[47px] text-black xl:text-[68px] xl:leading-[68px] lg1:text-[64px] lg1:leading-[64px] xl1:text-[72px] xl1:leading-[72px] 2xl:text-[97px] 2xl:leading-[92px] font-anton">
 							Check out <br /> the Champion
 							<br /> ranks
@@ -15,7 +15,7 @@ export default function Ranks() {
 							<p className="my-auto">View Rank</p>
 						</div>
 					</div>
-					<div className="lg1:w-[424px] xl:w-[451px] xl1:w-[469px] 2xl:w-[599px] shrink-0">
+					<div className="w-[334px] lg1:w-[424px] xl:w-[451px] xl1:w-[469px] 2xl:w-[599px] shrink-0">
 						<Image
 							alt="Champagne app mockup"
 							src="/images/content/ranks.png"
