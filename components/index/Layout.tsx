@@ -25,7 +25,7 @@ const Layout = ({
 	footer = true,
 	college,
 	shared,
-	navbar,
+	navbar = true,
 }: LayoutProps) => {
 	return (
 		<div className="flex flex-col min-h-screen">
