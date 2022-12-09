@@ -15,18 +15,17 @@ export default function Champions() {
 		<div className="w-full flex bg-white px-4">
 			<div className="w-full max-w-5xl lg1:max-w-[1044px] xl:max-w-[1110px] xl1:max-w-[1154px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center py-[105px]">
 				<div className="mx-auto w-full space-y-[42px] max-w-[1538px] bg-champagne-lightest-blue rounded-[40px] px-[24px] py-[52px] lg1:px-[86px] lg1:py-[44px] xl:px-[92px] xl:py-[47px] xl1:px-[95px] xl1:py-[48px] 2xl:px-[127px] 2xl:py-[89px] flex flex-col lg1:flex-row justify-between">
-					<div className="space-y-[11px] flex flex-col relative lg1:max-w-[289px] xl:max-w-[307px] xl1:max-w-[319px] 2xl:max-w-[333px]">
+					<div className="space-y-[19px] flex flex-col relative lg1:max-w-[289px] xl:max-w-[307px] xl1:max-w-[319px] 2xl:max-w-[333px]">
 						<h1 className=" text-[47px] leading-[47px] text-black xl:text-[51px] xl:leading-[51px] lg1:text-[48px] lg1:leading-[48px] xl1:text-[52px] xl1:leading-[52px] 2xl:text-[71px] 2xl:leading-[71px] font-anton">
 							Who are Champagne Champion
 						</h1>
 
-						<p className="max-w-[426px] text-[20px] font-bold text-[#6F6F6F]">
-							Champions are Champagne&apos;s Campus Ambassadors
-							who are working with the team to promote, market and
-							evangelize the app at their respective
-							colleges.Champions are the main go to person on
-							campus and make the campus come alive in the
-							Champagne app.
+						<p className="max-w-[426px] text-[20px] leading-[20px] font-medium text-[#6F6F6F]">
+							Champions are Champagne’s Campus Ambassadors who are
+							working with the team to promote, market and
+							evangelize the app at their respective colleges.
+							Champions are the main go to person on campus and
+							make the campus come alive in the Champagne app.
 						</p>
 					</div>
 

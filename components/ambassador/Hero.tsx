@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
 	return (
 		<div
-			className="w-full flex h-[685px] lg1:h-[647px] xl:h-[687px] xl1:h-[715px] 2xl:h-[953px] relative"
+			className="w-full flex h-[685px] lg1:h-[647px] xl:h-[screen] xl1:h-[715px] 2xl:h-[953px] relative"
 			style={{
 				backgroundImage: "url('/images/content/ambassador-hero.png')",
 				backgroundSize: "cover",

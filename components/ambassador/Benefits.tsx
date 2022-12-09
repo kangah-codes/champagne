@@ -220,7 +220,7 @@ export default function Benefits() {
 								width="25.146"
 								height="38.54"
 								viewBox="0 0 25.146 38.54"
-								className="cursor-pointer"
+								className="cursor-pointer w-[13px] h-[23px] lg1:w-[25px] lg1:h-[38px]"
 								onClick={() => {
 									// check if the screen size is mobile
 									if (window.innerWidth < 768) {
@@ -261,7 +261,7 @@ export default function Benefits() {
 								width="49.296"
 								height="8"
 								viewBox="0 0 49.296 8"
-								className="ml-[24px]"
+								className="ml-[13px] lg1:ml-[15px] w-[35px] lg1:w-[49px]"
 							>
 								<path
 									id="Path_14577"
@@ -279,7 +279,7 @@ export default function Benefits() {
 								width="8"
 								height="8"
 								viewBox="0 0 8 8"
-								className="ml-[17px]"
+								className="ml-[13px] lg1:ml-[15px] w-[6px] h-[6px] lg1:w-[8px] lg1:h-[8px]"
 							>
 								<g
 									id="Ellipse_1324"
@@ -297,7 +297,7 @@ export default function Benefits() {
 								width="25.146"
 								height="38.54"
 								viewBox="0 0 25.146 38.54"
-								className="ml-[25px] cursor-pointer"
+								className="ml-[13px] lg1:ml-[15px] cursor-pointer w-[13px] h-[23px] lg1:w-[25px] lg1:h-[38px]"
 								onClick={() => {
 									// check if the screen size is mobile
 									if (window.innerWidth < 768) {
@@ -336,11 +336,11 @@ export default function Benefits() {
 						</div>
 					</div>
 					<div className="my-auto itens-center space-y-[20px] lg1:space-y-[11px] flex flex-col relative items-start lg1:ml-[82px] xl:ml-[87px] xl1:ml-[90px] 2xl:ml-[120px] order-first lg1:order-last mb-[34px] lg1:my-auto">
-						<h1 className="max-w-[414px] text-[47px] leading-[47px] text-black xl:text-[51px] xl:leading-[51px] lg1:text-[48px] lg1:leading-[48px] xl1:text-[52px] xl1:leading-[52px] 2xl:text-[71px] 2xl:leading-[71px] font-anton">
+						<h1 className=" max-w-[414px] text-[47px] leading-[47px] text-black xl:text-[51px] xl:leading-[51px] lg1:text-[48px] lg1:leading-[48px] xl1:text-[52px] xl1:leading-[52px] 2xl:text-[71px] 2xl:leading-[71px] font-anton">
 							What are your benefits as a Champion
 						</h1>
 
-						<div className="bg-white rounded-full xl:my-auto flex items-center lg1:mt-0 justify-center py-[20px] px-[59px] my-5 lg:mt-14 text-black text-[18px] leading-[18px] lg1:leading-[21px] lg1:text-[21px] xl1:text-[23px] font-black">
+						<div className="bg-white rounded-full xl:my-auto flex items-center justify-center py-[20px] px-[59px] my-5 lg1:mt-14 text-black text-[18px] leading-[18px] lg1:leading-[21px] lg1:text-[21px] xl1:text-[23px] font-black">
 							<p className="my-auto">Apply Today</p>
 						</div>
 					</div>
