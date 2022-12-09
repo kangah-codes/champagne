@@ -47,12 +47,12 @@ const NavBar = () => {
 								/>
 							</Link>
 						</div>
-						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-2 cursor-pointer">
+						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-[27px] cursor-pointer">
 							<button
 								className={`text-champagne-pink text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px] hidden lg1:block`}
 								onClick={() => setIsOpen(true)}
 							>
-								Join Waitlist
+								Ambassador Rank
 							</button>
 							<Link href="/leaderboard">
 								<div

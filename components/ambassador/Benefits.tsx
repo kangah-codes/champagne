@@ -1,4 +1,5 @@
 import { useRef, useState, useLayoutEffect } from "react";
+import Image from "next/image";
 
 export default function Benefits() {
 	const targetRef = useRef();
@@ -21,7 +22,7 @@ export default function Benefits() {
 							ref={targetRef as any}
 							id="desktop-scroll-mobile-2"
 						>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Souvenirs & swags
 								</h1>
@@ -31,8 +32,15 @@ export default function Benefits() {
 									Cups, Banners, bags, books, water bottles
 									etc.
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/bag.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Account Promotion
 								</h1>
@@ -42,8 +50,15 @@ export default function Benefits() {
 									matches. Be on your way to becoming popular
 									in your school.
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/celebration.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Shares
 								</h1>
@@ -53,8 +68,15 @@ export default function Benefits() {
 									receiving an average of $50K when the value
 									of Champagne increases to $1B
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/cash.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Resume Credits
 								</h1>
@@ -65,8 +87,15 @@ export default function Benefits() {
 									you internship and FT work depending on your
 									performance and role availability
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/note.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Meet other Champions
 								</h1>
@@ -76,8 +105,15 @@ export default function Benefits() {
 									the opportunity to meet others ambassadors
 									at other campuses
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/dancer.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									One month subscription credit
 								</h1>
@@ -86,8 +122,15 @@ export default function Benefits() {
 									you can use to activate the premium version
 									of the Champagne app
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/cash-phone.png"
+									width="76"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Free access to Champagne events
 								</h1>
@@ -97,8 +140,15 @@ export default function Benefits() {
 									ambassador will be given free access to all
 									such events
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/mask.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Bragging rights
 								</h1>
@@ -107,6 +157,13 @@ export default function Benefits() {
 									bragging rights as an ambassador of the
 									Champagne app
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/derp.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
 						</div>
 						<div
@@ -120,7 +177,7 @@ export default function Benefits() {
 							id="desktop-scroll-desktop-2"
 						>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
 										All Champions will receive Champagne
 										Souvenirs and Swags including Tee
@@ -130,8 +187,15 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										Souvenirs & swags
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/bag.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="text-[15px] leading-[15px] font-medium">
 										As an ambassador, your profile in
 										Champagne will be promoted to get more
@@ -141,10 +205,17 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										Account Promotion
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/celebration.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
 										The top 1000 Champions will receive
 										stock options in the Champagne app.
@@ -155,8 +226,15 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										Shares
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/cash.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
 										You can include your role as a Champion
 										on your resume. We will provide feedback
@@ -168,11 +246,18 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										Resume Credits
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/note.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
 							</div>
 
 							<div className="flex flex-col space-y-[25px]">
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
 										We will organize meetups either in
 										person or virtual meetups for all
@@ -183,6 +268,13 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										Meet Other Champions
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/dancer.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
 								<div className="pl-[39px] pr-[27px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
@@ -193,10 +285,17 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										One month subscription credit
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/cash-phone.png"
+										width="76"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
 										Champagne team will work with our
 										Champions to organize events on your
@@ -207,8 +306,15 @@ export default function Benefits() {
 										Free access <br />
 										to Champagne events
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/mask.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
-								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
+								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white relative">
 									<p className="lg1:text-[10px] lg1:leading-[10px] 2xl:text-[15px] 2xl:leading-[15px] font-medium">
 										Be the toast of your campus as you hold
 										the bragging rights as an ambassador of
@@ -217,6 +323,13 @@ export default function Benefits() {
 									<h1 className=" max-w-[174px] lg1:text-[23px] xl:text-[25px] 2xl:text-[35px] lg1:leading-[23px] xl:leading-[25px] 2xl:leading-[35px] text-white font-anton">
 										Bragging rights
 									</h1>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/derp.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
 							</div>
 						</div>

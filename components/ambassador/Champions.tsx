@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export default function Champions() {
@@ -35,92 +36,119 @@ export default function Champions() {
 							ref={targetRef as any}
 							id="desktop-scroll-mobile-1"
 						>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 								<h1 className="text-[30px] leading-[30px] font-anton">
-									Souvenirs & swags
+									Rainmakers
 								</h1>
 								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									All Champions will receive Champagne
-									Souvenirs and Swags including Tee Shirts,
-									Cups, Banners, bags, books, water bottles
-									etc.
+									You are an irate connector who likes to
+									socialize, hobnob and pitch ideas and
+									products to potential users.
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/shades.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 								<h1 className="text-[30px] leading-[30px] font-anton">
-									Account Promotion
+									Event Organizers & Hosts
 								</h1>
 								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									As an ambassador, your profile in Champagne
-									will be promoted to get more views and
-									matches. Be on your way to becoming popular
-									in your school.
+									You find bringing people together enjoyable.
+									You are able to come up with ideas for
+									classy events, organize and host it and
+									minimal budget.
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/mask-mic.png"
+									width="76"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 								<h1 className="text-[30px] leading-[30px] font-anton">
-									Shares
+									Content Creators
 								</h1>
 								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									The top 1000 Champions will receive stock
-									options in the Champagne app. Imagine
-									receiving an average of $50K when the value
-									of Champagne increases to $1B
+									You enjoy creating contents especially video
+									contents and posting them on social media
+									platforms like TikTok, SnapChat,Instagram
+									and TikTok.
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/camera.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 								<h1 className="text-[30px] leading-[30px] font-anton">
-									Resume Credits
+									App Promoters & Marketers
 								</h1>
 								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									You can include your role as a Champion on
-									your resume. We will provide feedback and
-									support whenever needed. We may also offer
-									you internship and FT work depending on your
-									performance and role availability
+									You are an early adopter of softwares
+									especially social apps and can speak to
+									their unique features. You like posting and
+									marketing apps on social media platforms. It
+									is even better if you have some digital
+									marketing or social media management
+									experience
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/phone.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 								<h1 className="text-[30px] leading-[30px] font-anton">
-									Meet other Champions
+									Community Builders
 								</h1>
 								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									We will organize meetups either in person or
-									virtual meetups for all Champions. You get
-									the opportunity to meet others ambassadors
-									at other campuses
+									You must be someone who is excited about
+									building, managing and leading communities
+									of people to perform specific tasks. Growing
+									an engaged community brings you joy and
+									happiness.You have what it takes to start
+									such a community from scratch with little or
+									no supervision
 								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/camera.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 								<h1 className="text-[30px] leading-[30px] font-anton">
-									One month subscription credit
+									Product Evangelists
 								</h1>
 								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									We will give you one month free credit that
-									you can use to activate the premium version
-									of the Champagne app
+									Are you excited about pitching and promoting
+									new products to new users? If yes, then this
+									program is for you! How would feel to have
+									100% of your college mates on Champagne app
+									because of YOU?
 								</p>
-							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
-								<h1 className="text-[30px] leading-[30px] font-anton">
-									Free access to Champagne events
-								</h1>
-								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									Champagne team will work with our Champions
-									to organize events on your campus, each
-									ambassador will be given free access to all
-									such events
-								</p>
-							</div>
-							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
-								<h1 className="text-[30px] leading-[30px] font-anton">
-									Bragging rights
-								</h1>
-								<p className="text-[13px] leading-[13px] font-medium mt-[5px]">
-									Be the toast of your campus as you hold the
-									bragging rights as an ambassador of the
-									Champagne app
-								</p>
+								<Image
+									alt="Heart eyes"
+									src="/images/emojis/phone.png"
+									width="47"
+									height="47"
+									className="top-2 right-2 absolute"
+								/>
 							</div>
 						</div>
 						<div
@@ -134,99 +162,124 @@ export default function Champions() {
 							id="desktop-scroll-desktop"
 						>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
+										Rainmakers
 									</h1>
 									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
+										You are an irate connector who likes to
+										socialize, hobnob and pitch ideas and
+										products to potential users.
 									</p>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/shades.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
+										Event Organizers & Hosts
 									</h1>
 									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
+										You find bringing people together
+										enjoyable. You are able to come up with
+										ideas for classy events, organize and
+										host it and minimal budget.
 									</p>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/mask-mic.png"
+										width="76"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>{" "}
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
+										Content Creators
 									</h1>
 									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
+										You enjoy creating contents especially
+										video contents and posting them on
+										social media platforms like TikTok,
+										SnapChat,Instagram and TikTok.
 									</p>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/camera.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>{" "}
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
+										App Promoters & Marketers
 									</h1>
 									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
+										You are an early adopter of softwares
+										especially social apps and can speak to
+										their unique features. You like posting
+										and marketing apps on social media
+										platforms. It is even better if you have
+										some digital marketing or social media
+										management experience
 									</p>
-								</div>{" "}
-							</div>
-							<div className="flex flex-col space-y-[25px]">
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
-									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
-									</h1>
-									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
-									</p>
-								</div>{" "}
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
-									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
-									</h1>
-									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
-									</p>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/phone.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>{" "}
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
+										Community Builders
 									</h1>
 									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
+										You must be someone who is excited about
+										building, managing and leading
+										communities of people to perform
+										specific tasks. Growing an engaged
+										community brings you joy and
+										happiness.You have what it takes to
+										start such a community from scratch with
+										little or no supervision
 									</p>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/camera.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>{" "}
-								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px] relative">
 									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
-										Souvenirs & swags
+										Product Evangelists
 									</h1>
 									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
-										All Champions will receive Champagne
-										Souvenirs and Swags including Tee
-										Shirts, Cups, Banners, bags, books,
-										water bottles etc.
+										Are you excited about pitching and
+										promoting new products to new users? If
+										yes, then this program is for you! How
+										would feel to have 100% of your college
+										mates on Champagne app because of YOU?
 									</p>
+									<Image
+										alt="Heart eyes"
+										src="/images/emojis/phone.png"
+										width="47"
+										height="47"
+										className="top-2 right-2 absolute"
+									/>
 								</div>{" "}
 							</div>
 						</div>

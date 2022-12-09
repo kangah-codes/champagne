@@ -1,6 +1,33 @@
 import Image from "next/image";
 import { useRef, useState, useLayoutEffect, useEffect } from "react";
 
+const content = [
+	{
+		img: "slide-1.png",
+		text: "Create & manage social media Pages for Champagne",
+	},
+	{
+		img: "slide-2.png",
+		text: "Recommend Champagne App to your friends",
+	},
+	{
+		img: "slide-3.png",
+		text: "Create promotional content for Champagne",
+	},
+	{
+		img: "slide-4.png",
+		text: "Join or build & lead a community around Champagne app",
+	},
+	{
+		img: "slide-5.png",
+		text: "Organize & Host or Attend Special Champagne Events",
+	},
+	{
+		img: "slide-6.png",
+		text: "Market & Promote Champagne on your Campus",
+	},
+];
+
 export default function ChampionsDo() {
 	const targetRef = useRef();
 	const [desktopScrollWidth, setDesktopScrollWidth] = useState(0);
@@ -11,13 +38,25 @@ export default function ChampionsDo() {
 			setDesktopScrollWidth(targetRef.current.offsetWidth);
 		}
 
-		// set the middle element to the middle of the scrollbar for the images-slider
-		// @ts-ignore
-		document.querySelector("#images-slider").scrollLeft =
+		if (window.innerWidth <= 768) {
+			// set the middle element to the middle of the scrollbar for the images-slider
 			// @ts-ignore
-			document.querySelector("#images-slider").scrollWidth / 2 -
+			document.querySelector("#images-slider").scrollLeft =
+				// @ts-ignore
+				(document.querySelector("#images-slider").scrollWidth / 2 -
+					// @ts-ignore
+					document.querySelector("#images-slider").offsetWidth / 2) /
+				2.75;
+		} else {
+			// set the middle element to the middle of the scrollbar for the images-slider
 			// @ts-ignore
-			document.querySelector("#images-slider").offsetWidth / 2;
+			document.querySelector("#images-slider").scrollLeft =
+				// @ts-ignore
+				(document.querySelector("#images-slider").scrollWidth / 2 -
+					// @ts-ignore
+					document.querySelector("#images-slider").offsetWidth / 2) /
+				3;
+		}
 	}, []);
 
 	return (
@@ -35,7 +74,29 @@ export default function ChampionsDo() {
 							className="mx-auto w-full flex flex-row space-x-[16px] lg1:space-x-[80px] items-center overflow-x-scroll hide-scrollbar "
 							id="images-slider"
 						>
-							<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
+							{content.map((content, i) => (
+								<div
+									className="flex flex-col space-y-[14px] lg1:space-y-[55px] items-center justify-center"
+									key={i}
+								>
+									<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
+										<Image
+											className="object-cover"
+											fill
+											src={`/images/content/slide-${
+												i + 1
+											}.png`}
+											alt="img"
+										/>
+									</div>
+
+									<p className="font-black text-[14px] leading-[14px] max-w-[234px] lg1:text-[38px] lg1:leading-[38px] lg1:max-w-[100%] w-full text-center">
+										{content.text}
+									</p>
+								</div>
+							))}
+
+							{/* <div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
 								<Image
 									className="object-cover"
 									fill
@@ -50,15 +111,7 @@ export default function ChampionsDo() {
 									src="/images/content/champions-do.png"
 									alt="img"
 								/>
-							</div>
-							<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
-								<Image
-									className="object-cover"
-									fill
-									src="/images/content/champions-do.png"
-									alt="img"
-								/>
-							</div>
+							</div> */}
 						</div>
 					</div>
 
