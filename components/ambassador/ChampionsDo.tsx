@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRef, useState, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect, useEffect } from "react";
 
 export default function ChampionsDo() {
 	const targetRef = useRef();
@@ -10,6 +10,14 @@ export default function ChampionsDo() {
 			// @ts-ignore
 			setDesktopScrollWidth(targetRef.current.offsetWidth);
 		}
+
+		// set the middle element to the middle of the scrollbar for the images-slider
+		// @ts-ignore
+		document.querySelector("#images-slider").scrollLeft =
+			// @ts-ignore
+			document.querySelector("#images-slider").scrollWidth / 2 -
+			// @ts-ignore
+			document.querySelector("#images-slider").offsetWidth / 2;
 	}, []);
 
 	return (
@@ -24,7 +32,8 @@ export default function ChampionsDo() {
 					<div className="w-screen max-w-[screen]">
 						<div
 							ref={targetRef as any}
-							className="mx-auto w-full flex flex-row space-x-[16px] lg1:space-x-[80px] items-center justify-center overflow-x-scroll hide-scrollbar desktop-scroll"
+							className="mx-auto w-full flex flex-row space-x-[16px] lg1:space-x-[80px] items-center overflow-x-scroll hide-scrollbar "
+							id="images-slider"
 						>
 							<div className="w-[311px] h-[381px] lg1:w-[1104px] lg1:h-[682px] shrink-0 relative rounded-[24px] lg1:rounded-[32px] overflow-hidden">
 								<Image
@@ -62,26 +71,42 @@ export default function ChampionsDo() {
 							className="w-[13px] h-[23px] lg1:w-[51px] lg1:h-[78px] cursor-pointer"
 							onClick={() => {
 								// check if the screen size is mobile
-								if (window.innerWidth < 768) {
+								if (window.innerWidth <= 768) {
 									// scroll the desktop-scroll div to the left
 									// @ts-ignore
 									document
-										.querySelector(".desktop-scroll")
+										.getElementById("images-slider")
 										.scrollBy({
-											left: -335,
+											left: -335 - 16,
 											behavior: "smooth",
 										});
 									return;
 								}
 
-								// scroll the desktop-scroll div to the left
-								// @ts-ignore
-								document
-									.querySelector(".desktop-scroll")
-									.scrollBy({
-										left: -desktopScrollWidth,
-										behavior: "smooth",
-									});
+								if (
+									window.innerWidth <= 1024 &&
+									window.innerWidth >= 768
+								) {
+									// scroll the desktop-scroll div to the left
+									// @ts-ignore
+									document
+										.getElementById("images-slider")
+										.scrollBy({
+											left: -335,
+											behavior: "smooth",
+										});
+									return;
+								} else if (window.innerWidth >= 1280) {
+									// scroll the desktop-scroll div to the left
+									// @ts-ignore
+									document
+										.getElementById("images-slider")
+										.scrollBy({
+											left: -1104 - 80,
+											behavior: "smooth",
+										});
+									return;
+								}
 							}}
 						>
 							<path
@@ -271,11 +296,11 @@ export default function ChampionsDo() {
 							className="w-[13px] h-[23px] lg1:w-[51px] lg1:h-[78px] cursor-pointer"
 							onClick={() => {
 								// check if the screen size is mobile
-								if (window.innerWidth < 768) {
+								if (window.innerWidth <= 1024) {
 									// scroll the desktop-scroll div to the left
 									// @ts-ignore
 									document
-										.querySelector(".desktop-scroll")
+										.getElementById("images-slider")
 										.scrollBy({
 											left: 335,
 											behavior: "smooth",
@@ -283,14 +308,17 @@ export default function ChampionsDo() {
 									return;
 								}
 
-								// scroll the desktop-scroll div to the left
-								// @ts-ignore
-								document
-									.querySelector(".desktop-scroll")
-									.scrollBy({
-										left: desktopScrollWidth,
-										behavior: "smooth",
-									});
+								if (window.innerWidth >= 1280) {
+									// scroll the desktop-scroll div to the left
+									// @ts-ignore
+									document
+										.getElementById("images-slider")
+										.scrollBy({
+											left: 1104 + 80,
+											behavior: "smooth",
+										});
+									return;
+								}
 							}}
 						>
 							<path

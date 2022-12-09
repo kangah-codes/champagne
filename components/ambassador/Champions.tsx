@@ -30,7 +30,11 @@ export default function Champions() {
 					</div>
 
 					<div className="grid grid-cols-2 gap-[25px] overflow-hidden">
-						<div className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden desktop-scroll">
+						<div
+							className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden desktop-scroll"
+							ref={targetRef as any}
+							id="desktop-scroll-mobile-1"
+						>
 							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
 								<h1 className="text-[30px] leading-[30px] font-anton">
 									Souvenirs & swags
@@ -120,29 +124,110 @@ export default function Champions() {
 							</div>
 						</div>
 						<div
-							ref={targetRef as any}
 							className={`
-								desktop-scroll scroll-smooth col-span-2 flex-row overflow-x-scroll hide-scrollbar 
-								hidden lg1:flex space-x-[25px] lg1:max-w-[491px] xl:max-w-[519px] 
-								xl1:max-w-[539px] 2xl:max-w-[711px] transform duration-500 ease-in-out
-								
+							scroll-smooth col-span-2 flex-row overflow-x-scroll hide-scrollbar 
+							hidden lg1:flex space-x-[25px] lg1:max-w-[491px] xl:max-w-[519px] 
+							xl1:max-w-[539px] 2xl:max-w-[711px] transform duration-500 ease-in-out
+							
 							`}
+							ref={targetRef as any}
+							id="desktop-scroll-desktop"
 						>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
 							</div>
 							<div className="flex flex-col space-y-[25px]">
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
-								<div className="shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]"></div>
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
+								<div className="justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-[#C1FDFE] rounded-[29px]">
+									<h1 className="lg1:text-[23px] lg1:leading-[23px] xl:text-[25px] xl:leading-[25px] 2xl:text-[35px] 2xl:leading-[35px] font-anton">
+										Souvenirs & swags
+									</h1>
+									<p className="text-[10px] leading-[10px] font-medium mt-[5px]">
+										All Champions will receive Champagne
+										Souvenirs and Swags including Tee
+										Shirts, Cups, Banners, bags, books,
+										water bottles etc.
+									</p>
+								</div>{" "}
 							</div>
 						</div>
 						<div className="col-span-2 flex flex-row items-center justify-center lg1:justify-end">
@@ -158,7 +243,9 @@ export default function Champions() {
 										// scroll the desktop-scroll div to the left
 										// @ts-ignore
 										document
-											.querySelector(".desktop-scroll")
+											.getElementById(
+												"desktop-scroll-mobile-1"
+											)
 											.scrollBy({
 												left: -335,
 												behavior: "smooth",
@@ -166,12 +253,22 @@ export default function Champions() {
 										return;
 									}
 
+									console.log(
+										document.getElementById(
+											"desktop-scroll"
+										)
+									);
+
 									// scroll the desktop-scroll div to the left
 									// @ts-ignore
 									document
-										.querySelector(".desktop-scroll")
+										.getElementById(
+											"desktop-scroll-desktop"
+										)
 										.scrollBy({
-											left: -desktopScrollWidth,
+											left:
+												-(targetRef.current! as any)
+													.offsetWidth - 25,
 											behavior: "smooth",
 										});
 								}}
@@ -246,7 +343,9 @@ export default function Champions() {
 										// scroll the desktop-scroll div to the left
 										// @ts-ignore
 										document
-											.querySelector(".desktop-scroll")
+											.getElementById(
+												"desktop-scroll-mobile-1"
+											)
 											.scrollBy({
 												left: 335,
 												behavior: "smooth",
@@ -254,19 +353,26 @@ export default function Champions() {
 										return;
 									}
 
-									console.log(
-										"desktopScrollWidth",
-										desktopScrollWidth
-									);
-
 									// scroll the desktop-scroll div to the left
 									// @ts-ignore
 									document
-										.querySelector(".desktop-scroll")
+										.getElementById(
+											"desktop-scroll-desktop"
+										)
 										.scrollBy({
-											left: desktopScrollWidth,
+											left:
+												(targetRef.current! as any)
+													.offsetWidth + 25,
 											behavior: "smooth",
 										});
+
+									// set the desktopScrollWidth to the current scroll width
+									setDesktopScrollWidth(
+										// @ts-ignore
+										document.querySelector(
+											".desktop-scroll"
+										).scrollWidth
+									);
 								}}
 							>
 								<path

@@ -16,7 +16,11 @@ export default function Benefits() {
 			<div className="w-full max-w-5xl lg1:max-w-[1044px] xl:max-w-[1110px] xl1:max-w-[1154px] 2xl:max-w-screen-2xl mx-auto flex items-center justify-center py-[82px]">
 				<div className="mx-auto w-full flex flex-col lg1:flex-row lg1:px-[86px] xl:px-[92px] xl1:px-[95px] 2xl:px-[127px] justify-betwween items-center px-[24px]">
 					<div className="flex flex-col gap-[25px] lg1:max-w-[491px] xl:max-w-[519px] xl1:max-w-[539px] 2xl:max-w-[711px] w-full">
-						<div className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden desktop-scroll">
+						<div
+							className="col-span-2 flex flex-row gap-[25px] overflow-x-scroll hide-scrollbar lg1:hidden desktop-scroll-mobile-2"
+							ref={targetRef as any}
+							id="desktop-scroll-mobile-2"
+						>
 							<div className="shrink-0 justify-end pl-[34px] pr-[46px] pb-[33px] flex flex-col w-[310px] h-[276px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
 								<h1 className="text-[30px] leading-[30px] text-white font-anton">
 									Souvenirs & swags
@@ -106,12 +110,14 @@ export default function Benefits() {
 							</div>
 						</div>
 						<div
+							ref={targetRef as any}
 							className={`
-								desktop-scroll scroll-smooth col-span-2 flex-row overflow-x-scroll hide-scrollbar 
+								scroll-smooth col-span-2 flex-row overflow-x-scroll hide-scrollbar 
 								hidden lg1:flex lg1:max-w-[491px] xl:max-w-[519px] 
 								xl1:max-w-[539px] 2xl:max-w-[711px] space-x-[25px]
 								
 							`}
+							id="desktop-scroll-desktop-2"
 						>
 							<div className="flex flex-col space-y-[25px]">
 								<div className="lg1:px-[26px] xl:px-[28px] xl1:px-[29px] 2xl:px-[39px] lg1:pb-[27px] xl:pb-[33px] xl1:pb-[38px] 2xl:pb-[53px] space-y-[5px] flex flex-col-reverse shrink-0 w-[276px] h-[301px] lg1:w-[233px] lg1:h-[213px] xl:w-[247px] xl:h-[227px] xl1:w-[257px] xl1:h-[236px] 2xl:w-[343px] 2xl:h-[315px] bg-champagne-pink rounded-[29px] text-white">
@@ -224,10 +230,12 @@ export default function Benefits() {
 								onClick={() => {
 									// check if the screen size is mobile
 									if (window.innerWidth < 768) {
-										// scroll the desktop-scroll div to the left
+										// scroll the desktop-scroll-mobile-2 div to the left
 										// @ts-ignore
 										document
-											.querySelector(".desktop-scroll")
+											.getElementById(
+												"desktop-scroll-mobile-2"
+											)
 											.scrollBy({
 												left: -335,
 												behavior: "smooth",
@@ -235,12 +243,16 @@ export default function Benefits() {
 										return;
 									}
 
-									// scroll the desktop-scroll div to the left
+									// scroll the desktop-scroll-mobile-2 div to the left
 									// @ts-ignore
 									document
-										.querySelector(".desktop-scroll")
+										.getElementById(
+											"desktop-scroll-desktop-2"
+										)
 										.scrollBy({
-											left: -desktopScrollWidth,
+											left:
+												-(targetRef.current! as any)
+													.offsetWidth - 25,
 											behavior: "smooth",
 										});
 								}}
@@ -301,10 +313,12 @@ export default function Benefits() {
 								onClick={() => {
 									// check if the screen size is mobile
 									if (window.innerWidth < 768) {
-										// scroll the desktop-scroll div to the left
+										// scroll the desktop-scroll-mobile-2 div to the left
 										// @ts-ignore
 										document
-											.querySelector(".desktop-scroll")
+											.getElementById(
+												"desktop-scroll-mobile-2"
+											)
 											.scrollBy({
 												left: 335,
 												behavior: "smooth",
@@ -312,12 +326,21 @@ export default function Benefits() {
 										return;
 									}
 
-									// scroll the desktop-scroll div to the left
+									console.log(
+										"desktopScrollWidth",
+										desktopScrollWidth
+									);
+
+									// scroll the desktop-scroll-mobile-2 div to the left
 									// @ts-ignore
 									document
-										.querySelector(".desktop-scroll")
+										.getElementById(
+											"desktop-scroll-desktop-2"
+										)
 										.scrollBy({
-											left: desktopScrollWidth,
+											left:
+												(targetRef.current! as any)
+													.offsetWidth + 25,
 											behavior: "smooth",
 										});
 								}}
