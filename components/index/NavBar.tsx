@@ -47,7 +47,17 @@ const NavBar = () => {
 								/>
 							</Link>
 						</div>
-						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-2 cursor-pointer">
+						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-[47px] cursor-pointer">
+							<Link
+								href="/ambassador"
+								className={`text-champagne-pink text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px] ${
+									path === "/leaderboard"
+										? "hidden"
+										: "hidden lg1:block"
+								}`}
+							>
+								Ambassadors
+							</Link>
 							<button
 								className={`
 									border border-champagne-pink rounded-full flex items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12
@@ -58,13 +68,23 @@ const NavBar = () => {
 							>
 								Share
 							</button>
+							<Link
+								href="/leaderboard"
+								className={`text-champagne-pink text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px] hidden ${
+									path === "/leaderboard"
+										? "hidden"
+										: "hidden lg1:block"
+								}`}
+							>
+								Activate campus
+							</Link>
 							<button
 								className={`bg-champagne-pink rounded-full flex items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]`}
 								onClick={() => setIsOpen(true)}
 							>
 								Join Waitlist
 							</button>
-							<Link href="/leaderboard">
+							{/* <Link href="/leaderboard">
 								<div
 									className={`
 										bg-champagne-pink rounded-full items-center justify-center py-2 px-4 2xl:py-4 2xl:px-12 text-white text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px]\
@@ -75,7 +95,7 @@ const NavBar = () => {
 										Activate your campus
 									</p>
 								</div>
-							</Link>
+							</Link> */}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="25.075"
