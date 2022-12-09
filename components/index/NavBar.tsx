@@ -47,7 +47,7 @@ const NavBar = () => {
 								/>
 							</Link>
 						</div>
-						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-[47px] cursor-pointer">
+						<div className="flex items-center justify-end lg:flex-1 lg:w-0 flex-row space-x-[14px] lg1:space-x-[27px] cursor-pointer">
 							<Link
 								href="/ambassador"
 								className={`text-champagne-pink text-base font-black text-[10px] lg1:text-[13px] 2xl:text-[20px] ${
